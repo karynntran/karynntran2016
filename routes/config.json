@@ -1,6 +1,5 @@
 {
 	"script": {
-		"index":"../javascripts/app.js",
-		"monthlyPhotos":"../javascripts/monthlyphotos.js"
+		"index":"public/javascripts/app.js"
 	}
 }
