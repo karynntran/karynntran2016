@@ -16,8 +16,20 @@ gulp.task('styles', function(){
         .pipe(connect.reload());
 });
 
+gulp.task('js', function(){
+	gulp.src('js/*.js')
+		.pipe(connect.reload());
+})
+
+gulp.task('index', function(){
+	gulp.src('index.html')
+		.pipe(connect.reload());
+})
+
 gulp.task('watch', function(){
+	gulp.watch('js/*.js', ['js']);
 	gulp.watch('sass/**/*.scss', ['styles']);
+	gulp.watch('index.html', ['index']);
 });
 
 
