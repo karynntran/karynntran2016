@@ -1,9 +1,14 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+
+var express = require('express'),
+    path = require('path'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser'),
+    bodyParser = require('jade'),
+    stylus = require('stylus'),
+    sass = require('node-sass');
+
 
 var routes = require('./routes/index');
 
@@ -16,10 +21,21 @@ app.set('view engine', 'jade');
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(cookieParser());
+
+app.use(require('stylus').middleware({
+  src: __dirname + '/public/stylesheets',
+  compress: true
+}));
+
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(stylus.middleware({
+  src: __dirname + '/views',
+  dest: __dirname + '/public'
+}));
 
 app.use('/', routes);
 
@@ -54,6 +70,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(8080, function () {})
 
 module.exports = app;
 
