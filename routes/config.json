@@ -1,1 +1,49 @@
-{"data" : "hello"}
+{ 	
+	"test" : "hello",
+	"index": [
+		{ "js": 
+			[
+				"public/javascripts/jquery-1.11.3.js",
+				"public/javascripts/app.js",
+				"//localhost:35729/livereload.js"
+			]
+		},
+		{ "blocks": 
+			{ "rubix":
+				[	
+				{ 
+					"rubixElement": "rubix0"
+				},
+				{					 
+					"rubixElement": "rubix1",
+					  "txt" : "about"
+				},
+				{					 
+					"rubixElement": "rubix2"
+				},
+				{					 
+					"rubixElement": "rubix3",
+					  "txt" : "portfolio"
+				},
+				{					 
+					"rubixElement": "rubix4"
+				},
+				{					 
+					"rubixElement": "rubix5",
+					"txt" : "experience"
+				},
+				{					 
+					"rubixElement": "rubix6"
+				},
+				{					 
+					"rubixElement": "rubix7",
+					"txt" : "contact"
+				},
+				{					 
+					"rubixElement": "rubix8",
+					"styles" : ""
+				}]
+			}			
+		}
+	]
+}

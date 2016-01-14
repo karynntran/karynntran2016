@@ -5,7 +5,7 @@ var json = require('./config.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'karynn elio tran', test: json['data']});
+  res.render('index', { title: 'karynn elio tran', rubixData: json['index'][1]['blocks']['rubix']});
 });
 
 // router.get('/jsonData', function(req, res){

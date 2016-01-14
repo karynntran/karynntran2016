@@ -9,25 +9,28 @@ block content
 			div.right
 				div.rubix.vertical
 					ul
-						li
-							div.rubix-cube.rubix0
-						li
-							div.rubix-cube.rubix1
-								p.rubix-text.vertical #{test}
-						li
-							div.rubix-cube.rubix2
-						li
-							div.rubix-cube.rubix3
-								p.rubix-text.vertical portfolio
-						li
-							div.rubix-cube.rubix4
-						li
-							div.rubix-cube.rubix5
-								p.rubix-text.vertical experience
-						li
-							div.rubix-cube.rubix6
-						li
-							div.rubix-cube.rubix7
-								p.rubix-text.vertical contact
-						li
-							div.rubix-cube.rubix8
+						each cube in rubixData
+							li
+								div.rubix-cube(class=cube.rubixElement)
+									if ("txt" in cube)
+										p.rubix-text.vertical #{cube.txt}
+							//- li
+							//- 	div.rubix-cube.rubix1
+							//- 		p.rubix-text.vertical #{rubixData}
+							//- li
+							//- 	div.rubix-cube.rubix2
+							//- li
+							//- 	div.rubix-cube.rubix3
+							//- 		p.rubix-text.vertical portfolio
+							//- li
+							//- 	div.rubix-cube.rubix4
+							//- li
+							//- 	div.rubix-cube.rubix5
+							//- 		p.rubix-text.vertical experience
+							//- li
+							//- 	div.rubix-cube.rubix6
+							//- li
+							//- 	div.rubix-cube.rubix7
+							//- 		p.rubix-text.vertical contact
+							//- li
+							//- 	div.rubix-cube.rubix8

@@ -9,68 +9,66 @@
 		},
 		{ "blocks": 
 			{ "rubix":
-				[	
-					{ "rubix0": 
-						{ 
-							"styles" : "",
-							"text" : ""
-						}
-					},
-					{ "rubix1": 
-						{ 
+				[{ "rubix0": 
+					{ 
 						"styles" : "",
 						"text" : ""
-						}
-					},
-					{ "rubix2": 
-						{ 
-						"styles" : "",
-						"text" : ""
-						}
-					},
-					{ "rubix3": 
-						{ 
-						"styles" : "",
-						"text" : ""
-						}
-					},
-					{ "rubix4": 
-						{ 
-						"styles" : "",
-						"text" : ""
-						}
-					},
-					{ "rubix5": 
-						{ 
-						"styles" : "",
-						"text" : ""
-						}
-					},
-					{ "rubix6": 
-						{ 
-						"styles" : "",
-						"text" : ""
-						}
-					},
-					{ "rubix7": 
-						{ 
-						"styles" : "",
-						"text" : ""
-						}
-					},
-					{ "rubix8": 
-						{ 
-						"styles" : "",
-						"text" : ""
-						}
-					},
-					{ "rubix9": 
-						{ 
-						"styles" : "",
-						"text" : ""
-						}
 					}
-				]
+				},
+				{ "rubix1": 
+					{ 
+					"styles" : "",
+					"text" : ""
+					}
+				},
+				{ "rubix2": 
+					{ 
+					"styles" : "",
+					"text" : ""
+					}
+				},
+				{ "rubix3": 
+					{ 
+					"styles" : "",
+					"text" : ""
+					}
+				},
+				{ "rubix4": 
+					{ 
+					"styles" : "",
+					"text" : ""
+					}
+				},
+				{ "rubix5": 
+					{ 
+					"styles" : "",
+					"text" : ""
+					}
+				},
+				{ "rubix6": 
+					{ 
+					"styles" : "",
+					"text" : ""
+					}
+				},
+				{ "rubix7": 
+					{ 
+					"styles" : "",
+					"text" : ""
+					}
+				},
+				{ "rubix8": 
+					{ 
+					"styles" : "",
+					"text" : ""
+					}
+				},
+				{ "rubix9": 
+					{ 
+					"styles" : "",
+					"text" : ""
+					}
+				}]
 			}			
 		}
 	]
