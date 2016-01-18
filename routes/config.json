@@ -45,5 +45,29 @@
 				}]
 			}			
 		}
+	],
+	"navigation": [
+		{ "blocks": 
+			{ "nav":
+				[	
+				{ 
+					"navName": "about",
+					"categoryClass": "about-category"
+				},
+				{ 
+					"navName": "portfolio",
+					"categoryClass": "portfolio-category"
+				},
+				{ 
+					"navName": "experience",
+					"categoryClass": "experience-category"
+				},
+				{ 
+					"navName": "contact",
+					"categoryClass": "contact-category"
+				}
+				]
+			}			
+		}
 	]
 }
