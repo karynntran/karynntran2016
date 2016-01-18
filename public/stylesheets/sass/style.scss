@@ -179,7 +179,7 @@ body {
 
 .navigation-container {
 	width: 100%;
-	height: 5.5vw;
+	height: 6.5vw;
 }
 .nav-home {
 	font-family: CaviarDreams-Regular;
@@ -189,24 +189,32 @@ body {
 	color: #730065;
 }
 
-.navigation-menu {
+.navigation-ul {
 	position: absolute;
 	right: 0;
 	top: 0;
 	width: 50%;
 	height: 5vw;
+	margin-top: 0;
 }
 .nav-li {
-	font-family: CaviarDreams-Regular;
-	font-size: 1.5vw;
 	list-style-type: none;
 	display: inline;
 	color: white;
 }
 .nav-item {
-	display: inline;
-	margin: 0 2%;
-	padding: 3% 4%;
+	height: 30%;
+    width: 16%;
+    float: left;
+    margin: 0 1%;
+    padding: 3% 2%;
+	font-family: CaviarDreams-Regular;
+	font-size: 1.5vw;
+	text-align: center;
+}
+.nav-item:hover {
+	height: 80%;
+    transition: height .15s ease-in;
 }
 
 .about-category {
