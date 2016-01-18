@@ -12,6 +12,7 @@ router.get('/navigation', function(req, res, next) {
   res.render('navigation', { navigationData: json['navigation'][0]['blocks']['nav']});
 });
 
+
 // router.get('/jsonData', function(req, res){
 //   res.send(jsonData);
 // });

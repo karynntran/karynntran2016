@@ -69,5 +69,29 @@
 				]
 			}			
 		}
+	],
+	"about": [
+		{ 
+			"left": "contentleft",
+			"right": "contentright"
+		}
+	],
+	"portfolio": [
+		{ 
+			"left": "contentleft",
+			"right": "contentright"
+		}
+	],
+	"experience": [
+		{ 
+			"left": "contentleft",
+			"right": "contentright"
+		}
+	],
+	"contact": [
+		{ 
+			"left": "contentleft",
+			"right": "contentright"
+		}
 	]
 }
