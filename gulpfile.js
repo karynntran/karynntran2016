@@ -9,29 +9,6 @@ var gulp = require('gulp'),
 	jshint = require('gulp-jshint')
 	nodemon = require('nodemon');
 
-// gulp.task('server', function (cb) {
-//   exec('npm start', function (err, stdout, stderr) {
-//     console.log(stdout);
-//     console.log(stderr);
-//     cb(err);
-//   })
-// });
-
-// gulp.task('server', function(){
-// 	connect.server({
-// 		root: [__dirname],
-// 		port: 8080,
-// 		base: 'http://localhost',
-// 		livereload: true
-// 	});
-// });
-
-// gulp.task('jade', function() {
-//     return gulp.src('views/index.jade')
-//         .pipe(jade()) // pip to jade plugin
-//         .pipe(gulp.dest(__dirname)); // tell gulp our output folder
-// });
-
 gulp.task('start', function () {
   nodemon({
     script: 'app.js'

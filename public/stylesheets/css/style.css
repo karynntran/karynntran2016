@@ -18,7 +18,10 @@
 
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: CaviarDreams-Regular;
+  width: 100%;
+  height: 100%; }
 
 .vertical {
   position: relative;
@@ -31,6 +34,33 @@ body {
   100% {
     right: 0px; } }
 
+.content-container {
+  position: relative;
+  height: 90%;
+  width: 90%;
+  margin: 0 auto; }
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+  .page .content-container {
+    width: 70%;
+    height: 80%;
+    top: 7%; }
+
+.left {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  float: left; }
+
+.right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  position: relative; }
+
 #intro {
   width: 100%;
   height: 100%;
@@ -41,16 +71,6 @@ body {
     background: url("/images/bg.jpg") no-repeat;
     background-size: cover;
     position: absolute; }
-  #intro .left {
-    width: 45%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  #intro .right {
-    width: 55%;
-    height: 100%;
-    float: right; }
   #intro .rubix0,
   #intro .rubix1,
   #intro .rubix2,

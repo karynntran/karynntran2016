@@ -4,14 +4,15 @@ block content
 
 	div#intro
 		div.bg
-			div.left
-				div.text.vertical Karynn Elio Tran
-			div.right
-				div.rubix.vertical
-					ul
-						each cube in rubixData
-							li
-								div.rubix-cube(class=cube.rubixElement)
-									if ("txt" in cube)
-										p.rubix-text.vertical #{cube.txt}
+			div.content-container
+				div.left
+					div.text.vertical Karynn Elio Tran
+				div.right
+					div.rubix.vertical
+						ul
+							each cube in rubixData
+								li
+									div.rubix-cube(class=cube.rubixElement)
+										if ("txt" in cube)
+											p.rubix-text.vertical #{cube.txt}
 							
