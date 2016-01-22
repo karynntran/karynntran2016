@@ -7,8 +7,10 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     bodyParser = require('jade'),
     stylus = require('stylus'),
+    backbone = require('backbone'),
+    underscore = require('underscore'),
+    requirejs = require('requirejs'),
     sass = require('node-sass');
-
 
 var routes = require('./routes/index');
 
