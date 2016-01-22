@@ -1,5 +1,4 @@
-// require('./public/stylesheets/css/fonts');
-// require('../public/stylesheets/sass/style.scss');
+import "../public/stylesheets/sass/style.scss";
 import $ from 'jquery';
 import categories from './app.js';
 

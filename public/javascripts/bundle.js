@@ -46,18 +46,17 @@
 
 	'use strict';
 
-	var _jquery = __webpack_require__(1);
+	__webpack_require__(1);
+
+	var _jquery = __webpack_require__(5);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _app = __webpack_require__(2);
+	var _app = __webpack_require__(6);
 
 	var _app2 = _interopRequireDefault(_app);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// require('./public/stylesheets/css/fonts');
-	// require('../public/stylesheets/sass/style.scss');
 
 	document.addEventListener("DOMContentLoaded", function () {
 		(0, _jquery2.default)('#intro').addClass('animate');
@@ -92,6 +91,356 @@
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(2);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: CaviarDreams-Regular;\n  width: 100%;\n  height: 100%; }\n\n.vertical {\n  position: relative;\n  top: 50%;\n  transform: translateY(-50%); }\n\n@-webkit-keyframes slideleft {\n  0% {\n    right: -100px; }\n  100% {\n    right: 0px; } }\n\n.content-container {\n  position: relative;\n  height: 90%;\n  width: 90%;\n  margin: 0 auto; }\n\n.page {\n  width: 100%;\n  height: 100%;\n  position: absolute; }\n  .page .content-container {\n    width: 70%;\n    height: 80%;\n    top: 7%; }\n\n.left {\n  width: 50%;\n  height: 100%;\n  position: relative;\n  float: left; }\n\n.right {\n  width: 50%;\n  height: 100%;\n  float: right;\n  position: relative; }\n\n#intro {\n  width: 100%;\n  height: 100%;\n  position: absolute; }\n  #intro .bg {\n    width: 100%;\n    height: 100%;\n    background: url(\"/images/bg.jpg\") no-repeat;\n    background-size: cover;\n    position: absolute; }\n  #intro .rubix0,\n  #intro .rubix1,\n  #intro .rubix2,\n  #intro .rubix3,\n  #intro .rubix4,\n  #intro .rubix5,\n  #intro .rubix6,\n  #intro .rubix7,\n  #intro .rubix8 {\n    opacity: 0; }\n  #intro .text {\n    text-transform: uppercase;\n    color: #730065;\n    font-family: 'CaviarDreams-Regular';\n    font-size: 45px;\n    margin: 50px; }\n  #intro .rubix {\n    width: 370px;\n    height: auto;\n    position: absolute; }\n  #intro .rubix li {\n    list-style-type: none;\n    float: left; }\n  #intro .rubix-text {\n    position: relative;\n    padding: 0;\n    color: white;\n    font-family: 'CaviarDreams-Regular';\n    margin: 0 auto;\n    text-align: center;\n    right: -100px; }\n\n#intro.animate .rubix-cube {\n  width: 100px;\n  height: 100px;\n  margin: 5px;\n  overflow: hidden; }\n  #intro.animate .rubix-cube .rubix-text {\n    -webkit-animation: slideleft .5s 3s forwards; }\n  #intro.animate .rubix-cube.rubix0 {\n    background: url(\"/images/boxes/blue-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix1 {\n    background: url(\"/images/boxes/pink.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1.25s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix2 {\n    background: url(\"/images/boxes/green-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1.5s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix3 {\n    background: url(\"/images/boxes/green.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s .75s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix4 {\n    background: url(\"/images/boxes/tan.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s .5s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix5 {\n    background: url(\"/images/boxes/purple.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1.75s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix6 {\n    background: url(\"/images/boxes/purple-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 2.5s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix7 {\n    background: url(\"/images/boxes/blue.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 2.25s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix8 {\n    background: url(\"/images/boxes/pink-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 2s ease-in;\n    opacity: 1; }\n\n/*/ NAVIGATION /*/\n.navigation-container {\n  width: 100%;\n  height: 6.5vw; }\n\n.nav-home {\n  font-family: CaviarDreams-Regular;\n  font-size: 3vw;\n  text-align: center;\n  width: 50%;\n  color: #730065; }\n\n.navigation-ul {\n  position: absolute;\n  right: 0;\n  top: 0;\n  width: 50%;\n  height: 5vw;\n  margin-top: 0; }\n\n.nav-li {\n  list-style-type: none;\n  display: inline;\n  color: white; }\n\n.nav-item {\n  height: 30%;\n  width: 16%;\n  float: left;\n  margin: 0 1%;\n  padding: 3% 2%;\n  font-family: CaviarDreams-Regular;\n  font-size: 1.5vw;\n  text-align: center; }\n\n.nav-item:hover {\n  height: 80%;\n  transition: height .15s ease-in; }\n\n.about-category {\n  background: #FF6160; }\n\n.portfolio-category {\n  background: #C4C162; }\n\n.experience-category {\n  background: #2a577f; }\n\n.contact-category {\n  background: #71C5C9; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+
+	function createLinkElement(options) {
+		var linkElement = document.createElement("link");
+		linkElement.rel = "stylesheet";
+		insertStyleElement(options, linkElement);
+		return linkElement;
+	}
+
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement(options);
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+
+		update(obj);
+
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+
+	var replaceText = (function () {
+		var textStore = [];
+
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+		var sourceMap = obj.sourceMap;
+
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+		var sourceMap = obj.sourceMap;
+
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+
+		var blob = new Blob([css], { type: "text/css" });
+
+		var oldSrc = linkElement.href;
+
+		linkElement.href = URL.createObjectURL(blob);
+
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
+
+
+/***/ },
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -9928,7 +10277,7 @@
 
 
 /***/ },
-/* 2 */
+/* 6 */
 /***/ function(module, exports) {
 
 	"use strict";
