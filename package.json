@@ -53,6 +53,7 @@
     "style-loader": "^0.13.0",
     "tiny-lr": "^0.2.1",
     "underscore": "^1.8.3",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.11"
   }
 }

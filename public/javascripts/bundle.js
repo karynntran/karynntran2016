@@ -48,11 +48,11 @@
 
 	__webpack_require__(1);
 
-	var _jquery = __webpack_require__(5);
+	var _jquery = __webpack_require__(13);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _app = __webpack_require__(6);
+	var _app = __webpack_require__(14);
 
 	var _app2 = _interopRequireDefault(_app);
 
@@ -99,7 +99,7 @@
 	var content = __webpack_require__(2);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
+	var update = __webpack_require__(12)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -124,7 +124,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: CaviarDreams-Regular;\n  width: 100%;\n  height: 100%; }\n\n.vertical {\n  position: relative;\n  top: 50%;\n  transform: translateY(-50%); }\n\n@-webkit-keyframes slideleft {\n  0% {\n    right: -100px; }\n  100% {\n    right: 0px; } }\n\n.content-container {\n  position: relative;\n  height: 90%;\n  width: 90%;\n  margin: 0 auto; }\n\n.page {\n  width: 100%;\n  height: 100%;\n  position: absolute; }\n  .page .content-container {\n    width: 70%;\n    height: 80%;\n    top: 7%; }\n\n.left {\n  width: 50%;\n  height: 100%;\n  position: relative;\n  float: left; }\n\n.right {\n  width: 50%;\n  height: 100%;\n  float: right;\n  position: relative; }\n\n#intro {\n  width: 100%;\n  height: 100%;\n  position: absolute; }\n  #intro .bg {\n    width: 100%;\n    height: 100%;\n    background: url(\"/images/bg.jpg\") no-repeat;\n    background-size: cover;\n    position: absolute; }\n  #intro .rubix0,\n  #intro .rubix1,\n  #intro .rubix2,\n  #intro .rubix3,\n  #intro .rubix4,\n  #intro .rubix5,\n  #intro .rubix6,\n  #intro .rubix7,\n  #intro .rubix8 {\n    opacity: 0; }\n  #intro .text {\n    text-transform: uppercase;\n    color: #730065;\n    font-family: 'CaviarDreams-Regular';\n    font-size: 45px;\n    margin: 50px; }\n  #intro .rubix {\n    width: 370px;\n    height: auto;\n    position: absolute; }\n  #intro .rubix li {\n    list-style-type: none;\n    float: left; }\n  #intro .rubix-text {\n    position: relative;\n    padding: 0;\n    color: white;\n    font-family: 'CaviarDreams-Regular';\n    margin: 0 auto;\n    text-align: center;\n    right: -100px; }\n\n#intro.animate .rubix-cube {\n  width: 100px;\n  height: 100px;\n  margin: 5px;\n  overflow: hidden; }\n  #intro.animate .rubix-cube .rubix-text {\n    -webkit-animation: slideleft .5s 3s forwards; }\n  #intro.animate .rubix-cube.rubix0 {\n    background: url(\"/images/boxes/blue-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix1 {\n    background: url(\"/images/boxes/pink.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1.25s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix2 {\n    background: url(\"/images/boxes/green-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1.5s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix3 {\n    background: url(\"/images/boxes/green.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s .75s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix4 {\n    background: url(\"/images/boxes/tan.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s .5s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix5 {\n    background: url(\"/images/boxes/purple.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1.75s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix6 {\n    background: url(\"/images/boxes/purple-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 2.5s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix7 {\n    background: url(\"/images/boxes/blue.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 2.25s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix8 {\n    background: url(\"/images/boxes/pink-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 2s ease-in;\n    opacity: 1; }\n\n/*/ NAVIGATION /*/\n.navigation-container {\n  width: 100%;\n  height: 6.5vw; }\n\n.nav-home {\n  font-family: CaviarDreams-Regular;\n  font-size: 3vw;\n  text-align: center;\n  width: 50%;\n  color: #730065; }\n\n.navigation-ul {\n  position: absolute;\n  right: 0;\n  top: 0;\n  width: 50%;\n  height: 5vw;\n  margin-top: 0; }\n\n.nav-li {\n  list-style-type: none;\n  display: inline;\n  color: white; }\n\n.nav-item {\n  height: 30%;\n  width: 16%;\n  float: left;\n  margin: 0 1%;\n  padding: 3% 2%;\n  font-family: CaviarDreams-Regular;\n  font-size: 1.5vw;\n  text-align: center; }\n\n.nav-item:hover {\n  height: 80%;\n  transition: height .15s ease-in; }\n\n.about-category {\n  background: #FF6160; }\n\n.portfolio-category {\n  background: #C4C162; }\n\n.experience-category {\n  background: #2a577f; }\n\n.contact-category {\n  background: #71C5C9; }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'CaviarDreams-Bold';\n  src: url(" + __webpack_require__(4) + ");\n  src: url(" + __webpack_require__(4) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(5) + ") format(\"woff\"), url(" + __webpack_require__(6) + ") format(\"truetype\"), url(" + __webpack_require__(7) + "#CaviarDreams-Bold) format(\"svg\");\n  font-weight: 700;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\n@font-face {\n  font-family: 'CaviarDreams-Regular';\n  src: url(" + __webpack_require__(8) + ");\n  src: url(" + __webpack_require__(8) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(9) + ") format(\"woff\"), url(" + __webpack_require__(10) + ") format(\"truetype\"), url(" + __webpack_require__(11) + "#CaviarDreams-Regular) format(\"svg\");\n  font-weight: 400;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: CaviarDreams-Regular;\n  width: 100%;\n  height: 100%; }\n\n.vertical {\n  position: relative;\n  top: 50%;\n  transform: translateY(-50%); }\n\n@-webkit-keyframes slideleft {\n  0% {\n    right: -100px; }\n  100% {\n    right: 0px; } }\n\n.content-container {\n  position: relative;\n  height: 90%;\n  width: 90%;\n  margin: 0 auto; }\n\n.page {\n  width: 100%;\n  height: 100%;\n  position: absolute; }\n  .page .content-container {\n    width: 70%;\n    height: 80%;\n    top: 7%; }\n\n.left {\n  width: 50%;\n  height: 100%;\n  position: relative;\n  float: left; }\n\n.right {\n  width: 50%;\n  height: 100%;\n  float: right;\n  position: relative; }\n\n#intro {\n  width: 100%;\n  height: 100%;\n  position: absolute; }\n  #intro .bg {\n    width: 100%;\n    height: 100%;\n    background: url(\"/images/bg.jpg\") no-repeat;\n    background-size: cover;\n    position: absolute; }\n  #intro .rubix0,\n  #intro .rubix1,\n  #intro .rubix2,\n  #intro .rubix3,\n  #intro .rubix4,\n  #intro .rubix5,\n  #intro .rubix6,\n  #intro .rubix7,\n  #intro .rubix8 {\n    opacity: 0; }\n  #intro .text {\n    text-transform: uppercase;\n    color: #730065;\n    font-family: 'CaviarDreams-Regular';\n    font-size: 45px;\n    margin: 50px; }\n  #intro .rubix {\n    width: 370px;\n    height: auto;\n    position: absolute; }\n  #intro .rubix li {\n    list-style-type: none;\n    float: left; }\n  #intro .rubix-text {\n    position: relative;\n    padding: 0;\n    color: white;\n    font-family: 'CaviarDreams-Regular';\n    margin: 0 auto;\n    text-align: center;\n    right: -100px; }\n\n#intro.animate .rubix-cube {\n  width: 100px;\n  height: 100px;\n  margin: 5px;\n  overflow: hidden; }\n  #intro.animate .rubix-cube .rubix-text {\n    -webkit-animation: slideleft .5s 3s forwards; }\n  #intro.animate .rubix-cube.rubix0 {\n    background: url(\"/images/boxes/blue-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix1 {\n    background: url(\"/images/boxes/pink.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1.25s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix2 {\n    background: url(\"/images/boxes/green-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1.5s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix3 {\n    background: url(\"/images/boxes/green.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s .75s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix4 {\n    background: url(\"/images/boxes/tan.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s .5s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix5 {\n    background: url(\"/images/boxes/purple.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 1.75s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix6 {\n    background: url(\"/images/boxes/purple-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 2.5s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix7 {\n    background: url(\"/images/boxes/blue.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 2.25s ease-in;\n    opacity: 1; }\n  #intro.animate .rubix-cube.rubix8 {\n    background: url(\"/images/boxes/pink-pattern.png\") no-repeat;\n    background-size: contain;\n    background-position: center;\n    transition: opacity 1s 2s ease-in;\n    opacity: 1; }\n\n/*/ NAVIGATION /*/\n.navigation-container {\n  width: 100%;\n  height: 6.5vw; }\n\n.nav-home {\n  font-family: CaviarDreams-Regular;\n  font-size: 3vw;\n  text-align: center;\n  width: 50%;\n  color: #730065; }\n\n.navigation-ul {\n  position: absolute;\n  right: 0;\n  top: 0;\n  width: 50%;\n  height: 5vw;\n  margin-top: 0; }\n\n.nav-li {\n  list-style-type: none;\n  display: inline;\n  color: white; }\n\n.nav-item {\n  height: 30%;\n  width: 16%;\n  float: left;\n  margin: 0 1%;\n  padding: 3% 2%;\n  font-family: CaviarDreams-Regular;\n  font-size: 1.5vw;\n  text-align: center; }\n\n.nav-item:hover {\n  height: 80%;\n  transition: height .15s ease-in; }\n\n.about-category {\n  background: #FF6160; }\n\n.portfolio-category {\n  background: #C4C162; }\n\n.experience-category {\n  background: #2a577f; }\n\n.contact-category {\n  background: #71C5C9; }\n", ""]);
 
 	// exports
 
@@ -187,6 +187,54 @@
 
 /***/ },
 /* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "cbeb0696e6ff767a97d93f6d731bd336.eot";
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "35d29043113fe5c2b5f0bf31f5a689e9.woff";
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "dd1bf0404c02e3bf0ba2ba60b11bdbac.ttf";
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "bbc955303a5b784f19b89229904ba907.svg";
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4360c06c35f31eb1c8b48c2ecc9c8588.eot";
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4c769dfa341103331bed4e2584970bb8.woff";
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "aabaf16551afbfc1c175eb18a9aad432.ttf";
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e922de3c6e63c32382a42e4ed2eb1b08.svg";
+
+/***/ },
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -440,7 +488,7 @@
 
 
 /***/ },
-/* 5 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10277,7 +10325,7 @@
 
 
 /***/ },
-/* 6 */
+/* 14 */
 /***/ function(module, exports) {
 
 	"use strict";
