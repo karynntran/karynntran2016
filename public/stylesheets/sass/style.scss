@@ -27,7 +27,7 @@
 body {
 	padding: 0;
 	margin: 0;
-	font-family: CaviarDreams-Regular;
+	font-family: 'CaviarDreams-Regular';
 	width: 100%;
 	height: 100%;
 }
@@ -79,8 +79,7 @@ body {
 	.bg {
 		width: 100%;
 		height: 100%;
-		background: url('/images/bg.jpg') no-repeat;
-		background-size: cover;
+		background-color: #fff;
 		position: absolute;
 	}
 	.rubix0,
@@ -203,7 +202,7 @@ body {
 	height: 6.5vw;
 }
 .nav-home {
-	font-family: CaviarDreams-Regular;
+	font-family: 'CaviarDreams-Regular';
 	font-size: 3vw;
 	text-align: center;
 	width: 50%;
@@ -229,7 +228,7 @@ body {
     float: left;
     margin: 0 1%;
     padding: 3% 2%;
-	font-family: CaviarDreams-Regular;
+	font-family: 'CaviarDreams-Regular';
 	font-size: 1.5vw;
 	text-align: center;
 }

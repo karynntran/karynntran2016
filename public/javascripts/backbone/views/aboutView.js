@@ -1,13 +1,12 @@
-// var Backbone = require('backbone');
+// import $ from 'jquery';
+// import _ from 'lodash';
 
-// var MessageView = Backbone.View.extend({
-//   tagName: 'li',
-  
-//   render: function() {
-//     this.$el.text(this.model.get('message'));
-    
-//     return this;
-//   }
-// });
-
-// module.exports = MessageView;
+var AboutView = Backbone.View.extend({
+	testEl: $('.left'),
+	template: $('#test-template'),
+	templateContent: _.template($('#test-template').html()),
+	renderTest: function(){
+		this.testEl.html(this.templateContent);		
+		return this;
+	}
+});
