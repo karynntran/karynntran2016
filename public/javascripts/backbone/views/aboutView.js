@@ -1,12 +1,21 @@
-// import $ from 'jquery';
-// import _ from 'lodash';
+import $ from 'jquery';
+import _ from 'underscore';
+// import * as __ from 'lodash';
+// import 'lodash-es';
+import Backbone from 'backbone';
 
 var AboutView = Backbone.View.extend({
-	testEl: $('.left'),
-	template: $('#test-template'),
+	
+	el: $('left'),
 	templateContent: _.template($('#test-template').html()),
-	renderTest: function(){
-		this.testEl.html(this.templateContent);		
-		return this;
-	}
+	initialize: function(){
+    	alert("ugh");
+  	}
+	// $(el).html(template)
+	// testEl: $('.left'),
+	// templateContent: _.template($('#test-template'))
+	// // renderTest: function(){
+	// // 	this.testEl.html(this.templateContent);		
+	// // 	return this;
+	// // }
 });

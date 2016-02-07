@@ -53,14 +53,14 @@ module.exports = {
 	      '.js'
 	    ],
 	    alias: {
-  			'underscore' : 'lodash'
-	  	},
+  			'underscore' : 'underscore'
+	  	}
   	},
   	plugins: [
   		new webpack.ProvidePlugin({
-    		$ : "jquery",
-    		"_": "underscore",
-    		"backbone": "backbone"
-  	}) 
+    		$ : 'jquery',
+    		'_': 'underscore',
+    		'backbone': 'backbone'
+  		})
 	]
 }
