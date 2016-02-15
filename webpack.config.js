@@ -10,6 +10,11 @@ module.exports = {
 	},
 	module: {
 	  loaders: [
+      	{
+      		test: /\.js$/,
+            loader: 'babel',
+            exclude: 'node_modules'
+      	},
 		{
 		    test: /\.js$|\.jsx$/,
 		    loader: 'babel-loader',
@@ -20,14 +25,10 @@ module.exports = {
 		    test: /\.scss$/,
 		    loader: 'style!css!sass'
 		},
-        {
-			test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-			loader : 'file-loader'
-        },
-        {
-        	test: /\.(woff2?|svg|jpe?g|png|gif|ico)$/,
-        	loader: 'url?limit=10000'
-        },
+		{
+		    test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
+		    loader: 'url-loader?limit=30000&name=./src/assets.[ext]'
+		},
         { 
         	test: /\.ejs$/,
         	loader: "ejs-loader?variable=data" 
@@ -35,11 +36,6 @@ module.exports = {
         {
 	        test: /\.tpl$/,
 	        loader: 'underscore-loader?variable=data'
-      	},
-      	{
-      		test: /\.js$/,
-            loader: 'babel',
-            exclude: 'node_modules'
       	}
 	  ]
 	},
@@ -48,9 +44,11 @@ module.exports = {
 	      'src',
 	      'node_modules'
 	    ],
-	    extension: [
+	    extensions: [
 	      '',
-	      '.js'
+	      '.js',
+	      '.scss',
+	      '.jade'
 	    ],
 	    alias: {
   			'underscore' : 'underscore'

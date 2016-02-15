@@ -1,7 +1,5 @@
 import $ from 'jquery';
 import _ from 'underscore';
-// import * as __ from 'lodash';
-// import 'lodash-es';
 import Backbone from 'backbone';
 
 var AboutView = Backbone.View.extend({

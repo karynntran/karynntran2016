@@ -44,14 +44,14 @@ gulp.task('watch', function(){
 	      return console.log(err);
 	    }
 
-    gulp.watch('public/javascripts/*.js', ['js']);
 	gulp.watch('public/stylesheets/sass/**/*.scss', ['styles']);
+    gulp.watch('public/javascripts/*.js', ['js']);
 	gulp.watch('views/*.jade', ['jade']);
 
 	});
 });
 
 
-gulp.task('default',['start', 'watch'], function(){
+gulp.task('default',['start', 'styles', 'watch'], function(){
 
 });
