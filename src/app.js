@@ -1,4 +1,4 @@
-// var categories = ["home", "about", "portfolio", "experience", "contact"];
+// // var categories = ["home", "about", "portfolio", "experience", "contact"];
+// var data = './data.js';
 
-export default ["home", "about", "portfolio", "experience", "contact"];
-
+// export default data;

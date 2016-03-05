@@ -1,20 +1,19 @@
 var express = require('express');
 var router = express.Router();
-var json = require('./config.json');
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'karynn elio tran', rubixData: json['index'][1]['blocks']['rubix']});
+router.get('/', function (req, res){
+    res.render('index');
 });
 
-router.get('/navigation', function(req, res, next) {
-  res.render('navigation', { navigationData: json['navigation'][0]['blocks']['nav']});
-});
+// router.get('/navigation', function(req, res, next) {
+//   res.render('navigation', { navigationData: json['navigation'][0]['blocks']['nav']});
+// });
 
-router.get('/about', function(req, res, next) {
-  res.render('about', { navigationData: json['navigation'][0]['blocks']['nav']});
-});
+// router.get('/about', function(req, res, next) {
+//   res.render('about', { data: siteData});
+// });
 
 // router.get('/jsonData', function(req, res){
 //   res.send(jsonData);

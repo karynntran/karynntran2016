@@ -5,8 +5,9 @@ html
 
 	body
 		block content
-		script(id='test-template',type='template')
+		script(type="text/x-tmpl" id="test-template")
 			div Hello
+		script(src='vendor/tmpl.min.js')
 		script(src='javascripts/bundle.js')
 		script(src='//localhost:35729/livereload.js')
 		

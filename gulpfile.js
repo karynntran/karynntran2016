@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	exec = require('child_process').exec,
 	tinylr = require('tiny-lr'),
 	server = tinylr(),
-	jshint = require('gulp-jshint')
+	jshint = require('gulp-jshint'),
 	nodemon = require('nodemon');
 
 gulp.task('start', function () {
@@ -37,6 +37,16 @@ gulp.task('jade', function(){
 	gulp.src('views/*.jade')
 		.pipe( livereload( server ));
 })
+
+// gulp.task('templates', function() {
+//   var YOUR_LOCALS = { navigationData: json['navigation'][0]['blocks']['nav'] };
+
+//   gulp.src('views/*.jade')
+//     .pipe(jade({
+//       locals: YOUR_LOCALS
+//     }))
+//     .pipe(gulp.dest('views/html'))
+// });
 
 gulp.task('watch', function(){
     server.listen(35729, function (err) {
