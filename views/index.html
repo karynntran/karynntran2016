@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>REDO</title>
+	<title>boom</title>
 </head>
 <body>
-	<div class="test">WHAT</div>
-
-	<script type="text/x-tmpl" id="test-template">
-		<div>HEY</div>
+	<div class="test">yyo</div>
+	<div class="hey">test text</div>
+	<script type="text/x-tmpl" id="intro-template">
+		<ul class="cards-ul">
+			{% for (var i=0; i < data.length; i ++) { %}
+				<li class="flip-container">
+					<div class="flipper">
+						<div class="front" style="background: url('images/{%=data[i].front + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
+						<div class="back" style="background: url('images/{%=data[i].back + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
+					</div>
+				</li>
+			{% } %}
+		</ul>
 	</script>
 	<script type='text/javascript' src='vendor/tmpl.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='./javascripts/data.js' charset='utf-8'></script>

@@ -10,8 +10,8 @@ function render(element, template, data) {
 
 
 document.addEventListener("DOMContentLoaded", function (){
-	console.log('ready');
-	render('.test', 'test-template', data['hello']);
+	console.log('hi');
+	render('.test', 'intro-template', data.landing.intro);
 
 });
 

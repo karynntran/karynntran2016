@@ -22,6 +22,13 @@ gulp.task('styles', function(){
         .pipe( livereload( server ));
 });
 
+gulp.task('html', function() {
+    return gulp.src([
+        'views/index.html'
+    ])
+    .pipe(livereload());
+});
+
 gulp.task('js', function(){
 	gulp.src('public/javascripts/*.js')
 		.pipe( livereload( server ));
@@ -38,16 +45,6 @@ gulp.task('jade', function(){
 		.pipe( livereload( server ));
 })
 
-// gulp.task('templates', function() {
-//   var YOUR_LOCALS = { navigationData: json['navigation'][0]['blocks']['nav'] };
-
-//   gulp.src('views/*.jade')
-//     .pipe(jade({
-//       locals: YOUR_LOCALS
-//     }))
-//     .pipe(gulp.dest('views/html'))
-// });
-
 gulp.task('watch', function(){
     server.listen(35729, function (err) {
 	    if (err) {
@@ -56,7 +53,8 @@ gulp.task('watch', function(){
 
 	gulp.watch('public/stylesheets/sass/**/*.scss', ['styles']);
     gulp.watch('public/javascripts/*.js', ['js']);
-	gulp.watch('views/*.jade', ['jade']);
+	gulp.watch('views/*.jade', ['jade', 'styles']);
+	gulp.watch('views/*.html', ['html', 'styles']);
 
 	});
 });
