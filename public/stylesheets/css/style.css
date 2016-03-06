@@ -16,6 +16,22 @@
   font-stretch: normal;
   unicode-range: U+0020-2265; }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  20% {
+    transform: translateY(-10px); }
+  40% {
+    transform: translateY(-5px); }
+  50% {
+    transform: translateY(-10px); }
+  60% {
+    transform: translateY(-5px); }
+  80% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(-10px); } }
+
 body {
   padding: 0;
   margin: 0;
@@ -35,7 +51,7 @@ body {
   /* hide back of pane during swap */
   /* front pane, placed above back */
   /* back, initially hidden pane */ }
-  #app .intro {
+  #app .page {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -52,15 +68,27 @@ body {
     width: 534px;
     padding: 10px;
     height: 100px;
+    opacity: 0; }
+  #app .last-name {
     font-size: 29px;
     letter-spacing: 44px;
     text-align: justify;
     text-transform: uppercase;
-    color: darkgray;
-    opacity: 0; }
-    #app .intro-text.init-intro {
-      opacity: 1;
-      transition: opacity 1s 2s; }
+    color: darkgray; }
+  #app .start {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: purple;
+    font-size: 15px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    bottom: 0;
+    top: 25px;
+    cursor: pointer; }
   #app .cards-ul {
     padding: 0;
     margin: 0 auto; }
@@ -94,3 +122,14 @@ body {
   transform: rotateY(180deg);
   transition: transform 1s;
   -webkit-transition: transform 1s; }
+
+#app.on .flipper.init-intro:hover {
+  transform: rotateY(0deg); }
+
+#app.on .intro-text.init-intro {
+  opacity: 1;
+  transition: opacity 1s 1.5s; }
+
+#app.on .start.init-intro {
+  opacity: 1;
+  animation: bounce 2s 2s infinite; }

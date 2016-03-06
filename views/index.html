@@ -2,31 +2,34 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>boom</title>
+	<title>karynn elio tran || web developer</title>
 </head>
 <body>
 	<div id="app">
-		<div class="intro">
-			<div class="intro-container vertical">
-				<div class="intro-grid"></div>
-				<div class="intro-text">elio tran</div>
-			</div>
-		</div>
+		<div class="page"></div>
 	</div>
 
 	<script type="text/x-tmpl" id="intro-template">
-		<ul class="cards-ul">
-			{% for (var i=0; i < data.length; i ++) { %}
-				<li>
-					<div class="flip-container">
-						<div class="flipper">
-							<div class="front" style="background: url('images/{%=data[i].front + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
-							<div class="back" style="background: url('images/{%=data[i].back + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
-						</div>
-					</div>
-				</li>
-			{% } %}
-		</ul>
+		<div class="intro-container vertical">
+			<div class="intro-grid">
+				<ul class="cards-ul">
+					{% for (var i=0; i < data.length; i ++) { %}
+						<li>
+							<div class="flip-container">
+								<div class="flipper">
+									<div class="front" style="background: url('images/{%=data[i].front + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
+									<div class="back" style="background: url('images/{%=data[i].back + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
+								</div>
+							</div>
+						</li>
+					{% } %}
+				</ul>
+			</div>
+			<div class="intro-text">
+				<div class="last-name"> elio tran</div>
+				<div class="start">Hello!</div>
+			</div>
+		</div>
 	</script>
 	<script type='text/javascript' src='vendor/tmpl.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='./javascripts/data.js' charset='utf-8'></script>

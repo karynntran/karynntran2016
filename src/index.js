@@ -6,7 +6,7 @@ tmpl.arg = 'data';
 
 $(document).ready(function (){
 	$('#app').addClass('on');
-	intro.render('.intro-grid', 'intro-template', data.landing.intro);
+	intro.render('.page', 'intro-template', data.landing.intro);
 	setTimeout(function(){
 		intro.flipper();
 	},500)

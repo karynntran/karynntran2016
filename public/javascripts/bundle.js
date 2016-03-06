@@ -70,7 +70,7 @@
 
 	$(document).ready(function () {
 		$('#app').addClass('on');
-		intro.render('.intro-grid', 'intro-template', data.landing.intro);
+		intro.render('.page', 'intro-template', data.landing.intro);
 		setTimeout(function () {
 			intro.flipper();
 		}, 500);
@@ -1694,18 +1694,19 @@
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	exports.render = render;
 	exports.flipper = flipper;
 	function render(element, template, data) {
-	  $(element).html(tmpl(template, data));
-	  console.log("working");
+		$(element).html(tmpl(template, data));
+		console.log("working");
 	}
 
 	function flipper() {
-	  $('.flipper').addClass('init-intro');
-	  $('.intro-text').addClass('init-intro');
+		$('.flipper').addClass('init-intro');
+		$('.intro-text').addClass('init-intro');
+		$('.start').addClass('init-intro');
 	}
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
@@ -1744,7 +1745,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'CaviarDreams-Bold';\n  src: url(" + __webpack_require__(7) + ");\n  src: url(" + __webpack_require__(7) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(8) + ") format(\"woff\"), url(" + __webpack_require__(9) + ") format(\"truetype\"), url(" + __webpack_require__(10) + "#CaviarDreams-Bold) format(\"svg\");\n  font-weight: 700;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\n@font-face {\n  font-family: 'CaviarDreams-Regular';\n  src: url(" + __webpack_require__(11) + ");\n  src: url(" + __webpack_require__(11) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(12) + ") format(\"woff\"), url(" + __webpack_require__(13) + ") format(\"truetype\"), url(" + __webpack_require__(14) + "#CaviarDreams-Regular) format(\"svg\");\n  font-weight: 400;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: 'CaviarDreams-Regular';\n  width: 100%;\n  height: 100%; }\n\n.vertical {\n  position: relative;\n  top: 50%;\n  transform: translateY(-50%); }\n\n#app {\n  /*/ INTRO BOXES /*/\n  /* entire container, keeps perspective */\n  /* flip the pane when hovered */\n  /* hide back of pane during swap */\n  /* front pane, placed above back */\n  /* back, initially hidden pane */ }\n  #app .intro {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0; }\n  #app .intro-container {\n    width: 510px;\n    height: 345px;\n    margin: 0 auto; }\n  #app .intro-grid {\n    width: 100%;\n    height: 100%; }\n  #app .intro-text {\n    width: 534px;\n    padding: 10px;\n    height: 100px;\n    font-size: 29px;\n    letter-spacing: 44px;\n    text-align: justify;\n    text-transform: uppercase;\n    color: darkgray;\n    opacity: 0; }\n    #app .intro-text.init-intro {\n      opacity: 1;\n      transition: opacity 1s 7s; }\n  #app .cards-ul {\n    padding: 0;\n    margin: 0 auto; }\n  #app .cards-ul li {\n    list-style-type: none;\n    float: left;\n    margin: 10px; }\n  #app .flip-container {\n    perspective: 1000;\n    list-style-type: none; }\n  #app .flipper {\n    transform: rotateY(0deg);\n    transform-style: preserve-3d;\n    position: relative; }\n  #app .flip-container, #app .flipper, #app .front, #app .back {\n    width: 150px;\n    height: 150px; }\n  #app .front, #app .back {\n    backface-visibility: hidden;\n    position: absolute;\n    top: 0;\n    left: 0; }\n  #app .front {\n    z-index: 2;\n    /* for firefox 31 */\n    transform: rotateY(0deg); }\n  #app .back {\n    transform: rotateY(180deg); }\n\n#app.on .flipper.init-intro {\n  transform: rotateY(180deg);\n  transition: transform 1s;\n  -webkit-transition: transform 1s; }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'CaviarDreams-Bold';\n  src: url(" + __webpack_require__(7) + ");\n  src: url(" + __webpack_require__(7) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(8) + ") format(\"woff\"), url(" + __webpack_require__(9) + ") format(\"truetype\"), url(" + __webpack_require__(10) + "#CaviarDreams-Bold) format(\"svg\");\n  font-weight: 700;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\n@font-face {\n  font-family: 'CaviarDreams-Regular';\n  src: url(" + __webpack_require__(11) + ");\n  src: url(" + __webpack_require__(11) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(12) + ") format(\"woff\"), url(" + __webpack_require__(13) + ") format(\"truetype\"), url(" + __webpack_require__(14) + "#CaviarDreams-Regular) format(\"svg\");\n  font-weight: 400;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\n@keyframes bounce {\n  0% {\n    transform: translateY(0); }\n  20% {\n    transform: translateY(-10px); }\n  40% {\n    transform: translateY(-5px); }\n  50% {\n    transform: translateY(-10px); }\n  60% {\n    transform: translateY(-5px); }\n  80% {\n    transform: translateY(-10px); }\n  100% {\n    transform: translateY(-10px); } }\n\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: 'CaviarDreams-Regular';\n  width: 100%;\n  height: 100%; }\n\n.vertical {\n  position: relative;\n  top: 50%;\n  transform: translateY(-50%); }\n\n#app {\n  /*/ INTRO BOXES /*/\n  /* entire container, keeps perspective */\n  /* flip the pane when hovered */\n  /* hide back of pane during swap */\n  /* front pane, placed above back */\n  /* back, initially hidden pane */ }\n  #app .page {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0; }\n  #app .intro-container {\n    width: 510px;\n    height: 345px;\n    margin: 0 auto; }\n  #app .intro-grid {\n    width: 100%;\n    height: 100%; }\n  #app .intro-text {\n    width: 534px;\n    padding: 10px;\n    height: 100px;\n    opacity: 0; }\n  #app .last-name {\n    font-size: 29px;\n    letter-spacing: 44px;\n    text-align: justify;\n    text-transform: uppercase;\n    color: darkgray; }\n  #app .start {\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    background-color: purple;\n    font-size: 15px;\n    color: white;\n    margin: 0 auto;\n    text-align: center;\n    line-height: 50px;\n    position: relative;\n    bottom: 0;\n    top: 25px;\n    cursor: pointer; }\n  #app .cards-ul {\n    padding: 0;\n    margin: 0 auto; }\n  #app .cards-ul li {\n    list-style-type: none;\n    float: left;\n    margin: 10px; }\n  #app .flip-container {\n    perspective: 1000;\n    list-style-type: none; }\n  #app .flipper {\n    transform: rotateY(0deg);\n    transform-style: preserve-3d;\n    position: relative; }\n  #app .flip-container, #app .flipper, #app .front, #app .back {\n    width: 150px;\n    height: 150px; }\n  #app .front, #app .back {\n    backface-visibility: hidden;\n    position: absolute;\n    top: 0;\n    left: 0; }\n  #app .front {\n    z-index: 2;\n    /* for firefox 31 */\n    transform: rotateY(0deg); }\n  #app .back {\n    transform: rotateY(180deg); }\n\n#app.on .flipper.init-intro {\n  transform: rotateY(180deg);\n  transition: transform 1s;\n  -webkit-transition: transform 1s; }\n\n#app.on .flipper.init-intro:hover {\n  transform: rotateY(0deg); }\n\n#app.on .intro-text.init-intro {\n  opacity: 1;\n  transition: opacity 1s 1.5s; }\n\n#app.on .start.init-intro {\n  opacity: 1;\n  animation: bounce 2s 2s infinite; }\n", ""]);
 
 	// exports
 

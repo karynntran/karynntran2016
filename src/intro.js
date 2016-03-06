@@ -6,6 +6,7 @@ export function render(element, template, data) {
 export function flipper(){
 	$('.flipper').addClass('init-intro');
 	$('.intro-text').addClass('init-intro');
+	$('.start').addClass('init-intro');
 }
 
 
