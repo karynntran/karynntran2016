@@ -1,17 +1,14 @@
 import 'jquery';
+import * as intro from './intro.js';
 import '../public/stylesheets/sass/style.scss';
 
 tmpl.arg = 'data';
 
-function render(element, template, data) {
-    $(element).html(tmpl(template, data));
-    console.log("working")
-}
-
-
-document.addEventListener("DOMContentLoaded", function (){
-	console.log('hi');
-	render('.test', 'intro-template', data.landing.intro);
-
+$(document).ready(function (){
+	$('#app').addClass('on');
+	intro.render('.intro-grid', 'intro-template', data.landing.intro);
+	setTimeout(function(){
+		intro.flipper();
+	},500)
 });
 

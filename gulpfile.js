@@ -51,10 +51,10 @@ gulp.task('watch', function(){
 	      return console.log(err);
 	    }
 
-	gulp.watch('public/stylesheets/sass/**/*.scss', ['styles']);
     gulp.watch('public/javascripts/*.js', ['js']);
 	gulp.watch('views/*.jade', ['jade', 'styles']);
 	gulp.watch('views/*.html', ['html', 'styles']);
+	gulp.watch('public/stylesheets/sass/**/*.scss', ['styles']);
 
 	});
 });

@@ -49,16 +49,11 @@ module.exports = {
 	      '.js',
 	      '.scss',
 	      '.jade'
-	    ],
-	    alias: {
-  			'underscore' : 'underscore'
-	  	}
+	    ]
   	},
   	plugins: [
   		new webpack.ProvidePlugin({
-    		$ : 'jquery',
-    		'_': 'underscore',
-    		'backbone': 'backbone'
+    		$ : 'jquery'
   		})
 	]
 }
