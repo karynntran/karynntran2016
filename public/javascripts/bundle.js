@@ -70,37 +70,41 @@
 
 	$(document).ready(function () {
 		$('#app').addClass('on');
-		// intro.render('.content', 'intro-template', data.landing.intro);
+		intro.prepend('.content-container', 'intro-template', data.landing.intro);
+		setTimeout(function () {
+			intro.flipper();
+		}, 500);
 
-		// $('.intro-container').on('click', function(){
-		intro.prepend('.content-container', 'nav-template', data.nav);
+		$('.intro-container').on('click', function () {
+			$(this).hide();
+			intro.prepend('.content-container', 'nav-template', data.nav);
+			intro.render('.padded-content', 'welcome-template', data.nav);
 
-		var categories = ["about", "work", "portfolio", "contact"];
+			var categories = ["about", "work", "portfolio", "contact"];
 
-		var _loop = function _loop() {
-			var category = categories[i];
-			$('.' + category).click(function () {
-				$('.content').removeClass('about portfolio work contact');
-				$('.nav-vertical').removeClass('about portfolio work contact');
-				$('.' + category + '-nav-div .nav-vertical').addClass('' + category);
-				setTimeout(function () {
-					$('.content').addClass('' + category);
-				}, 300);
-			});
-		};
+			var _loop = function _loop() {
+				var category = categories[i];
+				$('.' + category).click(function () {
+					$('.content').removeClass('about portfolio work contact');
+					$('.nav-vertical').removeClass('about portfolio work contact');
+					$('.' + category + '-nav-div .nav-vertical').addClass('' + category);
+					setTimeout(function () {
+						$('.content').addClass('' + category);
+						intro.render('.padded-content', category + '-template', data.nav);
+					}, 300);
+				});
+			};
 
-		for (var i = 0; i < categories.length; i++) {
-			_loop();
-		}
+			for (var i = 0; i < categories.length; i++) {
+				_loop();
+			}
+		});
 
 		// $( '.about' ).click(function() {
 		//   $('.content').addClass('about');
 		// });
 
 		// })
-		// setTimeout(function(){
-		// 	intro.flipper();
-		// },500)
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
@@ -9622,7 +9626,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'CaviarDreams-Bold';\n  src: url(" + __webpack_require__(7) + ");\n  src: url(" + __webpack_require__(7) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(8) + ") format(\"woff\"), url(" + __webpack_require__(9) + ") format(\"truetype\"), url(" + __webpack_require__(10) + "#CaviarDreams-Bold) format(\"svg\");\n  font-weight: 700;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\n@font-face {\n  font-family: 'CaviarDreams-Regular';\n  src: url(" + __webpack_require__(11) + ");\n  src: url(" + __webpack_require__(11) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(12) + ") format(\"woff\"), url(" + __webpack_require__(13) + ") format(\"truetype\"), url(" + __webpack_require__(14) + "#CaviarDreams-Regular) format(\"svg\");\n  font-weight: 400;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\n@keyframes bounce {\n  0% {\n    transform: translateY(0); }\n  20% {\n    transform: translateY(-10px); }\n  40% {\n    transform: translateY(-5px); }\n  50% {\n    transform: translateY(-10px); }\n  60% {\n    transform: translateY(-5px); }\n  80% {\n    transform: translateY(-10px); }\n  100% {\n    transform: translateY(-10px); } }\n\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: 'CaviarDreams-Regular';\n  width: 100%;\n  height: 100%; }\n\n.vertical {\n  position: relative;\n  top: 50%;\n  transform: translateY(-50%); }\n\n#app {\n  /*/ intro /*/\n  /*/ INTRO BOXES /*/\n  /*/ NAV /*/ }\n  #app .page {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0; }\n  #app .content-container {\n    width: 80%;\n    height: 85%;\n    position: relative;\n    margin: 3% auto; }\n  #app .content {\n    position: relative; }\n  #app .intro-container {\n    width: 510px;\n    height: 345px;\n    margin: 0 auto; }\n  #app .intro-grid {\n    width: 100%;\n    height: 100%; }\n  #app .intro-text {\n    width: 534px;\n    padding: 10px;\n    height: 100px;\n    opacity: 0; }\n  #app .last-name {\n    font-size: 29px;\n    letter-spacing: 44px;\n    text-align: justify;\n    text-transform: uppercase;\n    color: #191919; }\n  #app .start {\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    background-color: #7f2a57;\n    font-size: 15px;\n    color: white;\n    margin: 0 auto;\n    text-align: center;\n    line-height: 50px;\n    position: relative;\n    bottom: 0;\n    top: 25px;\n    cursor: pointer; }\n  #app .cards-ul {\n    padding: 0;\n    margin: 0 auto; }\n  #app .cards-ul li {\n    list-style-type: none;\n    float: left;\n    margin: 10px; }\n  #app .flip-container {\n    perspective: 1000;\n    list-style-type: none; }\n  #app .flipper {\n    transform: rotateY(0deg);\n    transform-style: preserve-3d;\n    position: relative; }\n  #app .flip-container, #app .flipper, #app .front, #app .back {\n    width: 150px;\n    height: 150px; }\n  #app .front, #app .back {\n    backface-visibility: hidden;\n    position: absolute;\n    top: 0;\n    left: 0; }\n  #app .front {\n    z-index: 2;\n    transform: rotateY(0deg); }\n  #app .back {\n    transform: rotateY(180deg); }\n  #app .logo {\n    float: right;\n    font-size: 40px;\n    color: #191919; }\n  #app .nav {\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 10%; }\n  #app .nav-ul {\n    padding: 0;\n    height: 100%; }\n  #app .nav-div {\n    height: 35px;\n    width: 100px;\n    float: left;\n    display: inline; }\n  #app .nav-vertical {\n    width: 2px;\n    margin: 0 auto; }\n  #app .nav-li {\n    list-style-type: none;\n    font-size: 15px;\n    text-align: center;\n    margin: 2.5% 2%;\n    text-transform: uppercase; }\n    #app .nav-li.about:hover {\n      background: #FF6160;\n      color: white; }\n    #app .nav-li.portfolio:hover {\n      background: #C4C65D;\n      color: white; }\n    #app .nav-li.work:hover {\n      background: #7f2a57;\n      color: white; }\n    #app .nav-li.contact:hover {\n      background: #71c5c9;\n      color: white; }\n\n#app.on .flipper.init-intro {\n  transform: rotateY(180deg);\n  transition: transform 1s;\n  -webkit-transition: transform 1s; }\n\n#app.on .flipper.init-intro:hover {\n  transform: rotateY(0deg); }\n\n#app.on .intro-text.init-intro {\n  opacity: 1;\n  transition: opacity 1s 1.5s; }\n\n#app.on .start.init-intro {\n  opacity: 1;\n  animation: bounce 2s 2s infinite; }\n\n#app.on .content {\n  border: 0;\n  height: 0;\n  width: 100%;\n  transition: all .25s linear; }\n  #app.on .content.about {\n    height: 85%;\n    width: 100%;\n    border: 2px solid #FF6160;\n    transition: all .25s .35s linear; }\n  #app.on .content.portfolio {\n    height: 85%;\n    width: 100%;\n    border: 2px solid #C4C65D;\n    transition: all .25s .35s linear; }\n  #app.on .content.work {\n    height: 85%;\n    width: 100%;\n    border: 2px solid #7f2a57;\n    transition: all .25s .35s linear; }\n  #app.on .content.contact {\n    height: 85%;\n    width: 100%;\n    border: 2px solid #71c5c9;\n    transition: all .25s .35s linear; }\n\n#app.on .nav-vertical {\n  height: 0;\n  transition: all .25s .35s linear; }\n  #app.on .nav-vertical.about {\n    height: 38px;\n    background: #FF6160;\n    transition: all .25s linear; }\n  #app.on .nav-vertical.portfolio {\n    height: 38px;\n    background: #C4C65D;\n    transition: all .25s linear; }\n  #app.on .nav-vertical.work {\n    height: 38px;\n    background: #7f2a57;\n    transition: all .25s linear; }\n  #app.on .nav-vertical.contact {\n    height: 38px;\n    background: #71c5c9;\n    transition: all .25s linear; }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'CaviarDreams-Bold';\n  src: url(" + __webpack_require__(7) + ");\n  src: url(" + __webpack_require__(7) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(8) + ") format(\"woff\"), url(" + __webpack_require__(9) + ") format(\"truetype\"), url(" + __webpack_require__(10) + "#CaviarDreams-Bold) format(\"svg\");\n  font-weight: 700;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\n@font-face {\n  font-family: 'CaviarDreams-Regular';\n  src: url(" + __webpack_require__(11) + ");\n  src: url(" + __webpack_require__(11) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(12) + ") format(\"woff\"), url(" + __webpack_require__(13) + ") format(\"truetype\"), url(" + __webpack_require__(14) + "#CaviarDreams-Regular) format(\"svg\");\n  font-weight: 400;\n  font-style: normal;\n  font-stretch: normal;\n  unicode-range: U+0020-2265; }\n\n@keyframes bounce {\n  0% {\n    transform: translateY(0); }\n  20% {\n    transform: translateY(-10px); }\n  40% {\n    transform: translateY(-5px); }\n  50% {\n    transform: translateY(-10px); }\n  60% {\n    transform: translateY(-5px); }\n  80% {\n    transform: translateY(-10px); }\n  100% {\n    transform: translateY(-10px); } }\n\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: 'CaviarDreams-Regular';\n  width: 100%;\n  height: 100%; }\n\n.vertical {\n  position: relative;\n  top: 50%;\n  transform: translateY(-50%); }\n\n#app {\n  /*/ intro /*/\n  /*/ INTRO BOXES /*/\n  /*/ NAV /*/ }\n  #app .page {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0; }\n  #app .content-container {\n    width: 80%;\n    height: 85%;\n    position: relative;\n    margin: 3% auto; }\n  #app .content {\n    position: relative; }\n  #app .padded-content {\n    padding: 5%; }\n  #app .intro-container {\n    width: 510px;\n    height: 345px;\n    margin: 0 auto; }\n  #app .intro-grid {\n    width: 100%;\n    height: 100%; }\n  #app .intro-text {\n    width: 534px;\n    padding: 10px;\n    height: 100px;\n    opacity: 0; }\n  #app .last-name {\n    font-size: 29px;\n    letter-spacing: 44px;\n    text-align: justify;\n    text-transform: uppercase;\n    color: #191919; }\n  #app .start {\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    background-color: #7f2a57;\n    font-size: 15px;\n    color: white;\n    margin: 0 auto;\n    text-align: center;\n    line-height: 50px;\n    position: relative;\n    bottom: 0;\n    top: 25px;\n    cursor: pointer; }\n  #app .cards-ul {\n    padding: 0;\n    margin: 0 auto; }\n  #app .cards-ul li {\n    list-style-type: none;\n    float: left;\n    margin: 10px; }\n  #app .flip-container {\n    perspective: 1000;\n    list-style-type: none; }\n  #app .flipper {\n    transform: rotateY(0deg);\n    transform-style: preserve-3d;\n    position: relative; }\n  #app .flip-container, #app .flipper, #app .front, #app .back {\n    width: 150px;\n    height: 150px; }\n  #app .front, #app .back {\n    backface-visibility: hidden;\n    position: absolute;\n    top: 0;\n    left: 0; }\n  #app .front {\n    z-index: 2;\n    transform: rotateY(0deg); }\n  #app .back {\n    transform: rotateY(180deg); }\n  #app .logo {\n    float: right;\n    font-size: 40px;\n    color: #191919; }\n  #app .nav {\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 10%; }\n  #app .nav-ul {\n    padding: 0;\n    height: 100%; }\n  #app .nav-div {\n    height: 35px;\n    width: 100px;\n    float: left;\n    display: inline; }\n  #app .nav-vertical {\n    width: 2px;\n    margin: 0 auto; }\n  #app .nav-li {\n    list-style-type: none;\n    font-size: 15px;\n    text-align: center;\n    margin: 2.5% 2%;\n    text-transform: uppercase; }\n    #app .nav-li.about:hover {\n      background: #FF6160;\n      color: white; }\n    #app .nav-li.portfolio:hover {\n      background: #C4C65D;\n      color: white; }\n    #app .nav-li.work:hover {\n      background: #7f2a57;\n      color: white; }\n    #app .nav-li.contact:hover {\n      background: #71c5c9;\n      color: white; }\n\n#app.on .flipper.init-intro {\n  transform: rotateY(180deg);\n  transition: transform 1s;\n  -webkit-transition: transform 1s; }\n\n#app.on .flipper.init-intro:hover {\n  transform: rotateY(0deg); }\n\n#app.on .intro-text.init-intro {\n  opacity: 1;\n  transition: opacity 1s 1.5s; }\n\n#app.on .start.init-intro {\n  opacity: 1;\n  animation: bounce 2s 2s infinite; }\n\n#app.on .content {\n  border: 0;\n  height: 0;\n  width: 100%;\n  transition: all .25s linear;\n  border: 2px solid transparent; }\n  #app.on .content.about {\n    height: 85%;\n    width: 100%;\n    border: 2px solid #FF6160;\n    transition: all .25s .35s linear; }\n  #app.on .content.portfolio {\n    height: 85%;\n    width: 100%;\n    border: 2px solid #C4C65D;\n    transition: all .25s .35s linear; }\n  #app.on .content.work {\n    height: 85%;\n    width: 100%;\n    border: 2px solid #7f2a57;\n    transition: all .25s .35s linear; }\n  #app.on .content.contact {\n    height: 85%;\n    width: 100%;\n    border: 2px solid #71c5c9;\n    transition: all .25s .35s linear; }\n\n#app.on .nav-vertical {\n  height: 0;\n  transition: all .25s .35s linear; }\n  #app.on .nav-vertical.about {\n    height: 38px;\n    background: #FF6160;\n    transition: all .25s linear; }\n  #app.on .nav-vertical.portfolio {\n    height: 38px;\n    background: #C4C65D;\n    transition: all .25s linear; }\n  #app.on .nav-vertical.work {\n    height: 38px;\n    background: #7f2a57;\n    transition: all .25s linear; }\n  #app.on .nav-vertical.contact {\n    height: 38px;\n    background: #71c5c9;\n    transition: all .25s linear; }\n", ""]);
 
 	// exports
 

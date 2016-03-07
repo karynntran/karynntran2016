@@ -61,6 +61,8 @@ body {
     margin: 3% auto; }
   #app .content {
     position: relative; }
+  #app .padded-content {
+    padding: 5%; }
   #app .intro-container {
     width: 510px;
     height: 345px;
