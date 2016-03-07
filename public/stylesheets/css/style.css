@@ -45,18 +45,22 @@ body {
   transform: translateY(-50%); }
 
 #app {
+  /*/ intro /*/
   /*/ INTRO BOXES /*/
-  /* entire container, keeps perspective */
-  /* flip the pane when hovered */
-  /* hide back of pane during swap */
-  /* front pane, placed above back */
-  /* back, initially hidden pane */ }
+  /*/ NAV /*/ }
   #app .page {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0; }
+  #app .content-container {
+    width: 80%;
+    height: 85%;
+    position: relative;
+    margin: 3% auto; }
+  #app .content {
+    position: relative; }
   #app .intro-container {
     width: 510px;
     height: 345px;
@@ -74,12 +78,12 @@ body {
     letter-spacing: 44px;
     text-align: justify;
     text-transform: uppercase;
-    color: darkgray; }
+    color: #191919; }
   #app .start {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: purple;
+    background-color: #7f2a57;
     font-size: 15px;
     color: white;
     margin: 0 auto;
@@ -113,10 +117,47 @@ body {
     left: 0; }
   #app .front {
     z-index: 2;
-    /* for firefox 31 */
     transform: rotateY(0deg); }
   #app .back {
     transform: rotateY(180deg); }
+  #app .logo {
+    float: right;
+    font-size: 40px;
+    color: #191919; }
+  #app .nav {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 10%; }
+  #app .nav-ul {
+    padding: 0;
+    height: 100%; }
+  #app .nav-div {
+    height: 35px;
+    width: 100px;
+    float: left;
+    display: inline; }
+  #app .nav-vertical {
+    width: 2px;
+    margin: 0 auto; }
+  #app .nav-li {
+    list-style-type: none;
+    font-size: 15px;
+    text-align: center;
+    margin: 2.5% 2%;
+    text-transform: uppercase; }
+    #app .nav-li.about:hover {
+      background: #FF6160;
+      color: white; }
+    #app .nav-li.portfolio:hover {
+      background: #C4C65D;
+      color: white; }
+    #app .nav-li.work:hover {
+      background: #7f2a57;
+      color: white; }
+    #app .nav-li.contact:hover {
+      background: #71c5c9;
+      color: white; }
 
 #app.on .flipper.init-intro {
   transform: rotateY(180deg);
@@ -133,3 +174,50 @@ body {
 #app.on .start.init-intro {
   opacity: 1;
   animation: bounce 2s 2s infinite; }
+
+#app.on .content {
+  border: 0;
+  height: 0;
+  width: 100%;
+  transition: all .25s linear;
+  border: 2px solid transparent; }
+  #app.on .content.about {
+    height: 85%;
+    width: 100%;
+    border: 2px solid #FF6160;
+    transition: all .25s .35s linear; }
+  #app.on .content.portfolio {
+    height: 85%;
+    width: 100%;
+    border: 2px solid #C4C65D;
+    transition: all .25s .35s linear; }
+  #app.on .content.work {
+    height: 85%;
+    width: 100%;
+    border: 2px solid #7f2a57;
+    transition: all .25s .35s linear; }
+  #app.on .content.contact {
+    height: 85%;
+    width: 100%;
+    border: 2px solid #71c5c9;
+    transition: all .25s .35s linear; }
+
+#app.on .nav-vertical {
+  height: 0;
+  transition: all .25s .35s linear; }
+  #app.on .nav-vertical.about {
+    height: 38px;
+    background: #FF6160;
+    transition: all .25s linear; }
+  #app.on .nav-vertical.portfolio {
+    height: 38px;
+    background: #C4C65D;
+    transition: all .25s linear; }
+  #app.on .nav-vertical.work {
+    height: 38px;
+    background: #7f2a57;
+    transition: all .25s linear; }
+  #app.on .nav-vertical.contact {
+    height: 38px;
+    background: #71c5c9;
+    transition: all .25s linear; }

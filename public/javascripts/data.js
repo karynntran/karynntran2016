@@ -26,5 +26,11 @@ var data = {
 				"back" : "intro6b"
 			}
 		]
-	} 
+	},
+	"nav" : [
+		"about",
+		"portfolio",
+		"work",
+		"contact"
+	]
 }

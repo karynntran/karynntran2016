@@ -51,6 +51,7 @@
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^2.1.1",
     "jade-browser": "0.0.14",
+    "jquery": "^2.2.1",
     "jshint": "^2.8.0",
     "lodash": "^4.2.1",
     "lodash-es": "^4.2.1",
