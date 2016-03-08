@@ -74,6 +74,12 @@ body {
 	.padded-content {
 		padding: 5%;
 	}
+	.footer {
+		position: absolute;
+		bottom: 0;
+		height: 0%;
+		width: 100%;
+	}
 
 	/*/ intro /*/
 	.intro-container {
@@ -228,34 +234,87 @@ body {
 	    }
 	}
 	.content {
-		border: 0;
 		height: 0;
 		width: 100%;
 		transition: all .25s linear;
-		border: 2px solid transparent;
+		// border: 2px solid transparent;
+		// background: transparent;
+		z-index: 10;
 		&.about {
 			height: 85%;
 			width: 100%;
 			border: 2px solid $pink;
+			background: #fff;
 			transition: all .25s .35s linear; 
 		}
 		&.portfolio {
 			height: 85%;
 			width: 100%;
 			border: 2px solid $green;
+			background: #fff;
 			transition: all .25s .35s linear; 
 		}
 		&.work {
 			height: 85%;
 			width: 100%;
 			border: 2px solid $purple;
+			background: #fff;
 			transition: all .25s .35s linear; 
 		}
 		&.contact {
 			height: 85%;
 			width: 100%;
 			border: 2px solid $blue;
+			background: #fff;
 			transition: all .25s .35s linear; 
+		}
+	}
+	.footer {
+		height:0;
+		width: 100%;
+		&.about {
+			background: linear-gradient(
+		      rgba(255, 97, 96, 0.25), 
+		      rgba(255, 97, 96, 0.25)
+		    ),
+			url(../../images/test.jpg) no-repeat top left;
+			background-size: cover;
+			border-top: 2px solid $pink;
+			height: 50%;
+			transition: all .25s .5s linear; 
+		}
+		&.portfolio {
+			background: linear-gradient(
+		      rgba(196, 198, 93, 0.25), 
+		      rgba(196, 198, 93, 0.25)
+		    ),
+			url(../../images/test2.jpg) no-repeat top left;
+			background-size: cover;
+			border-top: 2px solid $green;
+			height: 50%;
+			transition: all .25s .5s linear; 
+		}
+		&.work {
+			background: linear-gradient(
+		      rgba(127, 42, 87, 0.25), 
+		      rgba(127, 42, 87, 0.25)
+		    ),
+			url(../../images/test3.jpg) no-repeat top left;
+			background-size: cover;
+			border-top: 2px solid $purple;
+			height: 50%;
+			transition: all .25s .5s linear; 
+		}
+		&.contact {
+			background: linear-gradient(
+		      rgba(113,197,201, 0.25), 
+		      rgba(113,197,201, 0.25)
+		    ),
+			url(../../images/test4.jpg) no-repeat bottom left;
+			background-size: cover;
+			border-top: 2px solid $blue;
+			height: 50%;
+			transition: all .25s .5s linear; 
 		}
 	}
 	.nav-vertical {

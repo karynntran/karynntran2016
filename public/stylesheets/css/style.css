@@ -63,6 +63,11 @@ body {
     position: relative; }
   #app .padded-content {
     padding: 5%; }
+  #app .footer {
+    position: absolute;
+    bottom: 0;
+    height: 0%;
+    width: 100%; }
   #app .intro-container {
     width: 510px;
     height: 345px;
@@ -178,31 +183,62 @@ body {
   animation: bounce 2s 2s infinite; }
 
 #app.on .content {
-  border: 0;
   height: 0;
   width: 100%;
   transition: all .25s linear;
-  border: 2px solid transparent; }
+  z-index: 10; }
   #app.on .content.about {
     height: 85%;
     width: 100%;
     border: 2px solid #FF6160;
+    background: #fff;
     transition: all .25s .35s linear; }
   #app.on .content.portfolio {
     height: 85%;
     width: 100%;
     border: 2px solid #C4C65D;
+    background: #fff;
     transition: all .25s .35s linear; }
   #app.on .content.work {
     height: 85%;
     width: 100%;
     border: 2px solid #7f2a57;
+    background: #fff;
     transition: all .25s .35s linear; }
   #app.on .content.contact {
     height: 85%;
     width: 100%;
     border: 2px solid #71c5c9;
+    background: #fff;
     transition: all .25s .35s linear; }
+
+#app.on .footer {
+  height: 0;
+  width: 100%; }
+  #app.on .footer.about {
+    background: linear-gradient(rgba(255, 97, 96, 0.25), rgba(255, 97, 96, 0.25)), url(../../images/test.jpg) no-repeat top left;
+    background-size: cover;
+    border-top: 2px solid #FF6160;
+    height: 50%;
+    transition: all .25s .5s linear; }
+  #app.on .footer.portfolio {
+    background: linear-gradient(rgba(196, 198, 93, 0.25), rgba(196, 198, 93, 0.25)), url(../../images/test2.jpg) no-repeat top left;
+    background-size: cover;
+    border-top: 2px solid #C4C65D;
+    height: 50%;
+    transition: all .25s .5s linear; }
+  #app.on .footer.work {
+    background: linear-gradient(rgba(127, 42, 87, 0.25), rgba(127, 42, 87, 0.25)), url(../../images/test3.jpg) no-repeat top left;
+    background-size: cover;
+    border-top: 2px solid #7f2a57;
+    height: 50%;
+    transition: all .25s .5s linear; }
+  #app.on .footer.contact {
+    background: linear-gradient(rgba(113, 197, 201, 0.25), rgba(113, 197, 201, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
+    background-size: cover;
+    border-top: 2px solid #71c5c9;
+    height: 50%;
+    transition: all .25s .5s linear; }
 
 #app.on .nav-vertical {
   height: 0;

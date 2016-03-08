@@ -12,7 +12,7 @@ $(document).ready(function (){
 	},500)
 	
 	$('.intro-container').on('click', function(){
-		$(this).hide();
+		$(this).css('display', 'none');
 		intro.prepend('.content-container', 'nav-template', data.nav);
 		intro.render('.padded-content', 'welcome-template', data.nav);
 		
@@ -23,9 +23,11 @@ $(document).ready(function (){
 			$('.' + category).click(function(){
 				$('.content').removeClass('about portfolio work contact');
 				$('.nav-vertical').removeClass('about portfolio work contact');
+				$('.footer').removeClass('about portfolio work contact');
 				$('.'+category+'-nav-div .nav-vertical').addClass(''+category);
 				setTimeout(function(){
 					$('.content').addClass(''+category);
+					$('.footer').addClass(''+category);
 					intro.render('.padded-content', category+'-template', data.nav);
 				},300);
 			})
