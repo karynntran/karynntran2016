@@ -7,9 +7,7 @@
 <body>
 	<div id="app">
 		<div class="page">
-			<div class="content-container">
-
-			</div>
+			<div class="content-container"></div>
 			<div class="footer"></div>
 		</div>
 	</div>
@@ -55,23 +53,37 @@
 	</script>
 
 	<script type="text/x-tmpl" id="welcome-template">
-		<div>welcome!</div>
+		
+		<div class="welcome">welcome!</div>
 	</script>
 
 	<script type="text/x-tmpl" id="about-template">
-		<div>about!</div>
+		<div class="main-copy">{%= data.mainCopy %}</div>
+		<div class="sub-copy">{%= data.subCopy %}</div>
 	</script>
 
 	<script type="text/x-tmpl" id="portfolio-template">
-		<div>portfolio!</div>
+		<div class="main-copy">{%= data.mainCopy %}</div>
+		<div class="sub-copy">{%= data.subCopy %}</div>
+		<div class="portfolio-container">
+			{% for (var i=0; i < data.projects.length; i ++) { %}
+				<div class="portfolio-proj">
+					<img src="{%= data.projects[i].projectImg %}"; style="width: 65px; height: 100px;"/>
+					<div>{%= data.projects[i].projectTitle %}</div>
+					<div>{%= data.projects[i].projectDescription %}</div>
+				</div>
+			{% } %}
+		</div>
 	</script>
 
 	<script type="text/x-tmpl" id="work-template">
-		<div>work!</div>
+		<div class="main-copy">{%= data.mainCopy %}</div>
+		<div class="sub-copy">{%= data.subCopy %}</div>
 	</script>
 
 	<script type="text/x-tmpl" id="contact-template">
-		<div>contact!</div>
+		<div class="main-copy">{%= data.mainCopy %}</div>
+		<div class="sub-copy">{%= data.subCopy %}</div>
 	</script>
 
 	<script type="text/x-tmpl" id="nav-template">

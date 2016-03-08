@@ -1,4 +1,20 @@
 @font-face {
+  font-family: 'Chapaza';
+  src: url("../css/fonts/Chapaza.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2265; }
+
+@font-face {
+  font-family: 'Chapaza-Italic';
+  src: url("../css/fonts/Chapaza_Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2265; }
+
+@font-face {
   font-family: 'CaviarDreams-Bold';
   src: url("../css/fonts/CaviarDreams-Bold_gdi.eot");
   src: url("../css/fonts/CaviarDreams-Bold_gdi.eot?#iefix") format("embedded-opentype"), url("../css/fonts/CaviarDreams-Bold_gdi.woff") format("woff"), url("../css/fonts/CaviarDreams-Bold_gdi.ttf") format("truetype"), url("../css/fonts/CaviarDreams-Bold_gdi.svg#CaviarDreams-Bold") format("svg");
@@ -62,7 +78,8 @@ body {
   #app .content {
     position: relative; }
   #app .padded-content {
-    padding: 5%; }
+    padding: 5%;
+    overflow: hidden; }
   #app .footer {
     position: absolute;
     bottom: 0;
@@ -85,7 +102,7 @@ body {
     letter-spacing: 44px;
     text-align: justify;
     text-transform: uppercase;
-    color: #191919; }
+    color: #494949; }
   #app .start {
     width: 50px;
     height: 50px;
@@ -128,9 +145,12 @@ body {
   #app .back {
     transform: rotateY(180deg); }
   #app .logo {
+    font-family: 'Chapaza-Italic';
     float: right;
     font-size: 40px;
-    color: #191919; }
+    color: #494949;
+    top: -20px;
+    position: relative; }
   #app .nav {
     position: relative;
     top: 0;
@@ -166,96 +186,122 @@ body {
       background: #71c5c9;
       color: white; }
 
-#app.on .flipper.init-intro {
-  transform: rotateY(180deg);
-  transition: transform 1s;
-  -webkit-transition: transform 1s; }
-
-#app.on .flipper.init-intro:hover {
-  transform: rotateY(0deg); }
-
-#app.on .intro-text.init-intro {
-  opacity: 1;
-  transition: opacity 1s 1.5s; }
-
-#app.on .start.init-intro {
-  opacity: 1;
-  animation: bounce 2s 2s infinite; }
-
-#app.on .content {
-  height: 0;
-  width: 100%;
-  transition: all .25s linear;
-  z-index: 10; }
-  #app.on .content.about {
-    height: 85%;
+#app.on {
+  /*/*CONTENT STYLES /*/
+  /*/*ABOUT STYLES /*/
+  /*/*PORTFOLIO STYLES /*/
+  /*/*WORK STYLES /*/
+  /*/*CONTACT STYLES /*/ }
+  #app.on .flipper.init-intro {
+    transform: rotateY(180deg);
+    transition: transform 1s;
+    -webkit-transition: transform 1s; }
+  #app.on .flipper.init-intro:hover {
+    transform: rotateY(0deg); }
+  #app.on .intro-text.init-intro {
+    opacity: 1;
+    transition: opacity 1s 1.5s; }
+  #app.on .start.init-intro {
+    opacity: 1;
+    animation: bounce 2s 2s infinite; }
+  #app.on .content {
+    height: 0;
     width: 100%;
-    border: 2px solid #FF6160;
+    transition: all .25s linear;
     background: #fff;
+    border: 1px solid lightgray;
+    z-index: 10; }
+    #app.on .content.about {
+      height: 85%;
+      width: 100%;
+      border: 2px solid #FF6160;
+      background: #fff;
+      transition: all .25s .35s linear; }
+    #app.on .content.portfolio {
+      height: 85%;
+      width: 100%;
+      border: 2px solid #C4C65D;
+      background: #fff;
+      transition: all .25s .35s linear; }
+    #app.on .content.work {
+      height: 85%;
+      width: 100%;
+      border: 2px solid #7f2a57;
+      background: #fff;
+      transition: all .25s .35s linear; }
+    #app.on .content.contact {
+      height: 85%;
+      width: 100%;
+      border: 2px solid #71c5c9;
+      background: #fff;
+      transition: all .25s .35s linear; }
+  #app.on .footer {
+    height: 0;
+    width: 100%; }
+    #app.on .footer.about {
+      background: linear-gradient(rgba(255, 97, 96, 0.25), rgba(255, 97, 96, 0.25)), url(../../images/test.jpg) no-repeat top left;
+      background-size: cover;
+      border-top: 2px solid #FF6160;
+      height: 50%;
+      transition: all .25s .5s linear; }
+    #app.on .footer.portfolio {
+      background: linear-gradient(rgba(196, 198, 93, 0.25), rgba(196, 198, 93, 0.25)), url(../../images/test2.jpg) no-repeat top left;
+      background-size: cover;
+      border-top: 2px solid #C4C65D;
+      height: 50%;
+      transition: all .25s .5s linear; }
+    #app.on .footer.work {
+      background: linear-gradient(rgba(127, 42, 87, 0.25), rgba(127, 42, 87, 0.25)), url(../../images/test3.jpg) no-repeat top left;
+      background-size: cover;
+      border-top: 2px solid #7f2a57;
+      height: 50%;
+      transition: all .25s .5s linear; }
+    #app.on .footer.contact {
+      background: linear-gradient(rgba(113, 197, 201, 0.25), rgba(113, 197, 201, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
+      background-size: cover;
+      border-top: 2px solid #71c5c9;
+      height: 50%;
+      transition: all .25s .5s linear; }
+  #app.on .nav-vertical {
+    height: 0;
     transition: all .25s .35s linear; }
-  #app.on .content.portfolio {
-    height: 85%;
+    #app.on .nav-vertical.about {
+      height: 36px;
+      background: #FF6160;
+      transition: all .25s linear; }
+    #app.on .nav-vertical.portfolio {
+      height: 36px;
+      background: #C4C65D;
+      transition: all .25s linear; }
+    #app.on .nav-vertical.work {
+      height: 36px;
+      background: #7f2a57;
+      transition: all .25s linear; }
+    #app.on .nav-vertical.contact {
+      height: 36px;
+      background: #71c5c9;
+      transition: all .25s linear; }
+  #app.on .content .main-copy {
+    font-family: 'Chapaza';
+    font-size: 25px; }
+  #app.on .content .sub-copy {
+    top: 20px;
+    position: relative;
+    font-size: 17px; }
+  #app.on .content.about .main-copy {
+    color: #FF6160; }
+  #app.on .content.portfolio .main-copy {
+    color: #C4C65D; }
+  #app.on .content.portfolio .portfolio-container {
+    display: inline;
     width: 100%;
-    border: 2px solid #C4C65D;
-    background: #fff;
-    transition: all .25s .35s linear; }
-  #app.on .content.work {
-    height: 85%;
-    width: 100%;
-    border: 2px solid #7f2a57;
-    background: #fff;
-    transition: all .25s .35s linear; }
-  #app.on .content.contact {
-    height: 85%;
-    width: 100%;
-    border: 2px solid #71c5c9;
-    background: #fff;
-    transition: all .25s .35s linear; }
-
-#app.on .footer {
-  height: 0;
-  width: 100%; }
-  #app.on .footer.about {
-    background: linear-gradient(rgba(255, 97, 96, 0.25), rgba(255, 97, 96, 0.25)), url(../../images/test.jpg) no-repeat top left;
-    background-size: cover;
-    border-top: 2px solid #FF6160;
-    height: 50%;
-    transition: all .25s .5s linear; }
-  #app.on .footer.portfolio {
-    background: linear-gradient(rgba(196, 198, 93, 0.25), rgba(196, 198, 93, 0.25)), url(../../images/test2.jpg) no-repeat top left;
-    background-size: cover;
-    border-top: 2px solid #C4C65D;
-    height: 50%;
-    transition: all .25s .5s linear; }
-  #app.on .footer.work {
-    background: linear-gradient(rgba(127, 42, 87, 0.25), rgba(127, 42, 87, 0.25)), url(../../images/test3.jpg) no-repeat top left;
-    background-size: cover;
-    border-top: 2px solid #7f2a57;
-    height: 50%;
-    transition: all .25s .5s linear; }
-  #app.on .footer.contact {
-    background: linear-gradient(rgba(113, 197, 201, 0.25), rgba(113, 197, 201, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
-    background-size: cover;
-    border-top: 2px solid #71c5c9;
-    height: 50%;
-    transition: all .25s .5s linear; }
-
-#app.on .nav-vertical {
-  height: 0;
-  transition: all .25s .35s linear; }
-  #app.on .nav-vertical.about {
-    height: 38px;
-    background: #FF6160;
-    transition: all .25s linear; }
-  #app.on .nav-vertical.portfolio {
-    height: 38px;
-    background: #C4C65D;
-    transition: all .25s linear; }
-  #app.on .nav-vertical.work {
-    height: 38px;
-    background: #7f2a57;
-    transition: all .25s linear; }
-  #app.on .nav-vertical.contact {
-    height: 38px;
-    background: #71c5c9;
-    transition: all .25s linear; }
+    position: absolute;
+    top: 150px; }
+  #app.on .content.portfolio .portfolio-proj {
+    float: left;
+    width: 100px;
+    height: 100px; }
+  #app.on .content.work .main-copy {
+    color: #7f2a57; }
+  #app.on .content.contact .main-copy {
+    color: #71c5c9; }
