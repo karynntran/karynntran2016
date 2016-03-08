@@ -6,13 +6,13 @@ tmpl.arg = 'data';
 
 $(document).ready(function (){
 	$('#app').addClass('on');
-	// intro.prepend('.content-container', 'intro-template', data.landing.intro);
-	// setTimeout(function(){
-	// 	intro.flipper();
-	// },500)
+	intro.prepend('.content-container', 'intro-template', data.landing.intro);
+	setTimeout(function(){
+		intro.flipper();
+	},500)
 	
-	// $('.intro-container').on('click', function(){
-		// $(this).css('display', 'none');
+	$('.intro-container').on('click', function(){
+		$(this).css('display', 'none');
 		intro.prepend('.content-container', 'nav-template', data.nav);
 		intro.render('.padded-content', 'welcome-template', data.nav);
 		
@@ -32,7 +32,7 @@ $(document).ready(function (){
 				},300);
 			})
 		}
-	// });
+	});
 
 });
 
