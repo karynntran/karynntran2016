@@ -61,8 +61,6 @@ body {
   transform: translateY(-50%); }
 
 #app {
-  /*/ intro /*/
-  /*/ INTRO BOXES /*/
   /*/ NAV /*/ }
   #app .page {
     width: 100%;
@@ -85,45 +83,6 @@ body {
     bottom: 0;
     height: 0%;
     width: 100%; }
-  #app .intro-container {
-    width: 510px;
-    height: 345px;
-    margin: 0 auto; }
-  #app .intro-grid {
-    width: 100%;
-    height: 100%; }
-  #app .intro-text {
-    width: 534px;
-    padding: 10px;
-    height: 100px;
-    opacity: 0; }
-  #app .last-name {
-    font-size: 29px;
-    letter-spacing: 44px;
-    text-align: justify;
-    text-transform: uppercase;
-    color: #494949; }
-  #app .start {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #7f2a57;
-    font-size: 15px;
-    color: white;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 50px;
-    position: relative;
-    bottom: 0;
-    top: 25px;
-    cursor: pointer; }
-  #app .cards-ul {
-    padding: 0;
-    margin: 0 auto; }
-  #app .cards-ul li {
-    list-style-type: none;
-    float: left;
-    margin: 10px; }
   #app .flip-container {
     perspective: 1000;
     list-style-type: none; }
@@ -131,9 +90,6 @@ body {
     transform: rotateY(0deg);
     transform-style: preserve-3d;
     position: relative; }
-  #app .flip-container, #app .flipper, #app .front, #app .back {
-    width: 150px;
-    height: 150px; }
   #app .front, #app .back {
     backface-visibility: hidden;
     position: absolute;
@@ -187,23 +143,21 @@ body {
       color: white; }
 
 #app.on {
+  /*/*INTRO STYLES /*/
   /*/*CONTENT STYLES /*/
   /*/*ABOUT STYLES /*/
   /*/*PORTFOLIO STYLES /*/
   /*/*WORK STYLES /*/
   /*/*CONTACT STYLES /*/ }
+  #app.on .flipper:hover,
   #app.on .flipper.init-intro {
     transform: rotateY(180deg);
     transition: transform 1s;
     -webkit-transition: transform 1s; }
   #app.on .flipper.init-intro:hover {
     transform: rotateY(0deg); }
-  #app.on .intro-text.init-intro {
-    opacity: 1;
-    transition: opacity 1s 1.5s; }
-  #app.on .start.init-intro {
-    opacity: 1;
-    animation: bounce 2s 2s infinite; }
+  #app.on .flipper:hover {
+    transform: rotateY(180deg); }
   #app.on .content {
     height: 0;
     width: 100%;
@@ -281,20 +235,78 @@ body {
       height: 36px;
       background: #71c5c9;
       transition: all .25s linear; }
+  #app.on .intro-container {
+    width: 510px;
+    height: 345px;
+    margin: 0 auto;
+    /*/ INTRO BOXES /*/ }
+    #app.on .intro-container .intro-grid {
+      width: 100%;
+      height: 100%; }
+    #app.on .intro-container .intro-text {
+      width: 534px;
+      padding: 10px;
+      height: 100px;
+      opacity: 0; }
+    #app.on .intro-container .last-name {
+      font-size: 29px;
+      letter-spacing: 44px;
+      text-align: justify;
+      text-transform: uppercase;
+      color: #494949; }
+    #app.on .intro-container .start {
+      width: 490px;
+      left: 0;
+      position: relative;
+      margin: 0;
+      background-color: none; }
+    #app.on .intro-container .start-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #7f2a57;
+      font-size: 15px;
+      color: white;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 50px;
+      position: relative;
+      bottom: 0;
+      top: 25px;
+      cursor: pointer; }
+    #app.on .intro-container .cards-ul {
+      padding: 0;
+      margin: 0 auto; }
+    #app.on .intro-container .cards-ul li {
+      list-style-type: none;
+      float: left;
+      margin: 10px; }
+    #app.on .intro-container .intro-text.init-intro {
+      opacity: 1;
+      transition: opacity 1s 1.5s; }
+    #app.on .intro-container .start-icon.init-intro {
+      opacity: 1;
+      animation: bounce 2s 2s infinite; }
+    #app.on .intro-container .intro-container .flip-container, #app.on .intro-container .intro-container .flipper, #app.on .intro-container .intro-container .front, #app.on .intro-container .intro-container .back {
+      width: 150px;
+      height: 150px; }
   #app.on .content .main-copy {
     font-family: 'Chapaza';
     font-size: 25px; }
   #app.on .content .sub-copy {
     top: 20px;
     position: relative;
-    font-size: 17px; }
+    font-size: 17px;
+    width: 50%;
+    float: right;
+    text-align: justify; }
   #app.on .content.about .main-copy {
     color: #FF6160; }
   #app.on .content.portfolio .main-copy {
     color: #C4C65D; }
   #app.on .content.portfolio .portfolio-container {
     display: inline;
-    width: 100%;
+    width: 90%;
     position: absolute;
     top: 150px; }
   #app.on .content.portfolio .portfolio-proj {
@@ -303,5 +315,39 @@ body {
     height: 100px; }
   #app.on .content.work .main-copy {
     color: #7f2a57; }
+  #app.on .content.work .work-container {
+    display: inline;
+    width: 84%;
+    position: absolute;
+    top: 170px;
+    margin: 0 auto; }
+  #app.on .content.work .work.flip-container,
+  #app.on .content.work .work.flipper,
+  #app.on .content.work .work.front,
+  #app.on .content.work .work.back {
+    width: 200px;
+    height: 200px;
+    margin: 0; }
+  #app.on .content.work .work.flip-container {
+    margin: 10px; }
+  #app.on .content.work .work {
+    float: left;
+    background: white; }
+  #app.on .content.work .work.back {
+    border: 1px solid lightgray;
+    background: #fff;
+    padding: 10%;
+    box-sizing: border-box; }
+  #app.on .content.work .work-company {
+    font-size: 20px;
+    font-family: 'Chapaza'; }
+  #app.on .content.work .work-logo {
+    width: 55px;
+    height: 35px; }
+  #app.on .content.work .work-position {
+    font-family: 'Chapaza-Italic';
+    font-size: 13px; }
+  #app.on .content.work .work-description {
+    font-size: 13px; }
   #app.on .content.contact .main-copy {
     color: #71c5c9; }

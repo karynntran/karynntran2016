@@ -98,55 +98,6 @@ body {
 		width: 100%;
 	}
 
-	/*/ intro /*/
-	.intro-container {
-		width: 510px;
-	    height: 345px;
-		margin: 0 auto;
-	}
-	.intro-grid {
-		width: 100%;
-		height: 100%;
-	}
-
-	.intro-text {
-	    width: 534px;
-	    padding: 10px;
-	    height: 100px;
-	    opacity: 0;
-	}
-	.last-name {
-		font-size: 29px;
-	    letter-spacing: 44px;
-	    text-align: justify;
-	    text-transform: uppercase;
-	    color: $gray;
-	}
-	.start {
-		width: 50px;
-	    height: 50px;
-	    border-radius: 50%;
-	    background-color: $purple;
-	    font-size: 15px;
-	    color: white;
-	    margin: 0 auto;
-	    text-align: center;
-	    line-height: 50px;
-	    position: relative;
-	    bottom: 0;
-	    top: 25px;
-	    cursor: pointer;
-	}
-	/*/ INTRO BOXES /*/
-	.cards-ul {
-		padding: 0;
-		margin: 0 auto;
-	}
-	.cards-ul li {
-	    list-style-type: none;
-	    float: left;
-	    margin: 10px;
-	}
 
 	.flip-container {
 		perspective: 1000;
@@ -156,10 +107,6 @@ body {
 		transform: rotateY(0deg);
 		transform-style: preserve-3d;
 		position: relative;
-	}
-	.flip-container, .flipper, .front, .back {
-		width: 150px;
-		height: 150px;
 	}
 	.front, .back {
 		backface-visibility: hidden;
@@ -231,6 +178,7 @@ body {
 }
 
 #app.on {
+	.flipper:hover,
 	.flipper.init-intro {
 		transform: rotateY(180deg);
 		transition: transform 1s;
@@ -238,20 +186,9 @@ body {
 	}
 	.flipper.init-intro:hover {
 		transform: rotateY(0deg);
-
 	}
-	.intro-text {
-		&.init-intro{
-	    	opacity: 1;
-	    	transition: opacity 1s 1.5s;
-	    }
-	}
-	.start {
-		&.init-intro{
-	    	opacity: 1;
-	    	// transition: opacity 1s 2s;
-	    	animation: bounce 2s 2s infinite;
-	    }
+	.flipper:hover {
+		transform: rotateY(180deg);
 	}
 	.content {
 		height: 0;
@@ -362,6 +299,84 @@ body {
 		}
 	}
 
+/*/*INTRO STYLES /*/
+.intro-container {
+	width: 510px;
+	height: 345px;
+	margin: 0 auto;
+	.intro-grid {
+		width: 100%;
+		height: 100%;
+	}
+
+	.intro-text {
+	    width: 534px;
+	    padding: 10px;
+	    height: 100px;
+	    opacity: 0;
+	}
+	.last-name {
+		font-size: 29px;
+	    letter-spacing: 44px;
+	    text-align: justify;
+	    text-transform: uppercase;
+	    color: $gray;
+	}
+	.start {
+		width: 490px;
+	    left: 0;
+	    position: relative;
+	    margin: 0;
+	    background-color: none;
+	}
+	.start-icon {
+		width: 50px;
+	    height: 50px;
+	    border-radius: 50%;
+	    background-color: $purple;
+	    font-size: 15px;
+	    color: white;
+	    margin: 0 auto;
+	    text-align: center;
+	    line-height: 50px;
+	    position: relative;
+	    bottom: 0;
+	    top: 25px;
+	    cursor: pointer;
+	}
+
+
+	/*/ INTRO BOXES /*/
+	.cards-ul {
+		padding: 0;
+		margin: 0 auto;
+	}
+	.cards-ul li {
+	    list-style-type: none;
+	    float: left;
+	    margin: 10px;
+	}
+	.intro-text {
+		&.init-intro{
+	    	opacity: 1;
+	    	transition: opacity 1s 1.5s;
+	    }
+	}
+	.start-icon {
+		&.init-intro{
+	    	opacity: 1;
+	    	// transition: opacity 1s 2s;
+	    	animation: bounce 2s 2s infinite;
+	    }
+	}
+	.intro-container {
+		.flip-container, .flipper, .front, .back {
+			width: 150px;
+			height: 150px;
+		}
+	}
+}
+
 /*/*CONTENT STYLES /*/
 	.content {
 		.main-copy {
@@ -372,6 +387,9 @@ body {
 			top: 20px;
 		    position: relative;
 		    font-size: 17px;
+		    width: 50%;
+		    float: right;
+		    text-align: justify;
 		}
 	}
 	
@@ -390,7 +408,7 @@ body {
 		}
 		.portfolio-container {
 			display: inline;
-		    width: 100%;
+		    width: 90%;
 		    position: absolute;
 		    top: 150px;
 		}
@@ -406,6 +424,49 @@ body {
 	.content.work {
 		.main-copy {
 			color: $purple;
+		}
+		.work-container {
+			display: inline;
+		    width: 84%;
+		    position: absolute;
+		    top: 170px;
+		    margin: 0 auto;
+		}
+		.work.flip-container,
+		.work.flipper,
+		.work.front,
+		.work.back {
+		    width: 200px;
+		    height: 200px;
+			margin: 0;
+		}
+		.work.flip-container {
+			margin: 10px;
+		}
+		.work {
+			float: left;
+			background: white;
+		}
+		.work.back {
+			border: 1px solid lightgray;
+			background: #fff;
+			padding: 10%;
+			box-sizing: border-box;
+		}
+		.work-company {
+			font-size: 20px;
+			font-family: 'Chapaza';
+		}
+		.work-logo {
+			width: 55px;
+    		height: 35px;
+		}
+		.work-position {
+			font-family: 'Chapaza-Italic';
+			font-size: 13px;
+		}
+		.work-description {
+			font-size: 13px;
 		}
 	}
 

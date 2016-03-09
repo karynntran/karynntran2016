@@ -30,7 +30,9 @@
 			</div>
 			<div class="intro-text">
 				<div class="last-name"> elio tran</div>
-				<div class="start">Hello!</div>
+				<div class="start">
+					<div class="start-icon">Hello!</div>
+				</div>
 			</div>
 		</div>
 	</script>
@@ -54,7 +56,7 @@
 
 	<script type="text/x-tmpl" id="welcome-template">
 		
-		<div class="welcome">welcome!</div>
+		<div class="main-copy welcome">welcome!</div>
 	</script>
 
 	<script type="text/x-tmpl" id="about-template">
@@ -68,7 +70,7 @@
 		<div class="portfolio-container">
 			{% for (var i=0; i < data.projects.length; i ++) { %}
 				<div class="portfolio-proj">
-					<img src="{%= data.projects[i].projectImg %}"; style="width: 65px; height: 100px;"/>
+					<div class="project-image" style="background: url({%= data.projects[i].projectImg %}); width: 65px; height: 100px;"/>
 					<div>{%= data.projects[i].projectTitle %}</div>
 					<div>{%= data.projects[i].projectDescription %}</div>
 				</div>
@@ -79,6 +81,21 @@
 	<script type="text/x-tmpl" id="work-template">
 		<div class="main-copy">{%= data.mainCopy %}</div>
 		<div class="sub-copy">{%= data.subCopy %}</div>
+		<div class="work-container">
+			{% for (var i=0; i < data.jobs.length; i ++) { %}
+				<div class="work flip-container">
+					<div class="work flipper">
+						<div class="work-card work front" style="background: url(../images/{%= data.jobs[i].logo %}) no-repeat; background-size: contain;">
+						</div>
+						<div class="work-card work back">	
+							<div class="work-company">{%= data.jobs[i].company %}</div>
+							<div class="work-position">{%= data.jobs[i].position %}</div>
+							<div class="work-description">{%= data.jobs[i].workDescription %}</div>
+						</div>
+					</div>
+				</div>
+			{% } %}
+		</div>
 	</script>
 
 	<script type="text/x-tmpl" id="contact-template">
