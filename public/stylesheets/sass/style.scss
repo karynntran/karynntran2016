@@ -71,6 +71,7 @@ body {
 }
 
 #app {
+	box-sizing: border-box;
 	.page {
 		width: 100%;
 		height: 100%;
@@ -89,6 +90,7 @@ body {
 	}
 	.padded-content {
 		padding: 5%;
+		height: 77%;
 		overflow: hidden;
 	}
 	.footer {
@@ -369,11 +371,9 @@ body {
 	    	animation: bounce 2s 2s infinite;
 	    }
 	}
-	.intro-container {
-		.flip-container, .flipper, .front, .back {
-			width: 150px;
-			height: 150px;
-		}
+	.flip-container, .flipper, .front, .back {
+		width: 10.6vw;
+		height: 10.6vw;
 	}
 }
 
@@ -389,7 +389,7 @@ body {
 		    font-size: 17px;
 		    width: 50%;
 		    float: right;
-		    text-align: justify;
+		    text-align: right;
 		}
 	}
 	
@@ -397,6 +397,47 @@ body {
 	.content.about {
 		.main-copy {
 			color: $pink;
+			font-size: 35px;
+		}
+		.description-container {
+			width: 90%;
+			position: relative;
+		    margin: 2% auto;
+			top: 45px;
+		}
+		.fact-copy,
+		.extrafact-copy {
+			font-family: 'CaviarDreams-Regular';
+			font-size: 20px;
+			text-align: justify;
+			text-transform: lowercase;
+			color: $gray;
+			display: inline;
+		}
+		.fact-copy {
+			text-align: right;
+			width: 300px;
+			color: $gray;
+			padding: 5px 15px;
+			border: 1px solid lightgray;
+		}
+		.extrafact-copy {
+			text-align: left;
+			letter-spacing: -10px;
+			color: transparent;
+			transition: all .5s ease-in;
+		}
+		.description-container:hover .extrafact-copy {
+			letter-spacing: 0;
+			background: $pink;
+			color: white;
+			padding: 5px 40px;
+			border: 1px solid $pink;
+			transition: all .5s ease-in;
+		}
+		.description-container:hover .fact-copy {
+			background: lightgray;
+			transition: all .5s ease-in;
 		}
 	}
 
@@ -414,8 +455,20 @@ body {
 		}
 		.portfolio-proj {
 			float: left;
-			width: 100px;
-			height: 100px;
+			width: 150px;
+			height: 150px;
+			margin: 10px;
+		}
+		.project-image {
+			width: 100%;
+			height: 100%;
+		}
+		.project-title {
+			font-family: 'Chapaza-Italic';
+			font-size: 17px;
+		}
+		.project-description {
+			font-size: 13px;
 		}
 	}
 
@@ -427,10 +480,14 @@ body {
 		}
 		.work-container {
 			display: inline;
-		    width: 84%;
+		    width: 100%;
 		    position: absolute;
 		    top: 170px;
 		    margin: 0 auto;
+		}
+		.work-cards {
+			width: 85%;
+			margin: 0 auto;
 		}
 		.work.flip-container,
 		.work.flipper,

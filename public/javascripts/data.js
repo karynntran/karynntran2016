@@ -34,8 +34,29 @@ var data = {
 		"contact"
 	],
 	"about" : {
-		"mainCopy" : "I'm a New York based web developer",
-		"subCopy" : "with previous career experience in design & storytelling."
+		"mainCopy" : "hello world! my name is karynn.",
+		"descriptionCopy" : [
+			{ 
+				"fact" : "I'm a native New York-based web developer",
+				"extraFact" : "Currently working at Quartz NYC"
+			},
+			{
+				"fact" :"A grad from Boston University",
+				"extraFact" : "with a BS in Communications and Business"
+			},
+			{
+				"fact" : "With experience in qualitative insights",
+				"extraFact" : "exploring consumer relationships with brands"
+			},
+			{
+				"fact" : "A focus on research design and storytelling",
+				"extraFact" : "With an affection for charts and icons"
+			},
+			{
+				"fact" : "and just for fun...",
+				"extraFact" : "I play the ukulele, kickbox and crochet"
+			}
+		]
 	},
 	"portfolio" : {
 		"mainCopy" : "i built these",
@@ -85,7 +106,7 @@ var data = {
 	},
 	"contact" : {
 		"mainCopy" : "say hello",
-		"subCopy" : "through your medium of choice"
+		"subCopy" : "i'm like hey what's up hello"
 	}
 
 

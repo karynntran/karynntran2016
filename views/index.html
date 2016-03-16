@@ -61,7 +61,12 @@
 
 	<script type="text/x-tmpl" id="about-template">
 		<div class="main-copy">{%= data.mainCopy %}</div>
-		<div class="sub-copy">{%= data.subCopy %}</div>
+		{% for (var i=0; i < data.descriptionCopy.length; i++) { %}
+			<div class="description-container">
+				<div class="fact-copy">{%= data.descriptionCopy[i].fact %}</div>
+				<div class="extrafact-copy">{%= data.descriptionCopy[i].extraFact %}</div>
+			</div>
+		{% } %}
 	</script>
 
 	<script type="text/x-tmpl" id="portfolio-template">
@@ -70,9 +75,9 @@
 		<div class="portfolio-container">
 			{% for (var i=0; i < data.projects.length; i ++) { %}
 				<div class="portfolio-proj">
-					<div class="project-image" style="background: url({%= data.projects[i].projectImg %}); width: 65px; height: 100px;"/>
-					<div>{%= data.projects[i].projectTitle %}</div>
-					<div>{%= data.projects[i].projectDescription %}</div>
+					<div class="project-image" style="background: url({%= data.projects[i].projectImg %}) no-repeat; background-size: contain"/>
+					<div class="project-title">{%= data.projects[i].projectTitle %}</div>
+					<div class="project-description">{%= data.projects[i].projectDescription %}</div>
 				</div>
 			{% } %}
 		</div>
@@ -82,19 +87,21 @@
 		<div class="main-copy">{%= data.mainCopy %}</div>
 		<div class="sub-copy">{%= data.subCopy %}</div>
 		<div class="work-container">
-			{% for (var i=0; i < data.jobs.length; i ++) { %}
-				<div class="work flip-container">
-					<div class="work flipper">
-						<div class="work-card work front" style="background: url(../images/{%= data.jobs[i].logo %}) no-repeat; background-size: contain;">
-						</div>
-						<div class="work-card work back">	
-							<div class="work-company">{%= data.jobs[i].company %}</div>
-							<div class="work-position">{%= data.jobs[i].position %}</div>
-							<div class="work-description">{%= data.jobs[i].workDescription %}</div>
+			<div class="work-cards">
+				{% for (var i=0; i < data.jobs.length; i ++) { %}
+					<div class="work flip-container">
+						<div class="work flipper">
+							<div class="work-card work front" style="background: url(../images/{%= data.jobs[i].logo %}) no-repeat; background-size: contain;">
+							</div>
+							<div class="work-card work back">	
+								<div class="work-company">{%= data.jobs[i].company %}</div>
+								<div class="work-position">{%= data.jobs[i].position %}</div>
+								<div class="work-description">{%= data.jobs[i].workDescription %}</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			{% } %}
+				{% } %}
+			</div>
 		</div>
 	</script>
 

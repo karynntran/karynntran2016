@@ -14,8 +14,13 @@ $(document).ready(function (){
 	$('.intro-container').on('click', function(){
 		$(this).css('display', 'none');
 		intro.prepend('.content-container', 'nav-template', data.nav);
-		intro.render('.padded-content', 'welcome-template', data.nav);
-		
+		$('.content').addClass('about');
+		$('.footer').addClass('about');
+		$('.about-nav-div .nav-vertical').addClass('about');
+		setTimeout(function(){
+			intro.render('.padded-content', 'about-template', data.about);
+		},700);
+
 		var categories = ["about", "work", "portfolio", "contact"];
 
 		for ( var i = 0; i < categories.length; i++) {

@@ -61,6 +61,7 @@ body {
   transform: translateY(-50%); }
 
 #app {
+  box-sizing: border-box;
   /*/ NAV /*/ }
   #app .page {
     width: 100%;
@@ -77,6 +78,7 @@ body {
     position: relative; }
   #app .padded-content {
     padding: 5%;
+    height: 77%;
     overflow: hidden; }
   #app .footer {
     position: absolute;
@@ -287,9 +289,9 @@ body {
     #app.on .intro-container .start-icon.init-intro {
       opacity: 1;
       animation: bounce 2s 2s infinite; }
-    #app.on .intro-container .intro-container .flip-container, #app.on .intro-container .intro-container .flipper, #app.on .intro-container .intro-container .front, #app.on .intro-container .intro-container .back {
-      width: 150px;
-      height: 150px; }
+    #app.on .intro-container .flip-container, #app.on .intro-container .flipper, #app.on .intro-container .front, #app.on .intro-container .back {
+      width: 10.6vw;
+      height: 10.6vw; }
   #app.on .content .main-copy {
     font-family: 'Chapaza';
     font-size: 25px; }
@@ -299,9 +301,44 @@ body {
     font-size: 17px;
     width: 50%;
     float: right;
-    text-align: justify; }
+    text-align: right; }
   #app.on .content.about .main-copy {
-    color: #FF6160; }
+    color: #FF6160;
+    font-size: 35px; }
+  #app.on .content.about .description-container {
+    width: 90%;
+    position: relative;
+    margin: 2% auto;
+    top: 45px; }
+  #app.on .content.about .fact-copy,
+  #app.on .content.about .extrafact-copy {
+    font-family: 'CaviarDreams-Regular';
+    font-size: 20px;
+    text-align: justify;
+    text-transform: lowercase;
+    color: #494949;
+    display: inline; }
+  #app.on .content.about .fact-copy {
+    text-align: right;
+    width: 300px;
+    color: #494949;
+    padding: 5px 15px;
+    border: 1px solid lightgray; }
+  #app.on .content.about .extrafact-copy {
+    text-align: left;
+    letter-spacing: -10px;
+    color: transparent;
+    transition: all .5s ease-in; }
+  #app.on .content.about .description-container:hover .extrafact-copy {
+    letter-spacing: 0;
+    background: #FF6160;
+    color: white;
+    padding: 5px 40px;
+    border: 1px solid #FF6160;
+    transition: all .5s ease-in; }
+  #app.on .content.about .description-container:hover .fact-copy {
+    background: lightgray;
+    transition: all .5s ease-in; }
   #app.on .content.portfolio .main-copy {
     color: #C4C65D; }
   #app.on .content.portfolio .portfolio-container {
@@ -311,15 +348,27 @@ body {
     top: 150px; }
   #app.on .content.portfolio .portfolio-proj {
     float: left;
-    width: 100px;
-    height: 100px; }
+    width: 150px;
+    height: 150px;
+    margin: 10px; }
+  #app.on .content.portfolio .project-image {
+    width: 100%;
+    height: 100%; }
+  #app.on .content.portfolio .project-title {
+    font-family: 'Chapaza-Italic';
+    font-size: 17px; }
+  #app.on .content.portfolio .project-description {
+    font-size: 13px; }
   #app.on .content.work .main-copy {
     color: #7f2a57; }
   #app.on .content.work .work-container {
     display: inline;
-    width: 84%;
+    width: 100%;
     position: absolute;
     top: 170px;
+    margin: 0 auto; }
+  #app.on .content.work .work-cards {
+    width: 85%;
     margin: 0 auto; }
   #app.on .content.work .work.flip-container,
   #app.on .content.work .work.flipper,
