@@ -96,25 +96,25 @@ var data = {
 			{
 				"company" : "Quartz",
 				"position" : "Web Developer",
-				"workDescription" : "I am a front end developer for the creative services team",
+				"workDescription" : "I'm a front end developer on the creative services team, building custom, interactive content for our clients.",
 				"logo" : "logo-quartz.png"
 			},
 			{
 				"company" : "TD Ameritrade",
 				"position" : "Web Developer Apprentice",
-				"workDescription" : "I designed and developed reporting dashboards and collaborated on the new Investools website",
+				"workDescription" : "I designed and developed multiple reporting dashboards, as well as collaborated on building TD's new Investools website.",
 				"logo" : "logo-tda.png"
 			},
 			{
 				"company" : "Communispace",
 				"position" : "Senior Consultant",
-				"workDescription" : "I worked with brands to better understand their consumers",
+				"workDescription" : "I experimented with research methodologies to understand consumer mindset with brands, and wrote and designed visually engaging presentations around key insights.",
 				"logo" : "logo-cspace.png"
 			},
 			{
 				"company" : "Mediaplanet",
 				"position" : "Publisher",
-				"workDescription" : "I published two reports in the Washington Post and USA Today for over 1MM readers",
+				"workDescription" : "I published two reports in the Washington Post and USA Today for over 1million readers, spearheading research and potential partners for key campaigns.",
 				"logo" : "logo-mediaplanet.png"
 			}
 		]

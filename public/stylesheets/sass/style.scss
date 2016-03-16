@@ -483,6 +483,7 @@ body {
 			font-size: 20px;
 			top: 20px;
 			position: relative;
+			color: $green;
 		}
 		.project-description {
 			font-size: 13px;
@@ -532,6 +533,7 @@ body {
 		.work-company {
 			font-size: 20px;
 			font-family: 'Chapaza';
+			color: $purple;
 		}
 		.work-logo {
 			width: 55px;
@@ -539,10 +541,13 @@ body {
 		}
 		.work-position {
 			font-family: 'Chapaza-Italic';
-			font-size: 13px;
+			font-size: 15px;
 		}
 		.work-description {
+			top: 10px;
+			position: relative;
 			font-size: 13px;
+			text-align: left;
 		}
 	}
 

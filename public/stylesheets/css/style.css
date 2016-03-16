@@ -371,7 +371,8 @@ body {
     font-family: 'Chapaza-Italic';
     font-size: 20px;
     top: 20px;
-    position: relative; }
+    position: relative;
+    color: #C4C65D; }
   #app.on .content.portfolio .project-description {
     font-size: 13px;
     position: relative;
@@ -406,14 +407,18 @@ body {
     box-sizing: border-box; }
   #app.on .content.work .work-company {
     font-size: 20px;
-    font-family: 'Chapaza'; }
+    font-family: 'Chapaza';
+    color: #7f2a57; }
   #app.on .content.work .work-logo {
     width: 55px;
     height: 35px; }
   #app.on .content.work .work-position {
     font-family: 'Chapaza-Italic';
-    font-size: 13px; }
+    font-size: 15px; }
   #app.on .content.work .work-description {
-    font-size: 13px; }
+    top: 10px;
+    position: relative;
+    font-size: 13px;
+    text-align: left; }
   #app.on .content.contact .main-copy {
     color: #71c5c9; }
