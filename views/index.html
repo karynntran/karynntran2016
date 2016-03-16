@@ -73,13 +73,15 @@
 		<div class="main-copy">{%= data.mainCopy %}</div>
 		<div class="sub-copy">{%= data.subCopy %}</div>
 		<div class="portfolio-container">
-			{% for (var i=0; i < data.projects.length; i ++) { %}
-				<div class="portfolio-proj">
-					<div class="project-image" style="background: url({%= data.projects[i].projectImg %}) no-repeat; background-size: contain"/>
-					<div class="project-title">{%= data.projects[i].projectTitle %}</div>
-					<div class="project-description">{%= data.projects[i].projectDescription %}</div>
-				</div>
-			{% } %}
+			<div class="portfolio-cards">
+				{% for (var i=0; i < data.projects.length; i ++) { %}
+					<div class="portfolio-proj">
+						<div class="project-image" style="background: url({%= data.projects[i].projectImg %}) no-repeat; background-size: cover; background-position: left"/>
+						<div class="project-title">{%= data.projects[i].projectTitle %}</div>
+						<div class="project-description">{%= data.projects[i].projectDescription %}</div>
+					</div>
+				{% } %}
+			</div>
 		</div>
 	</script>
 

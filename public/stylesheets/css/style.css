@@ -91,7 +91,8 @@ body {
   #app .flipper {
     transform: rotateY(0deg);
     transform-style: preserve-3d;
-    position: relative; }
+    position: relative;
+    transition: transform .25s forwards; }
   #app .front, #app .back {
     backface-visibility: hidden;
     position: absolute;
@@ -343,22 +344,31 @@ body {
     color: #C4C65D; }
   #app.on .content.portfolio .portfolio-container {
     display: inline;
-    width: 90%;
+    width: 100%;
     position: absolute;
     top: 150px; }
+  #app.on .content.portfolio .portfolio-cards {
+    width: 90%;
+    margin: 0 auto; }
   #app.on .content.portfolio .portfolio-proj {
     float: left;
-    width: 150px;
-    height: 150px;
-    margin: 10px; }
+    width: 160px;
+    height: 120px;
+    margin: 10px;
+    position: relative; }
   #app.on .content.portfolio .project-image {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    margin: 0 auto; }
   #app.on .content.portfolio .project-title {
     font-family: 'Chapaza-Italic';
-    font-size: 17px; }
+    font-size: 20px;
+    top: 20px;
+    position: relative; }
   #app.on .content.portfolio .project-description {
-    font-size: 13px; }
+    font-size: 13px;
+    position: relative;
+    top: 30px; }
   #app.on .content.work .main-copy {
     color: #7f2a57; }
   #app.on .content.work .work-container {

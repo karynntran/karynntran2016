@@ -64,13 +64,28 @@ var data = {
 		"projects" : [ 
 			{
 				"projectImg" : "https://placekitten.com/200/303",
-				"projectTitle" : "project1",
-				"projectDescription" : "description1"
+				"projectTitle" : "Project One",
+				"projectDescription" : "Red hair crookshanks bludger Marauder’s Map Prongs sunshine daisies butter mellow Ludo Bagman. Beaters gobbledegook"
 			},
 			{
 				"projectImg" : "https://placekitten.com/200/301",
-				"projectTitle" : "project2",
-				"projectDescription" : "description2"
+				"projectTitle" : "Project Two",
+				"projectDescription" : "Honeydukes eriseD inferi Wormtail. Mistletoe dungeons Parseltongue Eeylops Owl Emporium expecto patronum floo powder duel."
+			},
+			{
+				"projectImg" : "https://placekitten.com/200/305",
+				"projectTitle" : "Project Three",
+				"projectDescription" : "Gillyweed portkey, keeper Godric’s Hollow telescope, splinched fire-whisky silver Leprechaun O.W.L. stroke the spine."
+			},
+			{
+				"projectImg" : "https://placekitten.com/200/307",
+				"projectTitle" : "Project Four",
+				"projectDescription" : "Chalice Hungarian Horntail, catherine wheels Essence of Dittany Gringotts Harry Potter. Prophecies Yaxley green eyes"
+			},
+			{
+				"projectImg" : "https://placekitten.com/200/309",
+				"projectTitle" : "Project Five",
+				"projectDescription" : "Remembrall horcrux hand of the servant. Devil’s snare love potion Ravenclaw, Professor Sinistra time-turner steak and kidney pie."
 			}
 		]
 	},
