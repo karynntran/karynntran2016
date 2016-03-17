@@ -19,14 +19,15 @@ $(document).ready(function (){
 		$('.about-nav-div .nav-vertical').addClass('about');
 		setTimeout(function(){
 			intro.render('.padded-content', 'about-template', data.about);
-			$('.intro-container').empty().off('click');
 		},700);
+		$('.intro-grid, .intro-text').empty().off();
 
 		var categories = ["about", "work", "portfolio", "contact"];
 
 		for ( var i = 0; i < categories.length; i++) {
 			let category = categories[i];
-			$('.' + category).click(function(){
+			$('.' + category+'-nav-div').click(function(){
+				console.log('is this it');
 				$('.nav-vertical').removeClass('about portfolio work contact');
 				$('.footer').removeClass('about portfolio work contact');
 				$('.'+category+'-nav-div .nav-vertical').addClass(''+category);
