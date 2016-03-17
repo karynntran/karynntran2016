@@ -1,11 +1,9 @@
 export function render(element, template, data) {
     $(element).html(tmpl(template, data));
-    console.log("working")
 }
 
 export function prepend(element, template, data) {
     $(element).prepend(tmpl(template, data));
-    console.log("working")
 }
 
 export function flipper(){
@@ -15,12 +13,21 @@ export function flipper(){
 }
 
 export function clicker(){
-	var cat = data.nav;
-	for (var i=0; i < cat.length; i++) {
-		console.log(cat[i])
-		$('.'+cat[i]).on('click', function(){
-			console.log(cat[i]);
-		});
+	var categories = ["about", "work", "portfolio", "contact"];
+
+	for ( var i = 0; i < categories.length; i++) {
+		let category = categories[i];
+		$('.' + category).click(function(){
+			$('.nav-vertical').removeClass('about portfolio work contact');
+			$('.footer').removeClass('about portfolio work contact');
+			$('.'+category+'-nav-div .nav-vertical').addClass(''+category);
+			setTimeout(function(){
+				$('.content').removeClass('about portfolio work contact');
+				$('.footer').addClass(''+category);
+				$('.content').addClass(''+category);
+				intro.render('.padded-content', category+'-template', data[category]);
+			},300);
+		})
 	}
 }
 

@@ -11,7 +11,7 @@ $(document).ready(function (){
 		intro.flipper();
 	},500)
 	
-	$('.intro-container').on('click', function(){
+	$('.intro-grid, .intro-text').on('click', function(){
 		$(this).css('display', 'none');
 		intro.prepend('.content-container', 'nav-template', data.nav);
 		$('.content').addClass('about');
@@ -19,6 +19,7 @@ $(document).ready(function (){
 		$('.about-nav-div .nav-vertical').addClass('about');
 		setTimeout(function(){
 			intro.render('.padded-content', 'about-template', data.about);
+			$('.intro-container').empty().off('click');
 		},700);
 
 		var categories = ["about", "work", "portfolio", "contact"];

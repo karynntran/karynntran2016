@@ -78,11 +78,13 @@ body {
     position: relative; }
   #app .padded-content {
     padding: 5%;
-    height: 77%;
+    height: 82%;
+    width: 90%;
     overflow: hidden; }
   #app .footer {
     position: absolute;
     bottom: 0;
+    left: 0;
     height: 0%;
     width: 100%; }
   #app .tm {
@@ -246,26 +248,32 @@ body {
       background: #71c5c9;
       transition: all .25s linear; }
   #app.on .intro-container {
-    width: 510px;
+    width: 465px;
     height: 345px;
     margin: 0 auto;
+    cursor: pointer;
     /*/ INTRO BOXES /*/ }
     #app.on .intro-container .intro-grid {
       width: 100%;
-      height: 100%; }
+      height: 85%;
+      bottom: 0;
+      position: relative; }
     #app.on .intro-container .intro-text {
-      width: 534px;
+      width: 440px;
       padding: 10px;
-      height: 100px;
-      opacity: 0; }
+      height: 135px;
+      opacity: 0;
+      cursor: pointer; }
     #app.on .intro-container .last-name {
-      font-size: 29px;
-      letter-spacing: 44px;
-      text-align: justify;
+      font-size: 30px;
+      letter-spacing: 33px;
+      text-align: center;
       text-transform: uppercase;
-      color: #494949; }
+      color: #494949;
+      top: 15px;
+      position: relative; }
     #app.on .intro-container .start {
-      width: 490px;
+      width: 100%;
       left: 0;
       position: relative;
       margin: 0;
@@ -298,8 +306,8 @@ body {
       opacity: 1;
       animation: bounce 2s 2s infinite; }
     #app.on .intro-container .flip-container, #app.on .intro-container .flipper, #app.on .intro-container .front, #app.on .intro-container .back {
-      width: 10.6vw;
-      height: 10.6vw; }
+      width: 135px;
+      height: 135px; }
   #app.on .content .main-copy {
     font-family: 'Chapaza';
     font-size: 25px; }
@@ -316,19 +324,19 @@ body {
   #app.on .content.about .description-container {
     width: 90%;
     position: relative;
-    margin: 2% auto;
-    top: 45px; }
+    margin: 3% auto;
+    top: 5%; }
   #app.on .content.about .fact-copy,
   #app.on .content.about .extrafact-copy {
     font-family: 'CaviarDreams-Regular';
-    font-size: 20px;
+    font-size: 1.3vw;
     text-align: justify;
     text-transform: lowercase;
     color: #494949;
-    display: inline; }
+    display: inline;
+    cursor: pointer; }
   #app.on .content.about .fact-copy {
     text-align: right;
-    width: 300px;
     color: #494949;
     padding: 5px 15px;
     border: 1px solid lightgray; }
@@ -353,15 +361,18 @@ body {
     display: inline;
     width: 100%;
     position: absolute;
-    top: 150px; }
+    height: 100%;
+    top: 30%;
+    left: 0; }
   #app.on .content.portfolio .portfolio-cards {
-    width: 90%;
+    width: 80%;
+    height: 100%;
     margin: 0 auto; }
   #app.on .content.portfolio .portfolio-proj {
     float: left;
-    width: 160px;
-    height: 120px;
-    margin: 10px;
+    width: 16%;
+    height: 20%;
+    margin: 2%;
     position: relative; }
   #app.on .content.portfolio .project-image {
     width: 100%;
@@ -369,7 +380,7 @@ body {
     margin: 0 auto; }
   #app.on .content.portfolio .project-title {
     font-family: 'Chapaza-Italic';
-    font-size: 20px;
+    font-size: 1.5vw;
     top: 20px;
     position: relative;
     color: #C4C65D; }
@@ -384,19 +395,21 @@ body {
     width: 100%;
     position: absolute;
     top: 170px;
+    left: 0;
     margin: 0 auto; }
   #app.on .content.work .work-cards {
-    width: 85%;
+    width: 62vw;
+    height: 16vw;
     margin: 0 auto; }
   #app.on .content.work .work.flip-container,
   #app.on .content.work .work.flipper,
   #app.on .content.work .work.front,
   #app.on .content.work .work.back {
-    width: 200px;
-    height: 200px;
+    width: 14vw;
+    height: 14vw;
     margin: 0; }
   #app.on .content.work .work.flip-container {
-    margin: 10px; }
+    margin: 1%; }
   #app.on .content.work .work {
     float: left;
     background: white; }
@@ -406,7 +419,7 @@ body {
     padding: 10%;
     box-sizing: border-box; }
   #app.on .content.work .work-company {
-    font-size: 20px;
+    font-size: 1.5vw;
     font-family: 'Chapaza';
     color: #7f2a57; }
   #app.on .content.work .work-logo {
@@ -414,11 +427,11 @@ body {
     height: 35px; }
   #app.on .content.work .work-position {
     font-family: 'Chapaza-Italic';
-    font-size: 15px; }
+    font-size: 1.2vw; }
   #app.on .content.work .work-description {
-    top: 10px;
+    top: 1%;
     position: relative;
-    font-size: 13px;
+    font-size: 1vw;
     text-align: left; }
   #app.on .content.contact .main-copy {
     color: #71c5c9; }

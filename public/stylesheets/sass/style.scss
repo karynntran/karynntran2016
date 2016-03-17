@@ -90,12 +90,14 @@ body {
 	}
 	.padded-content {
 		padding: 5%;
-		height: 77%;
+		height: 82%;
+		width: 90%;
 		overflow: hidden;
 	}
 	.footer {
 		position: absolute;
 		bottom: 0;
+		left: 0;
 		height: 0%;
 		width: 100%;
 	}
@@ -107,7 +109,6 @@ body {
 		font-size: 12px;
 		color: white;
 	}
-
 
 	.flip-container {
 		perspective: 1000;
@@ -312,29 +313,35 @@ body {
 
 /*/*INTRO STYLES /*/
 .intro-container {
-	width: 510px;
+	width: 465px;
 	height: 345px;
 	margin: 0 auto;
+	cursor: pointer;
 	.intro-grid {
-		width: 100%;
-		height: 100%;
+	    width: 100%;
+	    height: 85%;
+	    bottom: 0;
+	    position: relative;
 	}
 
 	.intro-text {
-	    width: 534px;
+	    width: 440px;
 	    padding: 10px;
-	    height: 100px;
+	    height: 135px;
 	    opacity: 0;
+	    cursor: pointer;
 	}
 	.last-name {
-		font-size: 29px;
-	    letter-spacing: 44px;
-	    text-align: justify;
+		font-size: 30px;
+    	letter-spacing: 33px;
+	    text-align: center;
 	    text-transform: uppercase;
 	    color: $gray;
+	    top: 15px;
+	    position: relative;
 	}
 	.start {
-		width: 490px;
+		width: 100%;
 	    left: 0;
 	    position: relative;
 	    margin: 0;
@@ -381,8 +388,8 @@ body {
 	    }
 	}
 	.flip-container, .flipper, .front, .back {
-		width: 10.6vw;
-		height: 10.6vw;
+		width: 135px;;
+		height: 135px;;
 	}
 }
 
@@ -410,22 +417,22 @@ body {
 		}
 		.description-container {
 			width: 90%;
-			position: relative;
-		    margin: 2% auto;
-			top: 45px;
+		    position: relative;
+		    margin: 3% auto;
+		    top: 5%;
 		}
 		.fact-copy,
 		.extrafact-copy {
 			font-family: 'CaviarDreams-Regular';
-			font-size: 20px;
+			font-size: 1.3vw;
 			text-align: justify;
 			text-transform: lowercase;
 			color: $gray;
 			display: inline;
+			cursor: pointer;
 		}
 		.fact-copy {
 			text-align: right;
-			width: 300px;
 			color: $gray;
 			padding: 5px 15px;
 			border: 1px solid lightgray;
@@ -457,20 +464,23 @@ body {
 			color: $green;
 		}
 		.portfolio-container {
-			display: inline;
+		    display: inline;
 		    width: 100%;
 		    position: absolute;
-		    top: 150px;
+		    height: 100%;
+		    top: 30%;
+		    left: 0;
 		}
 		.portfolio-cards {
-			width: 90%;
+			width: 80%;
+    		height: 100%;
 			margin: 0 auto;
 		}
 		.portfolio-proj {
 			float: left;
-			width: 160px;
-			height: 120px;
-			margin: 10px;
+		    width: 16%;
+		    height: 20%;
+		    margin: 2%;
 			position: relative;
 		}
 		.project-image {
@@ -480,7 +490,7 @@ body {
 		}
 		.project-title {
 			font-family: 'Chapaza-Italic';
-			font-size: 20px;
+			font-size: 1.5vw;
 			top: 20px;
 			position: relative;
 			color: $green;
@@ -503,22 +513,24 @@ body {
 		    width: 100%;
 		    position: absolute;
 		    top: 170px;
+		    left: 0;
 		    margin: 0 auto;
 		}
 		.work-cards {
-			width: 85%;
+		    width: 62vw;
+		    height: 16vw;
 			margin: 0 auto;
 		}
 		.work.flip-container,
 		.work.flipper,
 		.work.front,
 		.work.back {
-		    width: 200px;
-		    height: 200px;
+		    width: 14vw;
+		    height: 14vw;
 			margin: 0;
 		}
 		.work.flip-container {
-			margin: 10px;
+			margin: 1%;
 		}
 		.work {
 			float: left;
@@ -531,7 +543,7 @@ body {
 			box-sizing: border-box;
 		}
 		.work-company {
-			font-size: 20px;
+			font-size: 1.5vw;
 			font-family: 'Chapaza';
 			color: $purple;
 		}
@@ -541,12 +553,12 @@ body {
 		}
 		.work-position {
 			font-family: 'Chapaza-Italic';
-			font-size: 15px;
+			font-size: 1.2vw;
 		}
 		.work-description {
-			top: 10px;
-			position: relative;
-			font-size: 13px;
+		    top: 1%;
+		    position: relative;
+		    font-size: 1vw;
 			text-align: left;
 		}
 	}
