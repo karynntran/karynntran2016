@@ -41,5 +41,10 @@ $(document).ready(function (){
 		}
 	});
 
+	$('.drawer').on('click', function(){
+		console.log('clicked');
+		$(this).addClass('animate');
+	});
+
 });
 

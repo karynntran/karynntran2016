@@ -312,10 +312,12 @@ body {
     font-family: 'Chapaza';
     font-size: 25px; }
   #app.on .content .sub-copy {
+    font-family: 'Chapaza-Italic';
+    color: lightgray;
     top: 20px;
     position: relative;
-    font-size: 17px;
-    width: 50%;
+    font-size: 14px;
+    width: 100%;
     float: right;
     text-align: right; }
   #app.on .content.about .main-copy {
@@ -331,7 +333,6 @@ body {
     font-family: 'CaviarDreams-Regular';
     font-size: 1.3vw;
     text-align: justify;
-    text-transform: lowercase;
     color: #494949;
     display: inline;
     cursor: pointer; }
@@ -339,12 +340,14 @@ body {
     text-align: right;
     color: #494949;
     padding: 5px 15px;
-    border: 1px solid lightgray; }
+    border: 1px solid lightgray;
+    text-transform: lowercase; }
   #app.on .content.about .extrafact-copy {
     text-align: left;
     letter-spacing: -10px;
     color: transparent;
-    transition: all .5s ease-in; }
+    transition: all .5s ease-in;
+    text-transform: none; }
   #app.on .content.about .description-container:hover .extrafact-copy {
     letter-spacing: 0;
     background: #FF6160;
@@ -361,33 +364,68 @@ body {
     display: inline;
     width: 100%;
     position: absolute;
-    height: 100%;
+    height: 50%;
     top: 30%;
     left: 0; }
   #app.on .content.portfolio .portfolio-cards {
-    width: 80%;
+    width: 90%;
     height: 100%;
     margin: 0 auto; }
+  #app.on .content.portfolio .project-front {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5; }
+  #app.on .content.portfolio .project-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
   #app.on .content.portfolio .portfolio-proj {
     float: left;
-    width: 16%;
-    height: 20%;
+    width: 29%;
+    height: 100%;
     margin: 2%;
     position: relative; }
   #app.on .content.portfolio .project-image {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 50%;
     margin: 0 auto; }
   #app.on .content.portfolio .project-title {
     font-family: 'Chapaza-Italic';
     font-size: 1.5vw;
     top: 20px;
     position: relative;
-    color: #C4C65D; }
+    color: #C4C65D;
+    padding-left: 2vw; }
   #app.on .content.portfolio .project-description {
     font-size: 13px;
     position: relative;
-    top: 30px; }
+    top: 30px;
+    padding: 0 2vw; }
+  #app.on .content.portfolio .drawer {
+    height: 100%;
+    width: 5%;
+    position: absolute;
+    left: 0;
+    background-color: #C4C65D;
+    z-index: 10; }
+  #app.on .content.portfolio .drawer.animate {
+    left: 90%;
+    transition: left 2s ease-in; }
+  #app.on .content.portfolio .arrow {
+    width: 0;
+    height: 0;
+    top: 2vw;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #C4C65D;
+    z-index: 10;
+    position: relative; }
   #app.on .content.work .main-copy {
     color: #7f2a57; }
   #app.on .content.work .work-container {

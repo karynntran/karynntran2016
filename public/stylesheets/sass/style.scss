@@ -400,10 +400,12 @@ body {
 			font-size: 25px;
 		}
 		.sub-copy {
+			font-family: 'Chapaza-Italic';
+			color: lightgray;
 			top: 20px;
 		    position: relative;
-		    font-size: 17px;
-		    width: 50%;
+		    font-size: 14px;
+		    width: 100%;
 		    float: right;
 		    text-align: right;
 		}
@@ -426,7 +428,6 @@ body {
 			font-family: 'CaviarDreams-Regular';
 			font-size: 1.3vw;
 			text-align: justify;
-			text-transform: lowercase;
 			color: $gray;
 			display: inline;
 			cursor: pointer;
@@ -436,12 +437,14 @@ body {
 			color: $gray;
 			padding: 5px 15px;
 			border: 1px solid lightgray;
+			text-transform: lowercase;
 		}
 		.extrafact-copy {
 			text-align: left;
 			letter-spacing: -10px;
 			color: transparent;
 			transition: all .5s ease-in;
+			text-transform: none;
 		}
 		.description-container:hover .extrafact-copy {
 			letter-spacing: 0;
@@ -467,25 +470,41 @@ body {
 		    display: inline;
 		    width: 100%;
 		    position: absolute;
-		    height: 100%;
+		    height: 50%;
 		    top: 30%;
 		    left: 0;
 		}
 		.portfolio-cards {
-			width: 80%;
+			width: 90%;
     		height: 100%;
 			margin: 0 auto;
 		}
+		.project-front {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			top: 0;
+			left:0;
+			z-index: 5
+		}
+		.project-back {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left:0;
+			z-index: 1;
+		}
 		.portfolio-proj {
 			float: left;
-		    width: 16%;
-		    height: 20%;
+		    width: 29%;
+		    height: 100%;
 		    margin: 2%;
 			position: relative;
 		}
 		.project-image {
-			width: 100%;
-			height: 100%;
+		    width: 90%;
+		    height: 50%;
 		    margin: 0 auto;
 		}
 		.project-title {
@@ -494,12 +513,37 @@ body {
 			top: 20px;
 			position: relative;
 			color: $green;
+			padding-left: 2vw;
 		}
 		.project-description {
 			font-size: 13px;
 			position: relative;
 			top: 30px;
+			padding: 0 2vw;
 		}
+		.drawer {
+			height: 100%;
+			width: 5%;
+			position: absolute;
+			left:0;
+			background-color: $green;
+			z-index: 10;
+		}
+		.drawer.animate {
+			left: 90%;
+			transition: left 2s ease-in;
+		}
+		.arrow {
+		    width: 0;
+		    height: 0;
+		    top: 2vw;
+		    border-top: 30px solid transparent;
+		    border-bottom: 30px solid transparent;
+		    border-left: 30px solid $green;
+		    z-index: 10;
+    		position: relative;
+		}
+
 	}
 
 

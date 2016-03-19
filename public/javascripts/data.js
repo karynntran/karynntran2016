@@ -38,7 +38,7 @@ var data = {
 		"descriptionCopy" : [
 			{ 
 				"fact" : "I'm a native New York-based web developer",
-				"extraFact" : "Currently working at Quartz NYC"
+				"extraFact" : "currently working at Quartz NYC"
 			},
 			{
 				"fact" :"A grad from Boston University",
@@ -50,47 +50,37 @@ var data = {
 			},
 			{
 				"fact" : "A focus on research design and storytelling",
-				"extraFact" : "With an affection for charts and icons"
+				"extraFact" : "with an affection for infographics and icons"
 			},
 			{
 				"fact" : "and just for fun...",
-				"extraFact" : "I play the ukulele, kickbox and crochet"
+				"extraFact" : "i love zombies, kickboxing, playing the uke and crocheting"
 			}
 		]
 	},
 	"portfolio" : {
-		"mainCopy" : "i built these",
-		"subCopy" : "as a web developer",
+		"mainCopy" : "i built some stuff",
+		"subCopy" : "with my trusty mac and a whole lotta coffee",
 		"projects" : [ 
 			{
-				"projectImg" : "https://placekitten.com/200/303",
-				"projectTitle" : "Project One",
-				"projectDescription" : "Red hair crookshanks bludger Marauder’s Map Prongs sunshine daisies butter mellow Ludo Bagman. Beaters gobbledegook"
+				"projectImg" : "portfolio-workday.jpg",
+				"projectTitle" : "the world of work",
+				"projectDescription" : "The World of Work was a custom content piece that served as the culmination of a 13 series campaign, showcasing key insights through interactive charts and graphs."
 			},
 			{
-				"projectImg" : "https://placekitten.com/200/301",
-				"projectTitle" : "Project Two",
-				"projectDescription" : "Honeydukes eriseD inferi Wormtail. Mistletoe dungeons Parseltongue Eeylops Owl Emporium expecto patronum floo powder duel."
+				"projectImg" : "portfolio-investools.jpg",
+				"projectTitle" : "the new investools",
+				"projectDescription" : "TD Ameritrade launched a complete re-design of Investools, a Node.js based education site."
 			},
 			{
-				"projectImg" : "https://placekitten.com/200/305",
-				"projectTitle" : "Project Three",
-				"projectDescription" : "Gillyweed portkey, keeper Godric’s Hollow telescope, splinched fire-whisky silver Leprechaun O.W.L. stroke the spine."
-			},
-			{
-				"projectImg" : "https://placekitten.com/200/307",
-				"projectTitle" : "Project Four",
-				"projectDescription" : "Chalice Hungarian Horntail, catherine wheels Essence of Dittany Gringotts Harry Potter. Prophecies Yaxley green eyes"
-			},
-			{
-				"projectImg" : "https://placekitten.com/200/309",
-				"projectTitle" : "Project Five",
-				"projectDescription" : "Remembrall horcrux hand of the servant. Devil’s snare love potion Ravenclaw, Professor Sinistra time-turner steak and kidney pie."
+				"projectImg" : "portfolio-comicsmashup.jpg",
+				"projectTitle" : "comic smashup",
+				"projectDescription" : "Comic SmashUp is a comic book story-generating app that allows users to search for favorite characters and select actions against a random opponent."
 			}
 		]
 	},
 	"work" : {
-		"mainCopy" : "i worked here",
+		"mainCopy" : "i worked at some pretty cool places",
 		"subCopy" : "as a developer, designer, senior consultant and publisher",
 		"jobs" : [ 
 			{
@@ -120,8 +110,8 @@ var data = {
 		]
 	},
 	"contact" : {
-		"mainCopy" : "say hello",
-		"subCopy" : "i'm like hey what's up hello"
+		"mainCopy" : "hello to you too",
+		"subCopy" : "drop me a line"
 	}
 
 
