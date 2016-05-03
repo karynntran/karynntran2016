@@ -77,8 +77,13 @@
 			<div class="drawer">
 				<div class="drawer-bar"></div>
 				<div class="arrow"></div>
-			</div>
-			<div class="portfolio-skills">
+				<div class="portfolio-skills">
+					<div class="skill-ul">
+						{% for (var i=0; i < data.skills.length; i ++) { %}
+						<li class="skill-li">{%= data.skills[i] %}</li>
+						{% } %}
+					</div>
+				</div>
 			</div>
 			<div class="portfolio-cards">
 				{% for (var i=0; i < data.projects.length; i ++) { %}

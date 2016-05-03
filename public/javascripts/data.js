@@ -62,7 +62,10 @@ var data = {
 		"mainCopy" : "i built some stuff",
 		"subCopy" : "with my trusty mac and a whole lotta coffee",
 		"skills" : [
-			
+			"Ruby",
+			"Javascript",
+			"Backbone",
+			"Marionette"
 		],
 		"projects" : [ 
 			{

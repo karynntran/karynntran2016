@@ -409,9 +409,10 @@ body {
     display: inline;
     width: 100%;
     position: absolute;
-    height: 50%;
+    height: 65%;
     top: 30%;
-    left: 0; }
+    left: 0;
+    overflow: hidden; }
   #app.on .content.portfolio .portfolio-cards {
     width: 90%;
     height: 100%;
@@ -453,33 +454,56 @@ body {
     top: 30px;
     padding: 0 2vw; }
   #app.on .content.portfolio .portfolio-skills {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    position: absolute; }
+    position: absolute;
+    background: #fff;
+    top: 0;
+    right: 0; }
+  #app.on .content.portfolio .skill-ul {
+    list-style-type: none; }
+  #app.on .content.portfolio .skill-li {
+    font-size: 1.2vw;
+    text-decoration: none; }
   #app.on .content.portfolio .drawer {
-    height: 135%;
-    width: 40px;
+    height: 100%;
+    width: 100%;
     position: absolute;
     right: 0;
-    z-index: 11; }
+    z-index: 11;
+    background: #fff;
+    transition: right 1s ease-in; }
+    #app.on .content.portfolio .drawer.collapsed {
+      right: -98.3%;
+      transition: right 1s ease-in; }
   #app.on .content.portfolio .drawer-bar {
     height: 100%;
     width: 20px;
-    float: right;
+    float: left;
     background-color: #C4C65D;
-    z-index: 10; }
+    z-index: 20;
+    cursor: pointer; }
   #app.on .content.portfolio .drawer.animate {
     left: 90%;
     transition: left 2s ease-in; }
   #app.on .content.portfolio .arrow {
-    width: 0;
+    width: 20px;
     height: 0;
     top: 2vw;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-right: 20px solid #C4C65D;
+    border-left: 20px solid #C4C65D;
     z-index: 10;
-    position: relative; }
+    position: relative;
+    left: 20px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all .3s .5s ease-in; }
+    #app.on .content.portfolio .arrow.collapsed {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      left: -40px;
+      transition: all .3s .5s ease-in; }
   #app.on .content.work .main-copy {
     color: #7f2a57; }
   #app.on .content.work .work-container {

@@ -36,15 +36,15 @@ $(document).ready(function (){
 					$('.footer').addClass(''+category);
 					$('.content').addClass(''+category);
 					intro.render('.padded-content', category+'-template', data[category]);
+					$('.drawer-bar').on('click', function(){
+						$('.drawer').toggleClass('collapsed');
+						$('.arrow').toggleClass('collapsed');
+					});
 				},300);
 			})
 		}
 	});
 
-	$('.drawer').on('click', function(){
-		console.log('clicked');
-		$(this).addClass('animate');
-	});
 
 });
 
