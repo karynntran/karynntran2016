@@ -61,6 +61,9 @@ var data = {
 	"portfolio" : {
 		"mainCopy" : "i built some stuff",
 		"subCopy" : "with my trusty mac and a whole lotta coffee",
+		"skills" : [
+			
+		],
 		"projects" : [ 
 			{
 				"projectImg" : "portfolio-workday.jpg",

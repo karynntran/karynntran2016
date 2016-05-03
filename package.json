@@ -32,6 +32,7 @@
     "stylus": "^0.53.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "babel": "^6.3.26",
     "babel-core": "^6.4.5",
     "babel-eslint": "^5.0.0-beta6",
@@ -46,6 +47,7 @@
     "ejs-loader": "^0.2.1",
     "express-livereload": "0.0.24",
     "file-loader": "^0.8.5",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-exec": "^2.1.2",
     "gulp-jshint": "^2.0.0",
     "gulp-livereload": "^3.8.1",
@@ -56,6 +58,8 @@
     "lodash": "^4.2.1",
     "lodash-es": "^4.2.1",
     "node-sass": "^3.4.2",
+    "postcss-loader": "^0.9.1",
+    "precss": "^1.4.0",
     "requirejs": "^2.1.22",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",

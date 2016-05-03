@@ -13,10 +13,6 @@
 		<div class="tm">karynn elio tran 2016</div>
 	</div>
 
-
-
-
-
 	<script type="text/x-tmpl" id="intro-template">
 		<div class="intro-container vertical">
 			<div class="intro-grid">
@@ -60,7 +56,6 @@
 	</script>
 
 	<script type="text/x-tmpl" id="welcome-template">
-		
 		<div class="main-copy welcome">welcome!</div>
 	</script>
 
@@ -77,13 +72,18 @@
 	<script type="text/x-tmpl" id="portfolio-template">
 		<div class="main-copy">{%= data.mainCopy %}</div>
 		<div class="sub-copy">{%= data.subCopy %}</div>
+		
 		<div class="portfolio-container">
+			<div class="drawer">
+				<div class="drawer-bar"></div>
+				<div class="arrow"></div>
+			</div>
+			<div class="portfolio-skills">
+			</div>
 			<div class="portfolio-cards">
 				{% for (var i=0; i < data.projects.length; i ++) { %}
 					<div class="portfolio-proj">
-						<div class="drawer">
-							<div class="arrow"></div>
-						</div>
+
 						<div class="project-front">
 							<div class="project-image" style="background: url('images/{%= data.projects[i].projectImg%}') no-repeat; background-size: cover; background-position: center"></div>
 							<div class="project-title">{%= data.projects[i].projectTitle %}</div>

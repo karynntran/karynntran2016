@@ -1,4 +1,6 @@
 var path = require('path');
+var precss = require('precss');
+var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 
 
@@ -22,9 +24,13 @@ module.exports = {
 		    exclude: /node_modules/,
 		    include: path.join(__dirname, 'src')
 		},
+		// {
+  //           test:   /\.css$/,
+  //           loader: "style-loader!css-loader?modules&importLoaders=1!postcss-loader"
+  //       },
 		{
 		    test: /\.scss$/,
-		    loader: 'style!css!sass'
+		    loader: 'style!css!postcss!sass'
 		},
 		{
 		    test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
@@ -37,9 +43,12 @@ module.exports = {
         {
 	        test: /\.tpl$/,
 	        loader: 'underscore-loader?variable=data'
-      	}
+      	},
 	  ]
 	},
+	postcss: function () {
+        return [precss, autoprefixer];
+    },
 	resolve: {
 	    moduleDirectories: [
 	      'src',

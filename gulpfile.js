@@ -7,7 +7,8 @@ var gulp = require('gulp'),
 	tinylr = require('tiny-lr'),
 	server = tinylr(),
 	jshint = require('gulp-jshint'),
-	nodemon = require('nodemon');
+	nodemon = require('nodemon'),
+	autoprefixer = require('gulp-autoprefixer');;
 
 gulp.task('start', function () {
   nodemon({
@@ -18,6 +19,10 @@ gulp.task('start', function () {
 gulp.task('styles', function(){
 	gulp.src('public/stylesheets/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
         .pipe(gulp.dest('public/stylesheets/css/'))
         .pipe( livereload( server ));
 });
