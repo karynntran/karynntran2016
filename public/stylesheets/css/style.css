@@ -93,6 +93,7 @@ body {
 
 #app {
   box-sizing: border-box;
+  font-size: 1vw;
   /*/ NAV /*/ }
   #app .page {
     width: 100%;
@@ -106,12 +107,15 @@ body {
     position: relative;
     margin: 3% auto; }
   #app .content {
-    position: relative; }
-  #app .padded-content {
+    position: relative;
     padding: 5%;
-    height: 82%;
+    height: 65%;
     width: 90%;
     overflow: hidden; }
+  #app .divider {
+    width: 100%;
+    height: 2em;
+    background: #ffffff; }
   #app .footer {
     position: absolute;
     bottom: 0;
@@ -215,63 +219,35 @@ body {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
   #app.on .content {
-    height: 0;
     width: 100%;
-    transition: all .25s linear;
-    background: #fff;
-    border: 1px solid lightgray;
-    z-index: 10; }
+    background: transparent;
+    z-index: 10;
+    height: 65%; }
     #app.on .content.about {
       height: 85%;
       width: 100%;
-      border: 2px solid #FF6160;
       background: #fff;
-      transition: all .25s .15s linear; }
+      background: linear-gradient(rgba(255, 97, 96, 0.25), rgba(255, 97, 96, 0.25)), url(../../images/test.jpg) no-repeat top left;
+      background-size: cover; }
     #app.on .content.portfolio {
       height: 85%;
       width: 100%;
-      border: 2px solid #C4C65D;
       background: #fff;
-      transition: all .25s .15s linear; }
+      background: linear-gradient(rgba(196, 198, 93, 0.25), rgba(196, 198, 93, 0.25)), url(../../images/test2.jpg) no-repeat top left;
+      background-size: cover; }
     #app.on .content.work {
       height: 85%;
       width: 100%;
-      border: 2px solid #7f2a57;
-      background: #fff;
-      transition: all .25s .15s linear; }
+      background: #fff; }
     #app.on .content.contact {
       height: 85%;
       width: 100%;
-      border: 2px solid #71c5c9;
       background: #fff;
-      transition: all .25s .15s linear; }
+      background: linear-gradient(rgba(113, 197, 201, 0.25), rgba(113, 197, 201, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
+      background-size: cover; }
   #app.on .footer {
     height: 0;
     width: 100%; }
-    #app.on .footer.about {
-      background: linear-gradient(rgba(255, 97, 96, 0.25), rgba(255, 97, 96, 0.25)), url(../../images/test.jpg) no-repeat top left;
-      background-size: cover;
-      border-top: 2px solid #FF6160;
-      height: 50%;
-      transition: all .25s .35s linear; }
-    #app.on .footer.portfolio {
-      background: linear-gradient(rgba(196, 198, 93, 0.25), rgba(196, 198, 93, 0.25)), url(../../images/test2.jpg) no-repeat top left;
-      background-size: cover;
-      border-top: 2px solid #C4C65D;
-      height: 50%;
-      transition: all .25s .5s linear; }
-    #app.on .footer.work {
-      background: linear-gradient(rgba(127, 42, 87, 0.25), rgba(127, 42, 87, 0.25)), url(../../images/test3.jpg) no-repeat top left;
-      background-size: cover;
-      border-top: 2px solid #7f2a57;
-      height: 50%;
-      transition: all .25s .5s linear; }
-    #app.on .footer.contact {
-      background: linear-gradient(rgba(113, 197, 201, 0.25), rgba(113, 197, 201, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
-      background-size: cover;
-      border-top: 2px solid #71c5c9;
-      height: 50%;
-      transition: all .25s .5s linear; }
   #app.on .nav-vertical {
     height: 0;
     transition: all .25s .35s linear; }
@@ -292,29 +268,28 @@ body {
       background: #71c5c9;
       transition: all .25s linear; }
   #app.on .intro-container {
-    width: 465px;
-    height: 345px;
+    width: 45em;
     margin: 0 auto;
     cursor: pointer;
     /*/ INTRO BOXES /*/ }
     #app.on .intro-container .intro-grid {
       width: 100%;
-      height: 85%;
+      height: 45%;
       bottom: 0;
       position: relative; }
     #app.on .intro-container .intro-text {
-      width: 440px;
+      width: 38em;
       padding: 10px;
       height: 135px;
       opacity: 0;
       cursor: pointer; }
     #app.on .intro-container .last-name {
-      font-size: 30px;
-      letter-spacing: 33px;
+      font-size: 2.7em;
+      letter-spacing: 1em;
       text-align: center;
       text-transform: uppercase;
       color: #494949;
-      top: 15px;
+      top: 1em;
       position: relative; }
     #app.on .intro-container .start {
       width: 100%;
@@ -323,18 +298,18 @@ body {
       margin: 0;
       background-color: none; }
     #app.on .intro-container .start-icon {
-      width: 50px;
-      height: 50px;
+      width: 4em;
+      height: 4em;
       border-radius: 50%;
       background-color: #7f2a57;
-      font-size: 15px;
+      font-size: 1.5em;
       color: white;
       margin: 0 auto;
       text-align: center;
-      line-height: 50px;
+      line-height: 4em;
       position: relative;
       bottom: 0;
-      top: 25px;
+      top: 3em;
       cursor: pointer; }
     #app.on .intro-container .cards-ul {
       padding: 0;
@@ -351,8 +326,8 @@ body {
       -webkit-animation: bounce 2s 2s infinite;
       animation: bounce 2s 2s infinite; }
     #app.on .intro-container .flip-container, #app.on .intro-container .flipper, #app.on .intro-container .front, #app.on .intro-container .back {
-      width: 135px;
-      height: 135px; }
+      width: 11em;
+      height: 11em; }
   #app.on .content .main-copy {
     font-family: 'Chapaza';
     font-size: 25px; }
@@ -365,47 +340,84 @@ body {
     width: 100%;
     float: right;
     text-align: right; }
-  #app.on .content.about .main-copy {
+  #app.on .about .cutout1 {
+    width: 0;
+    height: 1em;
+    border-left: 57em solid transparent;
+    border-right: 25em solid transparent;
+    border-top: 7em solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #app.on .about .cutout2 {
+    width: 0;
+    height: 1em;
+    border-left: 38em solid transparent;
+    border-right: 74em solid transparent;
+    border-bottom: 7em solid #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  #app.on .about .main-copy {
     color: #FF6160;
     font-size: 35px; }
-  #app.on .content.about .description-container {
+  #app.on .about .description-container {
     width: 90%;
     position: relative;
     margin: 3% auto;
     top: 5%; }
-  #app.on .content.about .fact-copy,
-  #app.on .content.about .extrafact-copy {
+  #app.on .about .fact-copy,
+  #app.on .about .extrafact-copy {
     font-family: 'CaviarDreams-Regular';
     font-size: 1.3vw;
     text-align: justify;
     color: #494949;
     display: inline;
     cursor: pointer; }
-  #app.on .content.about .fact-copy {
+  #app.on .about .fact-copy {
     text-align: right;
     color: #494949;
     padding: 5px 15px;
     border: 1px solid lightgray;
-    text-transform: lowercase; }
-  #app.on .content.about .extrafact-copy {
+    text-transform: lowercase;
+    background: lightgray; }
+  #app.on .about .extrafact-copy {
     text-align: left;
     letter-spacing: -10px;
     color: transparent;
     transition: all .5s ease-in;
     text-transform: none; }
-  #app.on .content.about .description-container:hover .extrafact-copy {
+  #app.on .about .description-container:hover .extrafact-copy {
     letter-spacing: 0;
     background: #FF6160;
     color: white;
     padding: 5px 40px;
     border: 1px solid #FF6160;
     transition: all .5s ease-in; }
-  #app.on .content.about .description-container:hover .fact-copy {
+  #app.on .about .description-container:hover .fact-copy {
     background: lightgray;
     transition: all .5s ease-in; }
-  #app.on .content.portfolio .main-copy {
+  #app.on .portfolio .cutout1 {
+    width: 0;
+    height: 1em;
+    border-left: 57em solid transparent;
+    border-right: 25em solid transparent;
+    border-top: 7em solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #app.on .portfolio .cutout2 {
+    width: 0;
+    height: 1em;
+    border-left: 38em solid transparent;
+    border-right: 74em solid transparent;
+    border-bottom: 7em solid #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  #app.on .portfolio .main-copy {
     color: #C4C65D; }
-  #app.on .content.portfolio .portfolio-container {
+  #app.on .portfolio .portfolio-container {
     display: inline;
     width: 100%;
     position: absolute;
@@ -413,80 +425,71 @@ body {
     top: 30%;
     left: 0;
     overflow: hidden; }
-  #app.on .content.portfolio .portfolio-cards {
+  #app.on .portfolio .portfolio-cards {
     width: 90%;
     height: 100%;
     margin: 0 auto; }
-  #app.on .content.portfolio .project-front {
+  #app.on .portfolio .project-front {
     width: 100%;
     height: 100%;
     position: relative;
     top: 0;
     left: 0;
     z-index: 5; }
-  #app.on .content.portfolio .project-back {
+  #app.on .portfolio .project-back {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1; }
-  #app.on .content.portfolio .portfolio-proj {
+  #app.on .portfolio .portfolio-proj {
     float: left;
     width: 29%;
     height: 100%;
     margin: 2%;
     position: relative; }
-  #app.on .content.portfolio .project-image {
+  #app.on .portfolio .project-image {
     width: 90%;
     height: 50%;
     margin: 0 auto; }
-  #app.on .content.portfolio .project-title {
+  #app.on .portfolio .project-title {
     font-family: 'Chapaza-Italic';
     font-size: 1.5vw;
     top: 20px;
     position: relative;
     color: #C4C65D;
     padding-left: 2vw; }
-  #app.on .content.portfolio .project-description {
+  #app.on .portfolio .project-description {
     font-size: 13px;
     position: relative;
     top: 30px;
     padding: 0 2vw; }
-  #app.on .content.portfolio .portfolio-skills {
+  #app.on .portfolio .portfolio-skills {
     width: 90%;
     height: 100%;
     position: absolute;
     background: #fff;
     top: 0;
     right: 0; }
-  #app.on .content.portfolio .skill-ul {
+  #app.on .portfolio .skill-ul {
     list-style-type: none; }
-  #app.on .content.portfolio .skill-li {
+  #app.on .portfolio .skill-li {
     font-size: 1.2vw;
     text-decoration: none; }
-  #app.on .content.portfolio .drawer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    right: 0;
-    z-index: 11;
-    background: #fff;
-    transition: right 1s ease-in; }
-    #app.on .content.portfolio .drawer.collapsed {
-      right: -98.3%;
-      transition: right 1s ease-in; }
-  #app.on .content.portfolio .drawer-bar {
+  #app.on .portfolio .drawer {
+    display: none; }
+  #app.on .portfolio .drawer-bar {
     height: 100%;
     width: 20px;
     float: left;
     background-color: #C4C65D;
     z-index: 20;
     cursor: pointer; }
-  #app.on .content.portfolio .drawer.animate {
+  #app.on .portfolio .drawer.animate {
     left: 90%;
     transition: left 2s ease-in; }
-  #app.on .content.portfolio .arrow {
+  #app.on .portfolio .arrow {
     width: 20px;
     height: 0;
     top: 2vw;
@@ -499,55 +502,82 @@ body {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     transition: all .3s .5s ease-in; }
-    #app.on .content.portfolio .arrow.collapsed {
+    #app.on .portfolio .arrow.collapsed {
       -webkit-transform: rotate(180deg);
       transform: rotate(180deg);
       left: -40px;
       transition: all .3s .5s ease-in; }
-  #app.on .content.work .main-copy {
+  #app.on .work .cutout1 {
+    width: 0;
+    height: 1em;
+    border-left: 57em solid transparent;
+    border-right: 25em solid transparent;
+    border-top: 7em solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #app.on .work .cutout2 {
+    width: 0;
+    height: 1em;
+    border-left: 38em solid transparent;
+    border-right: 74em solid transparent;
+    border-bottom: 7em solid #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  #app.on .work .main-copy {
     color: #7f2a57; }
-  #app.on .content.work .work-container {
+  #app.on .work .work-container {
     display: inline;
     width: 100%;
     position: absolute;
     top: 170px;
     left: 0;
     margin: 0 auto; }
-  #app.on .content.work .work-cards {
+  #app.on .work .work-cards {
     width: 62vw;
     height: 16vw;
     margin: 0 auto; }
-  #app.on .content.work .work.flip-container,
-  #app.on .content.work .work.flipper,
-  #app.on .content.work .work.front,
-  #app.on .content.work .work.back {
+  #app.on .work .work.flip-container,
+  #app.on .work .work.flipper,
+  #app.on .work .work.front,
+  #app.on .work .work.back {
     width: 14vw;
     height: 14vw;
     margin: 0; }
-  #app.on .content.work .work.flip-container {
+  #app.on .work .work.flip-container {
     margin: 1%; }
-  #app.on .content.work .work {
+  #app.on .work .work {
     float: left;
     background: white; }
-  #app.on .content.work .work.back {
+  #app.on .work .work.back {
     border: 1px solid lightgray;
     background: #fff;
     padding: 10%;
     box-sizing: border-box; }
-  #app.on .content.work .work-company {
+  #app.on .work .work-company {
     font-size: 1.5vw;
     font-family: 'Chapaza';
     color: #7f2a57; }
-  #app.on .content.work .work-logo {
+  #app.on .work .work-logo {
     width: 55px;
     height: 35px; }
-  #app.on .content.work .work-position {
+  #app.on .work .work-position {
     font-family: 'Chapaza-Italic';
     font-size: 1.2vw; }
-  #app.on .content.work .work-description {
+  #app.on .work .work-description {
     top: 1%;
     position: relative;
     font-size: 1vw;
     text-align: left; }
-  #app.on .content.contact .main-copy {
+  #app.on .contact .cutout1 {
+    width: 0;
+    height: 1em;
+    border-left: 57em solid transparent;
+    border-right: 25em solid transparent;
+    border-top: 7em solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #app.on .contact .main-copy {
     color: #71c5c9; }

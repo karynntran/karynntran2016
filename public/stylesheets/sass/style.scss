@@ -72,6 +72,7 @@ body {
 
 #app {
 	box-sizing: border-box;
+	font-size: 1vw;
 	.page {
 		width: 100%;
 		height: 100%;
@@ -87,12 +88,15 @@ body {
 	}
 	.content {
 		position: relative;
-	}
-	.padded-content {
 		padding: 5%;
-		height: 82%;
+		height: 65%;
 		width: 90%;
 		overflow: hidden;
+	}
+	.divider {
+		width: 100%;
+		height: 2em;
+		background: #ffffff;
 	}
 	.footer {
 		position: absolute;
@@ -203,88 +207,121 @@ body {
 		transform: rotateY(180deg);
 	}
 	.content {
-		height: 0;
 		width: 100%;
-		transition: all .25s linear;
-		background: #fff;
-		border: 1px solid lightgray;
+		background: transparent;
 		z-index: 10;
+		height: 65%;
 		&.about {
 			height: 85%;
 			width: 100%;
-			border: 2px solid $pink;
+			// border: 2px solid $pink;
 			background: #fff;
-			transition: all .25s .15s linear; 
-		}
-		&.portfolio {
-			height: 85%;
-			width: 100%;
-			border: 2px solid $green;
-			background: #fff;
-			transition: all .25s .15s linear; 
-		}
-		&.work {
-			height: 85%;
-			width: 100%;
-			border: 2px solid $purple;
-			background: #fff;
-			transition: all .25s .15s linear; 
-		}
-		&.contact {
-			height: 85%;
-			width: 100%;
-			border: 2px solid $blue;
-			background: #fff;
-			transition: all .25s .15s linear; 
-		}
-	}
-	.footer {
-		height:0;
-		width: 100%;
-		&.about {
+			// transition: all .25s .15s linear; 
+
 			background: linear-gradient(
 		      rgba(255, 97, 96, 0.25), 
 		      rgba(255, 97, 96, 0.25)
 		    ),
 			url(../../images/test.jpg) no-repeat top left;
 			background-size: cover;
-			border-top: 2px solid $pink;
-			height: 50%;
-			transition: all .25s .35s linear; 
+			// border-top: 2px solid $pink;
 		}
 		&.portfolio {
+			height: 85%;
+			width: 100%;
+			// border: 2px solid $green;
+			background: #fff;
+			// transition: all .25s .15s linear; 
+
 			background: linear-gradient(
 		      rgba(196, 198, 93, 0.25), 
 		      rgba(196, 198, 93, 0.25)
 		    ),
 			url(../../images/test2.jpg) no-repeat top left;
 			background-size: cover;
-			border-top: 2px solid $green;
-			height: 50%;
-			transition: all .25s .5s linear; 
+			// border-top: 2px solid $green;
+			// transition: all .25s .5s linear; 
 		}
 		&.work {
-			background: linear-gradient(
-		      rgba(127, 42, 87, 0.25), 
-		      rgba(127, 42, 87, 0.25)
-		    ),
-			url(../../images/test3.jpg) no-repeat top left;
-			background-size: cover;
-			border-top: 2px solid $purple;
-			height: 50%;
-			transition: all .25s .5s linear; 
+			height: 85%;
+			width: 100%;
+			// border: 2px solid $purple;
+			background: #fff;
+			// transition: all .25s .15s linear; 
+
+			// background: linear-gradient(
+		 //      rgba(127, 42, 87, 0.25), 
+		 //      rgba(127, 42, 87, 0.25)
+		 //    ),
+			// url(../../images/test3.jpg) no-repeat top left;
+			// background-size: cover;
+			// // border-top: 2px solid $purple;
+			// transition: all .25s .5s linear; 
 		}
 		&.contact {
+			height: 85%;
+			width: 100%;
+			// border: 2px solid $blue;
+			background: #fff;
+			// transition: all .25s .15s linear; 
+
 			background: linear-gradient(
 		      rgba(113,197,201, 0.25), 
 		      rgba(113,197,201, 0.25)
 		    ),
 			url(../../images/test4.jpg) no-repeat bottom left;
 			background-size: cover;
-			border-top: 2px solid $blue;
-			height: 50%;
-			transition: all .25s .5s linear; 
+			// border-top: 2px solid $blue;
+			// transition: all .25s .5s linear; 
 		}
+	}
+	.footer {
+		height:0;
+		width: 100%;
+		// &.about {
+		// 	background: linear-gradient(
+		//       rgba(255, 97, 96, 0.25), 
+		//       rgba(255, 97, 96, 0.25)
+		//     ),
+		// 	url(../../images/test.jpg) no-repeat top left;
+		// 	background-size: cover;
+		// 	border-top: 2px solid $pink;
+		// 	height: 50%;
+		// 	transition: all .25s .35s linear; 
+		// }
+		// &.portfolio {
+		// 	background: linear-gradient(
+		//       rgba(196, 198, 93, 0.25), 
+		//       rgba(196, 198, 93, 0.25)
+		//     ),
+		// 	url(../../images/test2.jpg) no-repeat top left;
+		// 	background-size: cover;
+		// 	border-top: 2px solid $green;
+		// 	height: 50%;
+		// 	transition: all .25s .5s linear; 
+		// }
+		// &.work {
+		// 	background: linear-gradient(
+		//       rgba(127, 42, 87, 0.25), 
+		//       rgba(127, 42, 87, 0.25)
+		//     ),
+		// 	url(../../images/test3.jpg) no-repeat top left;
+		// 	background-size: cover;
+		// 	border-top: 2px solid $purple;
+		// 	height: 50%;
+		// 	transition: all .25s .5s linear; 
+		// }
+		// &.contact {
+		// 	background: linear-gradient(
+		//       rgba(113,197,201, 0.25), 
+		//       rgba(113,197,201, 0.25)
+		//     ),
+		// 	url(../../images/test4.jpg) no-repeat bottom left;
+		// 	background-size: cover;
+		// 	border-top: 2px solid $blue;
+		// 	height: 50%;
+		// 	transition: all .25s .5s linear; 
+		// }
 	}
 	.nav-vertical {
 		height: 0;
@@ -313,31 +350,30 @@ body {
 
 /*/*INTRO STYLES /*/
 .intro-container {
-	width: 465px;
-	height: 345px;
+	width: 45em;
 	margin: 0 auto;
 	cursor: pointer;
 	.intro-grid {
 	    width: 100%;
-	    height: 85%;
+	    height: 45%;
 	    bottom: 0;
 	    position: relative;
 	}
 
 	.intro-text {
-	    width: 440px;
+	    width: 38em;
 	    padding: 10px;
 	    height: 135px;
 	    opacity: 0;
 	    cursor: pointer;
 	}
 	.last-name {
-		font-size: 30px;
-    	letter-spacing: 33px;
+	    font-size: 2.7em;
+	    letter-spacing: 1em;
 	    text-align: center;
 	    text-transform: uppercase;
 	    color: $gray;
-	    top: 15px;
+	    top: 1em;
 	    position: relative;
 	}
 	.start {
@@ -348,18 +384,18 @@ body {
 	    background-color: none;
 	}
 	.start-icon {
-		width: 50px;
-	    height: 50px;
+		width: 4em;
+	    height: 4em;
 	    border-radius: 50%;
-	    background-color: $purple;
-	    font-size: 15px;
+	    background-color: #7f2a57;
+	    font-size: 1.5em;
 	    color: white;
 	    margin: 0 auto;
 	    text-align: center;
-	    line-height: 50px;
+	    line-height: 4em;
 	    position: relative;
 	    bottom: 0;
-	    top: 25px;
+	    top: 3em;
 	    cursor: pointer;
 	}
 
@@ -388,8 +424,8 @@ body {
 	    }
 	}
 	.flip-container, .flipper, .front, .back {
-		width: 135px;;
-		height: 135px;;
+	    width: 11em;
+	    height: 11em;
 	}
 }
 
@@ -412,7 +448,27 @@ body {
 	}
 	
 /*/*ABOUT STYLES /*/
-	.content.about {
+	.about {
+		.cutout1 {
+			width: 0;
+		    height: 1em;
+		    border-left: 57em solid transparent;
+		    border-right: 25em solid transparent;
+		    border-top: 7em solid #fff;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		}
+		.cutout2 {
+		    width: 0;
+		    height: 1em;
+		    border-left: 38em solid transparent;
+		    border-right: 74em solid transparent;
+		    border-bottom: 7em solid #fff;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		}
 		.main-copy {
 			color: $pink;
 			font-size: 35px;
@@ -438,6 +494,7 @@ body {
 			padding: 5px 15px;
 			border: 1px solid lightgray;
 			text-transform: lowercase;
+			background: lightgray;
 		}
 		.extrafact-copy {
 			text-align: left;
@@ -462,7 +519,27 @@ body {
 
 
 /*/*PORTFOLIO STYLES /*/
-	.content.portfolio {
+	.portfolio {
+		.cutout1 {
+			width: 0;
+		    height: 1em;
+		    border-left: 57em solid transparent;
+		    border-right: 25em solid transparent;
+		    border-top: 7em solid #fff;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		}
+		.cutout2 {
+		    width: 0;
+		    height: 1em;
+		    border-left: 38em solid transparent;
+		    border-right: 74em solid transparent;
+		    border-bottom: 7em solid #fff;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		}
 		.main-copy {
 			color: $green;
 		}
@@ -538,17 +615,18 @@ body {
 			text-decoration: none;
 		}
 		.drawer {
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			right: 0;
-			z-index: 11;
-			background: #fff;
-			transition: right 1s ease-in;
-			&.collapsed {
-				right: -98.3%;
-				transition: right 1s ease-in;
-			}
+			display: none;
+		// 	height: 100%;
+		// 	width: 100%;
+		// 	position: absolute;
+		// 	right: 0;
+		// 	z-index: 11;
+		// 	background: #fff;
+		// 	transition: right 1s ease-in;
+		// 	&.collapsed {
+		// 		right: -98.3%;
+		// 		transition: right 1s ease-in;
+		// 	}
 		}
 		.drawer-bar {
 			height: 100%;
@@ -585,7 +663,27 @@ body {
 
 
 /*/*WORK STYLES /*/
-	.content.work {
+	.work {
+		.cutout1 {
+			width: 0;
+		    height: 1em;
+		    border-left: 57em solid transparent;
+		    border-right: 25em solid transparent;
+		    border-top: 7em solid #fff;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		}
+		.cutout2 {
+		    width: 0;
+		    height: 1em;
+		    border-left: 38em solid transparent;
+		    border-right: 74em solid transparent;
+		    border-bottom: 7em solid #fff;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		}
 		.main-copy {
 			color: $purple;
 		}
@@ -646,7 +744,27 @@ body {
 
 
 /*/*CONTACT STYLES /*/
-	.content.contact {
+	.contact {
+		.cutout1 {
+			width: 0;
+		    height: 1em;
+		    border-left: 57em solid transparent;
+		    border-right: 25em solid transparent;
+		    border-top: 7em solid #fff;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		}
+		.cutout2 {
+		    // width: 0;
+		    // height: 23%;
+		    // border-left: 38em solid transparent;
+		    // border-right: 74em solid transparent;
+		    // border-bottom: 7em solid #fff;
+		    // position: absolute;
+		    // bottom: 0;
+		    // left: 0;
+		}
 		.main-copy {
 			color: $blue;
 		}

@@ -17,7 +17,7 @@ export function clicker(){
 
 	for ( var i = 0; i < categories.length; i++) {
 		let category = categories[i];
-		$('.' + category).click(function(){
+		// $('.' + category).click(function(){
 			$('.nav-vertical').removeClass('about portfolio work contact');
 			$('.footer').removeClass('about portfolio work contact');
 			$('.'+category+'-nav-div .nav-vertical').addClass(''+category);
@@ -27,7 +27,7 @@ export function clicker(){
 				$('.content').addClass(''+category);
 				intro.render('.padded-content', category+'-template', data[category]);
 			},300);
-		})
+		// })
 	}
 }
 

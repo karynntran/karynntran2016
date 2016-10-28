@@ -7,33 +7,38 @@
 <body>
 	<div id="app">
 		<div class="page">
-			<div class="content-container"></div>
-			<div class="footer"></div>
+			<div class="content intro-container"></div>
+			<div class="content about"></div>
+			<div class="divider"></div>
+			<div class="content work"></div>
+			<div class="divider"></div>
+			<div class="content portfolio"></div>
+			<div class="divider"></div>
+			<div class="content contact"></div>
+<!-- 			<div class="content footer"></div> -->
 		</div>
 		<div class="tm">karynn elio tran 2016</div>
 	</div>
 
 	<script type="text/x-tmpl" id="intro-template">
-		<div class="intro-container vertical">
-			<div class="intro-grid">
-				<ul class="cards-ul">
-					{% for (var i=0; i < data.length; i ++) { %}
-						<li>
-							<div class="flip-container">
-								<div class="flipper">
-									<div class="front" style="background: url('images/{%=data[i].front + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
-									<div class="back" style="background: url('images/{%=data[i].back + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
-								</div>
+		<div class="intro-grid">
+			<ul class="cards-ul">
+				{% for (var i=0; i < data.length; i ++) { %}
+					<li>
+						<div class="flip-container">
+							<div class="flipper">
+								<div class="front" style="background: url('images/{%=data[i].front + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
+								<div class="back" style="background: url('images/{%=data[i].back + '.jpg'%}') no-repeat; background-size: contain; background-position: center"></div>
 							</div>
-						</li>
-					{% } %}
-				</ul>
-			</div>
-			<div class="intro-text">
-				<div class="last-name"> elio tran</div>
-				<div class="start">
-					<div class="start-icon">Hello!</div>
-				</div>
+						</div>
+					</li>
+				{% } %}
+			</ul>
+		</div>
+		<div class="intro-text">
+			<div class="last-name"> elio tran</div>
+			<div class="start">
+				<div class="start-icon">Hello!</div>
 			</div>
 		</div>
 	</script>
@@ -60,74 +65,90 @@
 	</script>
 
 	<script type="text/x-tmpl" id="about-template">
-		<div class="main-copy">{%= data.mainCopy %}</div>
-		{% for (var i=0; i < data.descriptionCopy.length; i++) { %}
-			<div class="description-container">
-				<div class="fact-copy">{%= data.descriptionCopy[i].fact %}</div>
-				<div class="extrafact-copy">{%= data.descriptionCopy[i].extraFact %}</div>
-			</div>
-		{% } %}
+		<div class="cutout1"></div>
+		<div class="content-container">
+			<div class="main-copy">{%= data.mainCopy %}</div>
+			{% for (var i=0; i < data.descriptionCopy.length; i++) { %}
+				<div class="description-container">
+					<div class="fact-copy">{%= data.descriptionCopy[i].fact %}</div>
+					<div class="extrafact-copy">{%= data.descriptionCopy[i].extraFact %}</div>
+				</div>
+			{% } %}
+		</div>
+		<div class="cutout2"></div>
 	</script>
 
 	<script type="text/x-tmpl" id="portfolio-template">
-		<div class="main-copy">{%= data.mainCopy %}</div>
-		<div class="sub-copy">{%= data.subCopy %}</div>
-		
-		<div class="portfolio-container">
-			<div class="drawer">
-				<div class="drawer-bar"></div>
-				<div class="arrow"></div>
-				<div class="portfolio-skills">
-					<div class="skill-ul">
-						{% for (var i=0; i < data.skills.length; i ++) { %}
-						<li class="skill-li">{%= data.skills[i] %}</li>
-						{% } %}
+		<div class="cutout1"></div>
+		<div class="content-container">
+			<div class="main-copy">{%= data.mainCopy %}</div>
+			<div class="sub-copy">{%= data.subCopy %}</div>
+			
+			<div class="portfolio-container">
+				<div class="drawer">
+					<div class="drawer-bar"></div>
+					<div class="arrow"></div>
+					<div class="portfolio-skills">
+						<div class="skill-ul">
+							{% for (var i=0; i < data.skills.length; i ++) { %}
+							<li class="skill-li">{%= data.skills[i] %}</li>
+							{% } %}
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="portfolio-cards">
-				{% for (var i=0; i < data.projects.length; i ++) { %}
-					<div class="portfolio-proj">
+				<div class="portfolio-cards">
+					{% for (var i=0; i < data.projects.length; i ++) { %}
+						<div class="portfolio-proj">
 
-						<div class="project-front">
-							<div class="project-image" style="background: url('images/{%= data.projects[i].projectImg%}') no-repeat; background-size: cover; background-position: center"></div>
-							<div class="project-title">{%= data.projects[i].projectTitle %}</div>
-							<div class="project-description">{%= data.projects[i].projectDescription %}</div>
+							<div class="project-front">
+								<div class="project-image" style="background: url('images/{%= data.projects[i].projectImg%}') no-repeat; background-size: cover; background-position: center"></div>
+								<div class="project-title">{%= data.projects[i].projectTitle %}</div>
+								<div class="project-description">{%= data.projects[i].projectDescription %}</div>
+							</div>
+							<div class="project-back">
+								<div class="hello"></div>
+							</div>
 						</div>
-						<div class="project-back">
-							<div class="hello"></div>
-						</div>
-					</div>
-				{% } %}
+					{% } %}
+				</div>
 			</div>
 		</div>
+		<div class="cutout2"></div>
 	</script>
 
 	<script type="text/x-tmpl" id="work-template">
-		<div class="main-copy">{%= data.mainCopy %}</div>
-		<div class="sub-copy">{%= data.subCopy %}</div>
-		<div class="work-container">
-			<div class="work-cards">
-				{% for (var i=0; i < data.jobs.length; i ++) { %}
-					<div class="work flip-container">
-						<div class="work flipper">
-							<div class="work-card work front" style="background: url(../images/{%= data.jobs[i].logo %}) no-repeat; background-size: contain;">
-							</div>
-							<div class="work-card work back">	
-								<div class="work-company">{%= data.jobs[i].company %}</div>
-								<div class="work-position">{%= data.jobs[i].position %}</div>
-								<div class="work-description">{%= data.jobs[i].workDescription %}</div>
+		<div class="cutout1"></div>
+		<div class="content-container">
+			<div class="main-copy">{%= data.mainCopy %}</div>
+			<div class="sub-copy">{%= data.subCopy %}</div>
+			<div class="work-container">
+				<div class="work-cards">
+					{% for (var i=0; i < data.jobs.length; i ++) { %}
+						<div class="work flip-container">
+							<div class="work flipper">
+								<div class="work-card work front" style="background: url(../images/{%= data.jobs[i].logo %}) no-repeat; background-size: contain;">
+								</div>
+								<div class="work-card work back">	
+									<div class="work-company">{%= data.jobs[i].company %}</div>
+									<div class="work-position">{%= data.jobs[i].position %}</div>
+									<div class="work-description">{%= data.jobs[i].workDescription %}</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				{% } %}
+					{% } %}
+				</div>
 			</div>
 		</div>
+		<div class="cutout2"></div>
 	</script>
 
 	<script type="text/x-tmpl" id="contact-template">
-		<div class="main-copy">{%= data.mainCopy %}</div>
-		<div class="sub-copy">{%= data.subCopy %}</div>
+		<div class="cutout1"></div>
+		<div class="content-container">
+			<div class="main-copy">{%= data.mainCopy %}</div>
+			<div class="sub-copy">{%= data.subCopy %}</div>
+		</div>
+		<div class="cutout2"></div>
 	</script>
 
 	<script type="text/x-tmpl" id="nav-template">
