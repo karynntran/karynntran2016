@@ -7,7 +7,7 @@ export function prepend(element, template, data) {
 }
 
 export function flipper(){
-	$('.flipper').addClass('init-intro');
+	$('.intro.flipper').addClass('init-intro');
 	$('.intro-text').addClass('init-intro');
 	$('.start-icon').addClass('init-intro');
 }

@@ -98,24 +98,30 @@ body {
   #app .page {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0; }
   #app .content-container {
     width: 80%;
     height: 85%;
     position: relative;
-    margin: 3% auto; }
+    margin: 0 auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
   #app .content {
     position: relative;
-    padding: 5%;
-    height: 65%;
     width: 90%;
-    overflow: hidden; }
+    height: 45em; }
   #app .divider {
     width: 100%;
-    height: 2em;
-    background: #ffffff; }
+    height: 15%;
+    background: #ffffff;
+    position: relative; }
+  #app .container {
+    position: relative;
+    height: 85%;
+    width: 100%; }
   #app .footer {
     position: absolute;
     bottom: 0;
@@ -201,50 +207,76 @@ body {
   /*/*INTRO STYLES /*/
   /*/*CONTENT STYLES /*/
   /*/*ABOUT STYLES /*/
+  /*/*skills STYLES /*/
   /*/*PORTFOLIO STYLES /*/
   /*/*WORK STYLES /*/
   /*/*CONTACT STYLES /*/ }
-  #app.on .flipper:hover,
-  #app.on .flipper.init-intro {
+  #app.on .intro.flipper:hover, #app.on .intro.flipper.init-intro {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     transition: -webkit-transform 1s;
     transition: transform 1s;
     transition: transform 1s, -webkit-transform 1s;
     -webkit-transition: transform 1s; }
-  #app.on .flipper.init-intro:hover {
+  #app.on .intro.flipper.init-intro:hover {
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg); }
-  #app.on .flipper:hover {
+  #app.on .intro.flipper:hover {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
+  #app.on .work-flip.flipper {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transition: transform 1s; }
+  #app.on .work-flip.flipper:hover {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transition: transform 1s; }
   #app.on .content {
     width: 100%;
     background: transparent;
-    z-index: 10;
-    height: 65%; }
+    z-index: 10; }
     #app.on .content.about {
-      height: 85%;
-      width: 100%;
-      background: #fff;
-      background: linear-gradient(rgba(255, 97, 96, 0.25), rgba(255, 97, 96, 0.25)), url(../../images/test.jpg) no-repeat top left;
-      background-size: cover; }
+      width: 100%; }
+      #app.on .content.about .image-container {
+        background: #fff;
+        background: linear-gradient(rgba(255, 97, 96, 0.25), rgba(255, 97, 96, 0.25)), url(../../images/test.jpg) no-repeat top left;
+        background-size: cover;
+        top: -5%; }
     #app.on .content.portfolio {
-      height: 85%;
-      width: 100%;
-      background: #fff;
-      background: linear-gradient(rgba(196, 198, 93, 0.25), rgba(196, 198, 93, 0.25)), url(../../images/test2.jpg) no-repeat top left;
-      background-size: cover; }
-    #app.on .content.work {
-      height: 85%;
       width: 100%;
       background: #fff; }
-    #app.on .content.contact {
-      height: 85%;
+    #app.on .content.skills .content-container {
+      height: 60%; }
+    #app.on .content.skills .skill {
+      float: left;
+      margin: 1em 1.5em; }
+    #app.on .content.skills .skill-type {
+      text-align: center;
+      text-transform: lowercase; }
+    #app.on .content.skills .skill-logo {
+      width: 3.5em;
+      height: 3.5em;
+      float: left;
+      margin: .5em auto; }
+    #app.on .content.work {
       width: 100%;
-      background: #fff;
-      background: linear-gradient(rgba(113, 197, 201, 0.25), rgba(113, 197, 201, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
-      background-size: cover; }
+      background: #fff; }
+      #app.on .content.work .image-container {
+        background: linear-gradient(rgba(113, 197, 201, 0.25), rgba(113, 197, 201, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
+        background-size: cover; }
+    #app.on .content.contact {
+      width: 100%;
+      background: #fff; }
+      #app.on .content.contact .image-container {
+        background: linear-gradient(rgba(196, 198, 93, 0.25), rgba(196, 198, 93, 0.25)), url(../../images/test2.jpg) no-repeat top left;
+        background-size: cover; }
   #app.on .footer {
     height: 0;
     width: 100%; }
@@ -268,23 +300,25 @@ body {
       background: #71c5c9;
       transition: all .25s linear; }
   #app.on .intro-container {
-    width: 45em;
+    width: 34.5em;
     margin: 0 auto;
     cursor: pointer;
     /*/ INTRO BOXES /*/ }
+    #app.on .intro-container .content-container {
+      width: 100%; }
     #app.on .intro-container .intro-grid {
       width: 100%;
       height: 45%;
       bottom: 0;
       position: relative; }
     #app.on .intro-container .intro-text {
-      width: 38em;
-      padding: 10px;
-      height: 135px;
+      width: 32.5em;
+      padding: .7em;
+      height: 14em;
       opacity: 0;
       cursor: pointer; }
     #app.on .intro-container .last-name {
-      font-size: 2.7em;
+      font-size: 1.7em;
       letter-spacing: 1em;
       text-align: center;
       text-transform: uppercase;
@@ -298,15 +332,15 @@ body {
       margin: 0;
       background-color: none; }
     #app.on .intro-container .start-icon {
-      width: 4em;
-      height: 4em;
+      width: 3em;
+      height: 3em;
       border-radius: 50%;
       background-color: #7f2a57;
       font-size: 1.5em;
       color: white;
       margin: 0 auto;
       text-align: center;
-      line-height: 4em;
+      line-height: 3em;
       position: relative;
       bottom: 0;
       top: 3em;
@@ -317,7 +351,7 @@ body {
     #app.on .intro-container .cards-ul li {
       list-style-type: none;
       float: left;
-      margin: 10px; }
+      margin: .7em; }
     #app.on .intro-container .intro-text.init-intro {
       opacity: 1;
       transition: opacity 1s 1.5s; }
@@ -326,11 +360,15 @@ body {
       -webkit-animation: bounce 2s 2s infinite;
       animation: bounce 2s 2s infinite; }
     #app.on .intro-container .flip-container, #app.on .intro-container .flipper, #app.on .intro-container .front, #app.on .intro-container .back {
-      width: 11em;
-      height: 11em; }
+      width: 10em;
+      height: 10em; }
   #app.on .content .main-copy {
     font-family: 'Chapaza';
-    font-size: 25px; }
+    font-size: 2em;
+    line-height: 3.6em;
+    text-align: center;
+    width: 100%;
+    height: 100%; }
   #app.on .content .sub-copy {
     font-family: 'Chapaza-Italic';
     color: lightgray;
@@ -340,217 +378,157 @@ body {
     width: 100%;
     float: right;
     text-align: right; }
-  #app.on .about .cutout1 {
-    width: 0;
-    height: 1em;
-    border-left: 57em solid transparent;
-    border-right: 25em solid transparent;
-    border-top: 7em solid #fff;
+  #app.on .content .image-container {
     position: absolute;
-    top: 0;
-    left: 0; }
-  #app.on .about .cutout2 {
-    width: 0;
-    height: 1em;
-    border-left: 38em solid transparent;
-    border-right: 74em solid transparent;
-    border-bottom: 7em solid #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0; }
-  #app.on .about .main-copy {
-    color: #FF6160;
-    font-size: 35px; }
-  #app.on .about .description-container {
-    width: 90%;
-    position: relative;
-    margin: 3% auto;
-    top: 5%; }
-  #app.on .about .fact-copy,
-  #app.on .about .extrafact-copy {
-    font-family: 'CaviarDreams-Regular';
-    font-size: 1.3vw;
-    text-align: justify;
-    color: #494949;
-    display: inline;
-    cursor: pointer; }
-  #app.on .about .fact-copy {
-    text-align: right;
-    color: #494949;
-    padding: 5px 15px;
-    border: 1px solid lightgray;
-    text-transform: lowercase;
-    background: lightgray; }
-  #app.on .about .extrafact-copy {
-    text-align: left;
-    letter-spacing: -10px;
-    color: transparent;
-    transition: all .5s ease-in;
-    text-transform: none; }
-  #app.on .about .description-container:hover .extrafact-copy {
-    letter-spacing: 0;
-    background: #FF6160;
-    color: white;
-    padding: 5px 40px;
-    border: 1px solid #FF6160;
-    transition: all .5s ease-in; }
-  #app.on .about .description-container:hover .fact-copy {
-    background: lightgray;
-    transition: all .5s ease-in; }
-  #app.on .portfolio .cutout1 {
-    width: 0;
-    height: 1em;
-    border-left: 57em solid transparent;
-    border-right: 25em solid transparent;
-    border-top: 7em solid #fff;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  #app.on .portfolio .cutout2 {
-    width: 0;
-    height: 1em;
-    border-left: 38em solid transparent;
-    border-right: 74em solid transparent;
-    border-bottom: 7em solid #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0; }
-  #app.on .portfolio .main-copy {
-    color: #C4C65D; }
-  #app.on .portfolio .portfolio-container {
-    display: inline;
     width: 100%;
-    position: absolute;
-    height: 65%;
-    top: 30%;
-    left: 0;
-    overflow: hidden; }
-  #app.on .portfolio .portfolio-cards {
-    width: 90%;
-    height: 100%;
-    margin: 0 auto; }
-  #app.on .portfolio .project-front {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 5; }
-  #app.on .portfolio .project-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-  #app.on .portfolio .portfolio-proj {
-    float: left;
-    width: 29%;
-    height: 100%;
-    margin: 2%;
-    position: relative; }
-  #app.on .portfolio .project-image {
-    width: 90%;
-    height: 50%;
-    margin: 0 auto; }
-  #app.on .portfolio .project-title {
-    font-family: 'Chapaza-Italic';
-    font-size: 1.5vw;
-    top: 20px;
-    position: relative;
-    color: #C4C65D;
-    padding-left: 2vw; }
-  #app.on .portfolio .project-description {
-    font-size: 13px;
-    position: relative;
-    top: 30px;
-    padding: 0 2vw; }
-  #app.on .portfolio .portfolio-skills {
-    width: 90%;
-    height: 100%;
-    position: absolute;
-    background: #fff;
-    top: 0;
-    right: 0; }
-  #app.on .portfolio .skill-ul {
-    list-style-type: none; }
-  #app.on .portfolio .skill-li {
-    font-size: 1.2vw;
-    text-decoration: none; }
-  #app.on .portfolio .drawer {
-    display: none; }
-  #app.on .portfolio .drawer-bar {
-    height: 100%;
-    width: 20px;
-    float: left;
-    background-color: #C4C65D;
-    z-index: 20;
-    cursor: pointer; }
-  #app.on .portfolio .drawer.animate {
-    left: 90%;
-    transition: left 2s ease-in; }
-  #app.on .portfolio .arrow {
-    width: 20px;
-    height: 0;
-    top: 2vw;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid #C4C65D;
-    z-index: 10;
-    position: relative;
-    left: 20px;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transition: all .3s .5s ease-in; }
-    #app.on .portfolio .arrow.collapsed {
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg);
-      left: -40px;
-      transition: all .3s .5s ease-in; }
-  #app.on .work .cutout1 {
-    width: 0;
-    height: 1em;
-    border-left: 57em solid transparent;
-    border-right: 25em solid transparent;
-    border-top: 7em solid #fff;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  #app.on .work .cutout2 {
-    width: 0;
-    height: 1em;
-    border-left: 38em solid transparent;
-    border-right: 74em solid transparent;
-    border-bottom: 7em solid #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0; }
-  #app.on .work .main-copy {
+    height: 100%; }
+  #app.on .about {
+    background: #f9f9f9; }
+    #app.on .about .image-container {
+      right: 0;
+      width: 50%; }
+    #app.on .about .main-copy {
+      color: #FF6160; }
+    #app.on .about .description-container {
+      width: 90%;
+      position: relative;
+      margin: 3% auto;
+      top: 5%; }
+    #app.on .about .fact-copy,
+    #app.on .about .extrafact-copy {
+      font-family: 'CaviarDreams-Regular';
+      font-size: 1.3vw;
+      text-align: justify;
+      color: #494949;
+      display: inline;
+      cursor: pointer; }
+    #app.on .about .fact-copy {
+      text-align: right;
+      color: #494949;
+      padding: 5px 15px;
+      border: 1px solid lightgray;
+      text-transform: lowercase;
+      background: lightgray; }
+    #app.on .about .extrafact-copy {
+      text-align: left;
+      letter-spacing: -10px;
+      color: transparent;
+      transition: all .5s ease-in;
+      text-transform: none; }
+    #app.on .about .description-container:hover .extrafact-copy {
+      letter-spacing: 0;
+      background: #FF6160;
+      color: white;
+      padding: 5px 40px;
+      border: 1px solid #FF6160;
+      transition: all .5s ease-in; }
+    #app.on .about .description-container:hover .fact-copy {
+      background: lightgray;
+      transition: all .5s ease-in; }
+  #app.on .skills .main-copy {
     color: #7f2a57; }
+  #app.on .skills .skill {
+    font-size: 1.5em; }
+  #app.on .portfolio {
+    background-color: #f9f9f9; }
+    #app.on .portfolio .main-copy {
+      color: #fbb87a; }
+    #app.on .portfolio .portfolio-container {
+      display: inline;
+      width: 49em;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden; }
+    #app.on .portfolio .portfolio-cards {
+      width: 94%;
+      height: 100%;
+      position: absolute;
+      right: 0; }
+    #app.on .portfolio .project-front {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 5; }
+    #app.on .portfolio .project-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+    #app.on .portfolio .portfolio-proj {
+      float: left;
+      width: 16em;
+      height: 16em;
+      position: relative; }
+    #app.on .portfolio .project-image {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      background: linear-gradient(rgba(251, 184, 122, 0.25), rgba(251, 184, 122, 0.25)), url(../../images/test4.jpg) no-repeat bottom left; }
+    #app.on .portfolio .project-title {
+      font-family: 'Chapaza-Italic';
+      font-size: 1.5vw;
+      top: 20px;
+      position: relative;
+      color: #fbb87a;
+      padding-left: 2vw; }
+    #app.on .portfolio .project-description {
+      font-size: 13px;
+      position: relative;
+      top: 30px;
+      padding: 0 2vw; }
+    #app.on .portfolio .arrow {
+      width: 20px;
+      height: 0;
+      top: 2vw;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid #C4C65D;
+      z-index: 10;
+      position: relative;
+      left: 20px;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      transition: all .3s .5s ease-in; }
+      #app.on .portfolio .arrow.collapsed {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        left: -40px;
+        transition: all .3s .5s ease-in; }
+  #app.on .work .main-copy {
+    color: #71c5c9; }
   #app.on .work .work-container {
     display: inline;
     width: 100%;
     position: absolute;
-    top: 170px;
-    left: 0;
-    margin: 0 auto; }
+    left: 50%;
+    margin: 0 auto;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   #app.on .work .work-cards {
-    width: 62vw;
-    height: 16vw;
+    width: 66em;
+    height: 16em;
     margin: 0 auto; }
-  #app.on .work .work.flip-container,
-  #app.on .work .work.flipper,
-  #app.on .work .work.front,
-  #app.on .work .work.back {
-    width: 14vw;
-    height: 14vw;
+  #app.on .work .flip-container,
+  #app.on .work .flipper,
+  #app.on .work .front,
+  #app.on .work .back {
+    width: 15em;
+    height: 15em;
     margin: 0; }
-  #app.on .work .work.flip-container {
-    margin: 1%; }
-  #app.on .work .work {
+  #app.on .work .flip-container {
+    margin: 1%;
     float: left;
-    background: white; }
-  #app.on .work .work.back {
+    background: transparent; }
+  #app.on .work .front {
+    border: 1px solid #ccc; }
+  #app.on .work .back {
     border: 1px solid lightgray;
     background: #fff;
     padding: 10%;
@@ -558,7 +536,7 @@ body {
   #app.on .work .work-company {
     font-size: 1.5vw;
     font-family: 'Chapaza';
-    color: #7f2a57; }
+    color: #71c5c9; }
   #app.on .work .work-logo {
     width: 55px;
     height: 35px; }
@@ -570,14 +548,7 @@ body {
     position: relative;
     font-size: 1vw;
     text-align: left; }
-  #app.on .contact .cutout1 {
-    width: 0;
-    height: 1em;
-    border-left: 57em solid transparent;
-    border-right: 25em solid transparent;
-    border-top: 7em solid #fff;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  #app.on .contact .main-copy {
-    color: #71c5c9; }
+  #app.on .contact {
+    background: #f9f9f9; }
+    #app.on .contact .main-copy {
+      color: #C4C65D; }

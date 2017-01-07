@@ -3,6 +3,7 @@ $pink: #FF6160;
 $green: #C4C65D;
 $purple: #7f2a57;
 $blue: #71c5c9;
+$orange: #fbb87a;
 
 @font-face {
 	font-family:'Chapaza';
@@ -76,7 +77,7 @@ body {
 	.page {
 		width: 100%;
 		height: 100%;
-		position: absolute;
+		position: relative;
 	    top: 0;
 	    left: 0;
 	}
@@ -84,19 +85,25 @@ body {
 		width: 80%;
 		height: 85%;
 		position: relative;
-	    margin: 3% auto;
+	    margin: 0 auto;
+	    top: 50%;
+    	transform: translateY(-50%);
 	}
 	.content {
 		position: relative;
-		padding: 5%;
-		height: 65%;
 		width: 90%;
-		overflow: hidden;
+		height: 45em;
 	}
 	.divider {
 		width: 100%;
-		height: 2em;
+		height: 15%;
 		background: #ffffff;
+		position: relative;
+	}
+	.container {
+		position: relative;
+		height: 85%;
+		width: 100%;
 	}
 	.footer {
 		position: absolute;
@@ -194,85 +201,104 @@ body {
 }
 
 #app.on {
-	.flipper:hover,
-	.flipper.init-intro {
-		transform: rotateY(180deg);
-		transition: transform 1s;
-		-webkit-transition: transform 1s;
+	.intro {
+		&.flipper:hover,
+		&.flipper.init-intro {
+			transform: rotateY(180deg);
+			transition: transform 1s;
+			-webkit-transition: transform 1s;
+		}
+		&.flipper.init-intro:hover {
+			transform: rotateY(0deg);
+		}
+		&.flipper:hover {
+			transform: rotateY(180deg);
+		}
 	}
-	.flipper.init-intro:hover {
-		transform: rotateY(0deg);
-	}
-	.flipper:hover {
-		transform: rotateY(180deg);
+	.work-flip {
+		&.flipper {
+			transform: rotateY(0deg);
+			transition: transform 1s;
+			-webkit-transition: transform 1s;		
+		}
+		// transform: rotateY(0deg);
+		&.flipper:hover {
+			transform: rotateY(180deg);
+			transition: transform 1s;
+			-webkit-transition: transform 1s;
+		}
 	}
 	.content {
 		width: 100%;
 		background: transparent;
 		z-index: 10;
-		height: 65%;
 		&.about {
-			height: 85%;
 			width: 100%;
-			// border: 2px solid $pink;
-			background: #fff;
-			// transition: all .25s .15s linear; 
-
-			background: linear-gradient(
-		      rgba(255, 97, 96, 0.25), 
-		      rgba(255, 97, 96, 0.25)
-		    ),
-			url(../../images/test.jpg) no-repeat top left;
-			background-size: cover;
-			// border-top: 2px solid $pink;
+			.image-container {
+				background: #fff;
+				background: linear-gradient(
+			      rgba(255, 97, 96, 0.25), 
+			      rgba(255, 97, 96, 0.25)
+			    ),
+				url(../../images/test.jpg) no-repeat top left;
+				background-size: cover;
+				top: -5%;
+			}
 		}
 		&.portfolio {
-			height: 85%;
 			width: 100%;
-			// border: 2px solid $green;
 			background: #fff;
-			// transition: all .25s .15s linear; 
-
-			background: linear-gradient(
-		      rgba(196, 198, 93, 0.25), 
-		      rgba(196, 198, 93, 0.25)
-		    ),
-			url(../../images/test2.jpg) no-repeat top left;
-			background-size: cover;
-			// border-top: 2px solid $green;
-			// transition: all .25s .5s linear; 
+		}
+		&.skills {
+			.content-container {
+				height: 60%;
+			}
+			.skill {
+				float: left;
+				margin: 1em 1.5em;
+			}
+			.skill-type {
+				text-align: center;
+				text-transform: lowercase;
+			}
+			.skill-logo {
+			    width: 3.5em;
+			    height: 3.5em;
+				float: left;
+				margin: .5em auto;
+			}
 		}
 		&.work {
-			height: 85%;
 			width: 100%;
 			// border: 2px solid $purple;
 			background: #fff;
 			// transition: all .25s .15s linear; 
+			.image-container {
+				background: linear-gradient(
+			      rgba(113,197,201, 0.25), 
+			      rgba(113,197,201, 0.25)
+			    ),
+				url(../../images/test4.jpg) no-repeat bottom left;
+				background-size: cover;				
+			}
 
-			// background: linear-gradient(
-		 //      rgba(127, 42, 87, 0.25), 
-		 //      rgba(127, 42, 87, 0.25)
-		 //    ),
-			// url(../../images/test3.jpg) no-repeat top left;
 			// background-size: cover;
 			// // border-top: 2px solid $purple;
 			// transition: all .25s .5s linear; 
 		}
 		&.contact {
-			height: 85%;
 			width: 100%;
 			// border: 2px solid $blue;
 			background: #fff;
 			// transition: all .25s .15s linear; 
-
-			background: linear-gradient(
-		      rgba(113,197,201, 0.25), 
-		      rgba(113,197,201, 0.25)
-		    ),
-			url(../../images/test4.jpg) no-repeat bottom left;
-			background-size: cover;
-			// border-top: 2px solid $blue;
-			// transition: all .25s .5s linear; 
+			.image-container {
+				background: linear-gradient(
+			      rgba(196, 198, 93, 0.25), 
+			      rgba(196, 198, 93, 0.25)
+			    ),
+				url(../../images/test2.jpg) no-repeat top left;
+				background-size: cover;
+			}
 		}
 	}
 	.footer {
@@ -350,9 +376,12 @@ body {
 
 /*/*INTRO STYLES /*/
 .intro-container {
-	width: 45em;
+	width: 34.5em;
 	margin: 0 auto;
 	cursor: pointer;
+	.content-container {
+		width: 100%;
+	}
 	.intro-grid {
 	    width: 100%;
 	    height: 45%;
@@ -361,14 +390,14 @@ body {
 	}
 
 	.intro-text {
-	    width: 38em;
-	    padding: 10px;
-	    height: 135px;
+	    width: 32.5em;
+	    padding: .7em;
+	    height: 14em;
 	    opacity: 0;
 	    cursor: pointer;
 	}
 	.last-name {
-	    font-size: 2.7em;
+    	font-size: 1.7em;
 	    letter-spacing: 1em;
 	    text-align: center;
 	    text-transform: uppercase;
@@ -384,15 +413,15 @@ body {
 	    background-color: none;
 	}
 	.start-icon {
-		width: 4em;
-	    height: 4em;
+		width: 3em;
+	    height: 3em;
 	    border-radius: 50%;
 	    background-color: #7f2a57;
 	    font-size: 1.5em;
 	    color: white;
 	    margin: 0 auto;
 	    text-align: center;
-	    line-height: 4em;
+	    line-height: 3em;
 	    position: relative;
 	    bottom: 0;
 	    top: 3em;
@@ -408,7 +437,7 @@ body {
 	.cards-ul li {
 	    list-style-type: none;
 	    float: left;
-	    margin: 10px;
+	    margin: .7em;
 	}
 	.intro-text {
 		&.init-intro{
@@ -424,8 +453,8 @@ body {
 	    }
 	}
 	.flip-container, .flipper, .front, .back {
-	    width: 11em;
-	    height: 11em;
+	    width: 10em;
+	    height: 10em;
 	}
 }
 
@@ -433,7 +462,11 @@ body {
 	.content {
 		.main-copy {
 			font-family: 'Chapaza';
-			font-size: 25px;
+		    font-size: 2em;
+		    line-height: 3.6em;
+			text-align: center;
+			width: 100%;
+			height: 100%;
 		}
 		.sub-copy {
 			font-family: 'Chapaza-Italic';
@@ -445,33 +478,22 @@ body {
 		    float: right;
 		    text-align: right;
 		}
+		.image-container {
+			position: absolute;
+			width: 100%;
+		    height: 100%;
+		}
 	}
 	
 /*/*ABOUT STYLES /*/
 	.about {
-		.cutout1 {
-			width: 0;
-		    height: 1em;
-		    border-left: 57em solid transparent;
-		    border-right: 25em solid transparent;
-		    border-top: 7em solid #fff;
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		}
-		.cutout2 {
-		    width: 0;
-		    height: 1em;
-		    border-left: 38em solid transparent;
-		    border-right: 74em solid transparent;
-		    border-bottom: 7em solid #fff;
-		    position: absolute;
-		    bottom: 0;
-		    left: 0;
+		background: #f9f9f9;
+		.image-container {
+		    right: 0;
+		    width: 50%;
 		}
 		.main-copy {
 			color: $pink;
-			font-size: 35px;
 		}
 		.description-container {
 			width: 90%;
@@ -517,45 +539,36 @@ body {
 		}
 	}
 
+/*/*skills STYLES /*/
+	.skills {
+		.main-copy {
+			color: $purple;
+		}
+		.skill {
+			    font-size: 1.5em;
+		}
+	}
 
 /*/*PORTFOLIO STYLES /*/
 	.portfolio {
-		.cutout1 {
-			width: 0;
-		    height: 1em;
-		    border-left: 57em solid transparent;
-		    border-right: 25em solid transparent;
-		    border-top: 7em solid #fff;
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		}
-		.cutout2 {
-		    width: 0;
-		    height: 1em;
-		    border-left: 38em solid transparent;
-		    border-right: 74em solid transparent;
-		    border-bottom: 7em solid #fff;
-		    position: absolute;
-		    bottom: 0;
-		    left: 0;
-		}
+		background-color: #f9f9f9;
 		.main-copy {
-			color: $green;
+			color: $orange;
 		}
 		.portfolio-container {
 		    display: inline;
-		    width: 100%;
+		    width: 49em;
 		    position: absolute;
-		    height: 65%;
-		    top: 30%;
+		    height: 100%;
+		    top: 0;
 		    left: 0;
 		    overflow: hidden;
 		}
 		.portfolio-cards {
-			width: 90%;
-    		height: 100%;
-			margin: 0 auto;
+		    width: 94%;
+		    height: 100%;
+		    position: absolute;
+		    right: 0;
 		}
 		.project-front {
 			width: 100%;
@@ -574,23 +587,23 @@ body {
 			z-index: 1;
 		}
 		.portfolio-proj {
-			float: left;
-		    width: 29%;
-		    height: 100%;
-		    margin: 2%;
-			position: relative;
+		    float: left;
+		    width: 16em;
+		    height: 16em;
+		    position: relative;
 		}
 		.project-image {
-		    width: 90%;
-		    height: 50%;
+		    width: 100%;
+		    height: 100%;
 		    margin: 0 auto;
+		    background: linear-gradient(rgba(251,184,122, 0.25), rgba(251,184,122, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
 		}
 		.project-title {
 			font-family: 'Chapaza-Italic';
 			font-size: 1.5vw;
 			top: 20px;
 			position: relative;
-			color: $green;
+			color: $orange;
 			padding-left: 2vw;
 		}
 		.project-description {
@@ -598,47 +611,6 @@ body {
 			position: relative;
 			top: 30px;
 			padding: 0 2vw;
-		}
-		.portfolio-skills {
-		    width: 90%;
-		    height: 100%;
-		    position: absolute;
-		    background: #fff;
-		    top: 0;
-		    right: 0;
-		}
-		.skill-ul {
-			list-style-type: none;
-		}
-		.skill-li {
-			font-size: 1.2vw;
-			text-decoration: none;
-		}
-		.drawer {
-			display: none;
-		// 	height: 100%;
-		// 	width: 100%;
-		// 	position: absolute;
-		// 	right: 0;
-		// 	z-index: 11;
-		// 	background: #fff;
-		// 	transition: right 1s ease-in;
-		// 	&.collapsed {
-		// 		right: -98.3%;
-		// 		transition: right 1s ease-in;
-		// 	}
-		}
-		.drawer-bar {
-			height: 100%;
-			width: 20px;
-			float: left;
-			background-color: $green;
-			z-index: 20;
-			cursor: pointer;
-		}
-		.drawer.animate {
-			left: 90%;
-			transition: left 2s ease-in;
 		}
 		.arrow {
 			width: 20px;
@@ -664,58 +636,40 @@ body {
 
 /*/*WORK STYLES /*/
 	.work {
-		.cutout1 {
-			width: 0;
-		    height: 1em;
-		    border-left: 57em solid transparent;
-		    border-right: 25em solid transparent;
-		    border-top: 7em solid #fff;
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		}
-		.cutout2 {
-		    width: 0;
-		    height: 1em;
-		    border-left: 38em solid transparent;
-		    border-right: 74em solid transparent;
-		    border-bottom: 7em solid #fff;
-		    position: absolute;
-		    bottom: 0;
-		    left: 0;
-		}
 		.main-copy {
-			color: $purple;
+			color: $blue;
 		}
 		.work-container {
-			display: inline;
+		    display: inline;
 		    width: 100%;
 		    position: absolute;
-		    top: 170px;
-		    left: 0;
+		    left: 50%;
 		    margin: 0 auto;
+		    top: 50%;
+		    transform: translate(-50%,-50%);
 		}
 		.work-cards {
-		    width: 62vw;
-		    height: 16vw;
+		    width: 66em;
+		    height: 16em;
 			margin: 0 auto;
 		}
-		.work.flip-container,
-		.work.flipper,
-		.work.front,
-		.work.back {
-		    width: 14vw;
-		    height: 14vw;
+		.flip-container,
+		.flipper,
+		.front,
+		.back {
+		    width: 15em;
+		    height: 15em;
 			margin: 0;
 		}
-		.work.flip-container {
+		.flip-container {
 			margin: 1%;
-		}
-		.work {
 			float: left;
-			background: white;
+			background: transparent;
 		}
-		.work.back {
+		.front {
+			border: 1px solid #ccc;
+		}
+		.back {
 			border: 1px solid lightgray;
 			background: #fff;
 			padding: 10%;
@@ -724,7 +678,7 @@ body {
 		.work-company {
 			font-size: 1.5vw;
 			font-family: 'Chapaza';
-			color: $purple;
+			color: $blue;
 		}
 		.work-logo {
 			width: 55px;
@@ -745,28 +699,9 @@ body {
 
 /*/*CONTACT STYLES /*/
 	.contact {
-		.cutout1 {
-			width: 0;
-		    height: 1em;
-		    border-left: 57em solid transparent;
-		    border-right: 25em solid transparent;
-		    border-top: 7em solid #fff;
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		}
-		.cutout2 {
-		    // width: 0;
-		    // height: 23%;
-		    // border-left: 38em solid transparent;
-		    // border-right: 74em solid transparent;
-		    // border-bottom: 7em solid #fff;
-		    // position: absolute;
-		    // bottom: 0;
-		    // left: 0;
-		}
+		background: #f9f9f9;		
 		.main-copy {
-			color: $blue;
+			color: $green;
 		}
 	}
 }
