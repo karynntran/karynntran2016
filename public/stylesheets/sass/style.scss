@@ -180,19 +180,23 @@ body {
 	    text-align: center;
 	    margin: 2.5% 2%;
 		text-transform: uppercase;
-		&.about:hover {
+		&.about:hover,
+		&.about:focus {
 			background: $pink;
 			color: white;
 		}
-		&.portfolio:hover {
+		&.portfolio:hover,
+		&.portfolio:focus {
 			background: $green;
 			color: white;
 		}
-		&.work:hover {
+		&.work:hover,
+		&.work:focus {
 			background: $purple;
 			color: white;
 		}
-		&.contact:hover {
+		&.contact:hover,
+		&.contact:focus {
 			background: $blue;
 			color: white;
 		}
@@ -203,15 +207,18 @@ body {
 #app.on {
 	.intro {
 		&.flipper:hover,
+		&.flipper:focus,
 		&.flipper.init-intro {
 			transform: rotateY(180deg);
 			transition: transform 1s;
 			-webkit-transition: transform 1s;
 		}
-		&.flipper.init-intro:hover {
+		&.flipper.init-intro:hover,
+		&.flipper.init-intro:focus {
 			transform: rotateY(0deg);
 		}
-		&.flipper:hover {
+		&.flipper:hover,
+		&.flipper:focus {
 			transform: rotateY(180deg);
 		}
 	}
@@ -222,7 +229,8 @@ body {
 			-webkit-transition: transform 1s;		
 		}
 		// transform: rotateY(0deg);
-		&.flipper:hover {
+		&.flipper:hover,
+		&.flipper:focus {
 			transform: rotateY(180deg);
 			transition: transform 1s;
 			-webkit-transition: transform 1s;
@@ -525,7 +533,8 @@ body {
 			transition: all .5s ease-in;
 			text-transform: none;
 		}
-		.description-container:hover .extrafact-copy {
+		.description-container:hover .extrafact-copy,
+		.description-container:focus .extrafact-copy {
 			letter-spacing: 0;
 			background: $pink;
 			color: white;
@@ -533,7 +542,8 @@ body {
 			border: 1px solid $pink;
 			transition: all .5s ease-in;
 		}
-		.description-container:hover .fact-copy {
+		.description-container:hover .fact-copy,
+		.description-container:focus .fact-copy {
 			background: lightgray;
 			transition: all .5s ease-in;
 		}

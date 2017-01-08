@@ -59,7 +59,7 @@ var data = {
 		]
 	},
 	"skills" : {
-		"mainCopy" : "skills",
+		"mainCopy" : "what i've worked with",
 		"skills" : [
 			{
 				"skill": "Ruby",
@@ -82,7 +82,7 @@ var data = {
 				"skillLogo": "backbone-gray.png"
 			},
 			{
-				"skill": "HTML",
+				"skill": "HTML5",
 				"skillLogo": "html-gray.png"
 			},
 			{
