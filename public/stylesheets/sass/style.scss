@@ -154,71 +154,23 @@ body {
 		top: -20px;
     	position: relative;
 	}
-	.nav {
-		position: relative;
-		top: 0;
-		width: 100%;
-		height: 60px;
-	}
-	.nav-ul {
-		padding: 0;
-		height: 100%;
-	}
-	.nav-div {
-		height: 35px;
-		width: 100px;
-		float: left;
-		display: inline;
-	}
-	.nav-vertical {
-	    width: 2px;
-	    margin: 0 auto;
-	}
-	.nav-li {
-		list-style-type: none;
-	    font-size: 15px;
-	    text-align: center;
-	    margin: 2.5% 2%;
-		text-transform: uppercase;
-		&.about:hover,
-		&.about:focus {
-			background: $pink;
-			color: white;
-		}
-		&.portfolio:hover,
-		&.portfolio:focus {
-			background: $green;
-			color: white;
-		}
-		&.work:hover,
-		&.work:focus {
-			background: $purple;
-			color: white;
-		}
-		&.contact:hover,
-		&.contact:focus {
-			background: $blue;
-			color: white;
-		}
-	}
-
 }
 
 #app.on {
 	.intro {
 		&.flipper:hover,
-		&.flipper:focus,
+		&.flipper.clicked,
 		&.flipper.init-intro {
 			transform: rotateY(180deg);
 			transition: transform 1s;
 			-webkit-transition: transform 1s;
 		}
 		&.flipper.init-intro:hover,
-		&.flipper.init-intro:focus {
+		&.flipper.init-intro.clicked {
 			transform: rotateY(0deg);
 		}
 		&.flipper:hover,
-		&.flipper:focus {
+		&.flipper.clicked {
 			transform: rotateY(180deg);
 		}
 	}
@@ -230,7 +182,7 @@ body {
 		}
 		// transform: rotateY(0deg);
 		&.flipper:hover,
-		&.flipper:focus {
+		&.flipper.clicked {
 			transform: rotateY(180deg);
 			transition: transform 1s;
 			-webkit-transition: transform 1s;
@@ -534,7 +486,7 @@ body {
 			text-transform: none;
 		}
 		.description-container:hover .extrafact-copy,
-		.description-container:focus .extrafact-copy {
+		.description-container.clicked .extrafact-copy {
 			letter-spacing: 0;
 			background: $pink;
 			color: white;
@@ -543,7 +495,7 @@ body {
 			transition: all .5s ease-in;
 		}
 		.description-container:hover .fact-copy,
-		.description-container:focus .fact-copy {
+		.description-container.clicked .fact-copy {
 			background: lightgray;
 			transition: all .5s ease-in;
 		}

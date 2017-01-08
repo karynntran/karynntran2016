@@ -168,40 +168,6 @@ body {
     color: #494949;
     top: -20px;
     position: relative; }
-  #app .nav {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 60px; }
-  #app .nav-ul {
-    padding: 0;
-    height: 100%; }
-  #app .nav-div {
-    height: 35px;
-    width: 100px;
-    float: left;
-    display: inline; }
-  #app .nav-vertical {
-    width: 2px;
-    margin: 0 auto; }
-  #app .nav-li {
-    list-style-type: none;
-    font-size: 15px;
-    text-align: center;
-    margin: 2.5% 2%;
-    text-transform: uppercase; }
-    #app .nav-li.about:hover, #app .nav-li.about:focus {
-      background: #FF6160;
-      color: white; }
-    #app .nav-li.portfolio:hover, #app .nav-li.portfolio:focus {
-      background: #C4C65D;
-      color: white; }
-    #app .nav-li.work:hover, #app .nav-li.work:focus {
-      background: #7f2a57;
-      color: white; }
-    #app .nav-li.contact:hover, #app .nav-li.contact:focus {
-      background: #71c5c9;
-      color: white; }
 
 #app.on {
   /*/*INTRO STYLES /*/
@@ -211,17 +177,17 @@ body {
   /*/*PORTFOLIO STYLES /*/
   /*/*WORK STYLES /*/
   /*/*CONTACT STYLES /*/ }
-  #app.on .intro.flipper:hover, #app.on .intro.flipper:focus, #app.on .intro.flipper.init-intro {
+  #app.on .intro.flipper:hover, #app.on .intro.flipper.clicked, #app.on .intro.flipper.init-intro {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     transition: -webkit-transform 1s;
     transition: transform 1s;
     transition: transform 1s, -webkit-transform 1s;
     -webkit-transition: transform 1s; }
-  #app.on .intro.flipper.init-intro:hover, #app.on .intro.flipper.init-intro:focus {
+  #app.on .intro.flipper.init-intro:hover, #app.on .intro.flipper.init-intro.clicked {
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg); }
-  #app.on .intro.flipper:hover, #app.on .intro.flipper:focus {
+  #app.on .intro.flipper:hover, #app.on .intro.flipper.clicked {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
   #app.on .work-flip.flipper {
@@ -231,7 +197,7 @@ body {
     transition: transform 1s;
     transition: transform 1s, -webkit-transform 1s;
     -webkit-transition: transform 1s; }
-  #app.on .work-flip.flipper:hover, #app.on .work-flip.flipper:focus {
+  #app.on .work-flip.flipper:hover, #app.on .work-flip.flipper.clicked {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     transition: -webkit-transform 1s;
@@ -416,7 +382,7 @@ body {
       transition: all .5s ease-in;
       text-transform: none; }
     #app.on .about .description-container:hover .extrafact-copy,
-    #app.on .about .description-container:focus .extrafact-copy {
+    #app.on .about .description-container.clicked .extrafact-copy {
       letter-spacing: 0;
       background: #FF6160;
       color: white;
@@ -424,7 +390,7 @@ body {
       border: 1px solid #FF6160;
       transition: all .5s ease-in; }
     #app.on .about .description-container:hover .fact-copy,
-    #app.on .about .description-container:focus .fact-copy {
+    #app.on .about .description-container.clicked .fact-copy {
       background: lightgray;
       transition: all .5s ease-in; }
   #app.on .skills .main-copy {
