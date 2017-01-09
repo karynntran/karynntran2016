@@ -710,7 +710,10 @@ body {
 @media all and (max-width: 480px) {
 	#app.on {
 		.content {
-			height: 178em;		
+			height: 178em;	
+			.main-copy {
+				font-size: 5em;
+			}	
 		}
 		.intro-container {
 			width: 80%;
@@ -726,6 +729,29 @@ body {
 			}
 			.start-icon {
 				font-size: 7.5em;
+			}
+		}
+		.about {
+			.content-container {
+				width: 75%;
+				top: 35%;
+			}
+			.description-container {
+				width: 100%;
+				height: 19em;
+			}
+			.fact-copy {
+				font-size: 3.5em;
+			    top: 1em;
+			    width: 18em;
+			}
+			.fact-number {
+				left: 50%;
+			}
+			&.active {
+				.fact-number {
+					left: 0;				
+				}
 			}
 		}
 	}

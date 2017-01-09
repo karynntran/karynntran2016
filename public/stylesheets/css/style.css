@@ -619,6 +619,8 @@ body {
 @media all and (max-width: 480px) {
   #app.on .content {
     height: 178em; }
+    #app.on .content .main-copy {
+      font-size: 5em; }
   #app.on .intro-container {
     width: 80%; }
     #app.on .intro-container .flip-container, #app.on .intro-container .flipper, #app.on .intro-container .front, #app.on .intro-container .back {
@@ -629,4 +631,18 @@ body {
     #app.on .intro-container .last-name {
       font-size: 5.7em; }
     #app.on .intro-container .start-icon {
-      font-size: 7.5em; } }
+      font-size: 7.5em; }
+  #app.on .about .content-container {
+    width: 75%;
+    top: 35%; }
+  #app.on .about .description-container {
+    width: 100%;
+    height: 19em; }
+  #app.on .about .fact-copy {
+    font-size: 3.5em;
+    top: 1em;
+    width: 18em; }
+  #app.on .about .fact-number {
+    left: 50%; }
+  #app.on .about.active .fact-number {
+    left: 0; } }
