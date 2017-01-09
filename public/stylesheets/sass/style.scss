@@ -110,6 +110,7 @@ body {
 		height: 15%;
 		background: #ffffff;
 		position: relative;
+		clear: both;
 	}
 	.container {
 		position: relative;
@@ -188,138 +189,35 @@ body {
 
 	.content {
 		width: 100%;
-		background: transparent;
+		background: #fff;
 		z-index: 10;
-		&.about {
+		.main-copy {
+			font-family: 'Chapaza';
+		    font-size: 2em;
+		    line-height: 3.6em;
+			text-align: center;
 			width: 100%;
+			height: 100%;
 		}
-		&.portfolio {
+		.sub-copy {
+			font-family: 'Chapaza-Italic';
+			color: lightgray;
+			top: 20px;
+		    position: relative;
+		    font-size: 14px;
+		    width: 100%;
+		    float: right;
+		    text-align: right;
+		}
+		.image-container {
+			position: absolute;
 			width: 100%;
-			background: #fff;
-		}
-		&.skills {
-			.content-container {
-				height: 60%;
-			}
-			.skill {
-				float: left;
-				margin: 1em 1.5em;
-			}
-			.skill-type {
-				text-align: center;
-				text-transform: lowercase;
-			}
-			.skill-logo {
-			    width: 3.5em;
-			    height: 3.5em;
-				float: left;
-				margin: .5em auto;
-			}
-		}
-		&.work {
-			width: 100%;
-			// border: 2px solid $purple;
-			background: #fff;
-			// transition: all .25s .15s linear; 
-			.image-container {
-				background: linear-gradient(
-			      rgba(113,197,201, 0.25), 
-			      rgba(113,197,201, 0.25)
-			    ),
-				url(../../images/test4.jpg) no-repeat bottom left;
-				background-size: cover;				
-			}
-
-			// background-size: cover;
-			// // border-top: 2px solid $purple;
-			// transition: all .25s .5s linear; 
-		}
-		&.contact {
-			width: 100%;
-			// border: 2px solid $blue;
-			background: #fff;
-			// transition: all .25s .15s linear; 
-			.image-container {
-				background: linear-gradient(
-			      rgba(196, 198, 93, 0.25), 
-			      rgba(196, 198, 93, 0.25)
-			    ),
-				url(../../images/test2.jpg) no-repeat top left;
-				background-size: cover;
-			}
+		    height: 100%;
 		}
 	}
 	.footer {
 		height:0;
 		width: 100%;
-		// &.about {
-		// 	background: linear-gradient(
-		//       rgba(255, 97, 96, 0.25), 
-		//       rgba(255, 97, 96, 0.25)
-		//     ),
-		// 	url(../../images/test.jpg) no-repeat top left;
-		// 	background-size: cover;
-		// 	border-top: 2px solid $pink;
-		// 	height: 50%;
-		// 	transition: all .25s .35s linear; 
-		// }
-		// &.portfolio {
-		// 	background: linear-gradient(
-		//       rgba(196, 198, 93, 0.25), 
-		//       rgba(196, 198, 93, 0.25)
-		//     ),
-		// 	url(../../images/test2.jpg) no-repeat top left;
-		// 	background-size: cover;
-		// 	border-top: 2px solid $green;
-		// 	height: 50%;
-		// 	transition: all .25s .5s linear; 
-		// }
-		// &.work {
-		// 	background: linear-gradient(
-		//       rgba(127, 42, 87, 0.25), 
-		//       rgba(127, 42, 87, 0.25)
-		//     ),
-		// 	url(../../images/test3.jpg) no-repeat top left;
-		// 	background-size: cover;
-		// 	border-top: 2px solid $purple;
-		// 	height: 50%;
-		// 	transition: all .25s .5s linear; 
-		// }
-		// &.contact {
-		// 	background: linear-gradient(
-		//       rgba(113,197,201, 0.25), 
-		//       rgba(113,197,201, 0.25)
-		//     ),
-		// 	url(../../images/test4.jpg) no-repeat bottom left;
-		// 	background-size: cover;
-		// 	border-top: 2px solid $blue;
-		// 	height: 50%;
-		// 	transition: all .25s .5s linear; 
-		// }
-	}
-	.nav-vertical {
-		height: 0;
-		transition: all .25s .35s linear;
-		&.about {
-			height: 36px;
-			background: $pink;
-			transition: all .25s linear; 
-		}
-		&.portfolio {
-			height: 36px;
-			background: $green;
-			transition: all .25s linear; 
-		}
-		&.work {
-			height: 36px;
-			background: $purple;
-			transition: all .25s linear; 
-		}
-		&.contact {
-			height: 36px;
-			background: $blue;
-			transition: all .25s linear; 
-		}
 	}
 
 /*/*INTRO STYLES /*/
@@ -406,32 +304,6 @@ body {
 	}
 }
 
-/*/*CONTENT STYLES /*/
-	.content {
-		.main-copy {
-			font-family: 'Chapaza';
-		    font-size: 2em;
-		    line-height: 3.6em;
-			text-align: center;
-			width: 100%;
-			height: 100%;
-		}
-		.sub-copy {
-			font-family: 'Chapaza-Italic';
-			color: lightgray;
-			top: 20px;
-		    position: relative;
-		    font-size: 14px;
-		    width: 100%;
-		    float: right;
-		    text-align: right;
-		}
-		.image-container {
-			position: absolute;
-			width: 100%;
-		    height: 100%;
-		}
-	}
 	
 /*/*ABOUT STYLES /*/
 	.about {
@@ -496,6 +368,16 @@ body {
 
 /*/*skills STYLES /*/
 	.skills {
+		.skill-type {
+			text-align: center;
+			text-transform: lowercase;
+		}
+		.skill-logo {
+		    width: 3.5em;
+		    height: 3.5em;
+			float: left;
+			margin: .5em auto;
+		}
 		.content-container {
 			width: 65%;
 		}
@@ -503,6 +385,8 @@ body {
 			color: $purple;
 		}
 		.skill {
+			float: left;
+			margin: 1em 1.5em;
 			font-size: 1.5em;
 			opacity: 0;
 			transition: opacity .25s ease-in;
@@ -525,7 +409,6 @@ body {
 
 /*/*PORTFOLIO STYLES /*/
 	.portfolio {
-		background-color: #f9f9f9;
 		.main-copy {
 			color: $orange;
 		}
@@ -609,7 +492,22 @@ body {
 
 /*/*WORK STYLES /*/
 	.work {
+			width: 100%;
+			// border: 2px solid $purple;
+			background: #fff;
+
+
+			// background-size: cover;
+			// // border-top: 2px solid $purple;
+			// transition: all .25s .5s linear; 
+
 		.image-container {
+				background: linear-gradient(
+			      rgba(113,197,201, 0.25), 
+			      rgba(113,197,201, 0.25)
+			    ),
+				url(../../images/test4.jpg) no-repeat bottom left;
+				background-size: cover;	
 			bottom: -100%;
 			transition: bottom .5s ease-in;
 		}
@@ -739,19 +637,70 @@ body {
 			.description-container {
 				width: 100%;
 				height: 19em;
+				margin: 3em 0;
 			}
 			.fact-copy {
-				font-size: 3.5em;
+				font-size: 4em;
 			    top: 1em;
 			    width: 18em;
 			}
 			.fact-number {
 				left: 50%;
+				transform: translateX(-50%);
+				font-size: 27em;
 			}
 			&.active {
-				.fact-number {
-					left: 0;				
+				.description-container {
+					width: 100%;
 				}
+				.fact-copy {
+					top: .7em;
+					left: .2em;
+				}
+				.fact-number {
+					opacity: .4;
+					left: 0;			
+				}
+			}
+		}
+		.skills {
+			.content-container {
+				width: 90%;
+			}
+			.skills-container {
+				column-count: 3;
+				height: 96em;
+			}
+			.skill {
+				margin: 4em 5.5em;
+				float: none;
+			}
+			.skill-type {
+				font-size: 3em;
+			}
+			.skill-logo {
+			    width: 8em;
+			    height: 8em;
+			    float: none;
+			}
+		}
+		.work {
+			.work-cards {
+				width: 84em;
+			}
+			.flip-container,
+			.flipper,
+			.front, 
+			.back {
+				width: 40em;
+				height: 40em;
+			}
+			.work-company {
+				font-size: 4em;
+			}
+			.work-position,
+			.work-description {
+				font-size: 2.5em;
 			}
 		}
 	}

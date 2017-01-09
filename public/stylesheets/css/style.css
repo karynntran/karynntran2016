@@ -125,7 +125,8 @@ body {
     width: 100%;
     height: 15%;
     background: #ffffff;
-    position: relative; }
+    position: relative;
+    clear: both; }
   #app .container {
     position: relative;
     height: 85%;
@@ -179,7 +180,6 @@ body {
 
 #app.on {
   /*/*INTRO STYLES /*/
-  /*/*CONTENT STYLES /*/
   /*/*ABOUT STYLES /*/
   /*/*skills STYLES /*/
   /*/*PORTFOLIO STYLES /*/
@@ -200,60 +200,31 @@ body {
     transform: rotateY(180deg); }
   #app.on .content {
     width: 100%;
-    background: transparent;
+    background: #fff;
     z-index: 10; }
-    #app.on .content.about {
-      width: 100%; }
-    #app.on .content.portfolio {
-      width: 100%;
-      background: #fff; }
-    #app.on .content.skills .content-container {
-      height: 60%; }
-    #app.on .content.skills .skill {
-      float: left;
-      margin: 1em 1.5em; }
-    #app.on .content.skills .skill-type {
+    #app.on .content .main-copy {
+      font-family: 'Chapaza';
+      font-size: 2em;
+      line-height: 3.6em;
       text-align: center;
-      text-transform: lowercase; }
-    #app.on .content.skills .skill-logo {
-      width: 3.5em;
-      height: 3.5em;
-      float: left;
-      margin: .5em auto; }
-    #app.on .content.work {
       width: 100%;
-      background: #fff; }
-      #app.on .content.work .image-container {
-        background: linear-gradient(rgba(113, 197, 201, 0.25), rgba(113, 197, 201, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
-        background-size: cover; }
-    #app.on .content.contact {
+      height: 100%; }
+    #app.on .content .sub-copy {
+      font-family: 'Chapaza-Italic';
+      color: lightgray;
+      top: 20px;
+      position: relative;
+      font-size: 14px;
       width: 100%;
-      background: #fff; }
-      #app.on .content.contact .image-container {
-        background: linear-gradient(rgba(196, 198, 93, 0.25), rgba(196, 198, 93, 0.25)), url(../../images/test2.jpg) no-repeat top left;
-        background-size: cover; }
+      float: right;
+      text-align: right; }
+    #app.on .content .image-container {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
   #app.on .footer {
     height: 0;
     width: 100%; }
-  #app.on .nav-vertical {
-    height: 0;
-    transition: all .25s .35s linear; }
-    #app.on .nav-vertical.about {
-      height: 36px;
-      background: #FF6160;
-      transition: all .25s linear; }
-    #app.on .nav-vertical.portfolio {
-      height: 36px;
-      background: #C4C65D;
-      transition: all .25s linear; }
-    #app.on .nav-vertical.work {
-      height: 36px;
-      background: #7f2a57;
-      transition: all .25s linear; }
-    #app.on .nav-vertical.contact {
-      height: 36px;
-      background: #71c5c9;
-      transition: all .25s linear; }
   #app.on .intro-container {
     width: 34.5em;
     margin: 0 auto;
@@ -317,26 +288,6 @@ body {
     #app.on .intro-container .flip-container, #app.on .intro-container .flipper, #app.on .intro-container .front, #app.on .intro-container .back {
       width: 10em;
       height: 10em; }
-  #app.on .content .main-copy {
-    font-family: 'Chapaza';
-    font-size: 2em;
-    line-height: 3.6em;
-    text-align: center;
-    width: 100%;
-    height: 100%; }
-  #app.on .content .sub-copy {
-    font-family: 'Chapaza-Italic';
-    color: lightgray;
-    top: 20px;
-    position: relative;
-    font-size: 14px;
-    width: 100%;
-    float: right;
-    text-align: right; }
-  #app.on .content .image-container {
-    position: absolute;
-    width: 100%;
-    height: 100%; }
   #app.on .about .content-container {
     width: 60%; }
   #app.on .about .main-copy {
@@ -389,11 +340,21 @@ body {
     opacity: .1;
     left: -.1em;
     transition: all .5s ease-in; }
+  #app.on .skills .skill-type {
+    text-align: center;
+    text-transform: lowercase; }
+  #app.on .skills .skill-logo {
+    width: 3.5em;
+    height: 3.5em;
+    float: left;
+    margin: .5em auto; }
   #app.on .skills .content-container {
     width: 65%; }
   #app.on .skills .main-copy {
     color: #7f2a57; }
   #app.on .skills .skill {
+    float: left;
+    margin: 1em 1.5em;
     font-size: 1.5em;
     opacity: 0;
     transition: opacity .25s ease-in; }
@@ -469,144 +430,147 @@ body {
     opacity: 1;
     transition: opacity .25s ease-in;
     transition-delay: 0.6s; }
-  #app.on .portfolio {
-    background-color: #f9f9f9; }
-    #app.on .portfolio .main-copy {
-      color: #fbb87a; }
-    #app.on .portfolio .portfolio-container {
-      display: inline;
-      width: 49em;
-      position: absolute;
-      height: 100%;
-      top: 0;
-      left: 0;
-      overflow: hidden; }
-    #app.on .portfolio .portfolio-cards {
-      width: 94%;
-      height: 100%;
-      position: absolute;
-      right: 0; }
-    #app.on .portfolio .project-front {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      top: 0;
-      left: 0;
-      z-index: 5; }
-    #app.on .portfolio .project-back {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1; }
-    #app.on .portfolio .portfolio-proj {
-      float: left;
-      width: 16em;
-      height: 16em;
-      position: relative; }
-    #app.on .portfolio .project-image {
-      width: 100%;
-      height: 100%;
-      margin: 0 auto; }
-    #app.on .portfolio .project-title {
-      font-family: 'Chapaza-Italic';
-      font-size: 1.5vw;
-      top: 20px;
-      position: relative;
-      color: #fbb87a;
-      padding-left: 2vw; }
-    #app.on .portfolio .project-description {
-      font-size: 13px;
-      position: relative;
-      top: 30px;
-      padding: 0 2vw; }
-    #app.on .portfolio .arrow {
-      width: 20px;
-      height: 0;
-      top: 2vw;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-left: 20px solid #C4C65D;
-      z-index: 10;
-      position: relative;
-      left: 20px;
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-      transition: all .3s .5s ease-in; }
-      #app.on .portfolio .arrow.collapsed {
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-        left: -40px;
-        transition: all .3s .5s ease-in; }
-  #app.on .work .image-container {
-    bottom: -100%;
-    transition: bottom .5s ease-in; }
-  #app.on .work .main-copy {
-    color: #71c5c9; }
-  #app.on .work .work-container {
+  #app.on .portfolio .main-copy {
+    color: #fbb87a; }
+  #app.on .portfolio .portfolio-container {
     display: inline;
-    width: 100%;
+    width: 49em;
     position: absolute;
-    left: 50%;
-    margin: 0 auto;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  #app.on .work .work-cards {
-    width: 66em;
-    height: 16em;
-    margin: 0 auto; }
-  #app.on .work .flip-container,
-  #app.on .work .flipper,
-  #app.on .work .front,
-  #app.on .work .back {
-    width: 15em;
-    height: 15em;
-    margin: 0; }
-  #app.on .work .flip-container {
-    margin: 1%;
-    float: left;
-    background: transparent; }
-  #app.on .work .front {
-    border: 1px solid #ccc; }
-  #app.on .work .back {
-    border: 1px solid lightgray;
-    background: #fff;
-    padding: 10%;
-    box-sizing: border-box; }
-  #app.on .work .work-company {
-    font-size: 1.5vw;
-    font-family: 'Chapaza';
-    color: #71c5c9; }
-  #app.on .work .work-logo {
-    width: 55px;
-    height: 35px; }
-  #app.on .work .work-position {
-    font-family: 'Chapaza-Italic';
-    font-size: 1.2vw; }
-  #app.on .work .work-description {
-    top: 1%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+  #app.on .portfolio .portfolio-cards {
+    width: 94%;
+    height: 100%;
+    position: absolute;
+    right: 0; }
+  #app.on .portfolio .project-front {
+    width: 100%;
+    height: 100%;
     position: relative;
-    font-size: 1vw;
-    text-align: left; }
-  #app.on .work.active .image-container {
-    bottom: 0;
-    transition: bottom .5s ease-in; }
-  #app.on .work.active .work-flip.flipper {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    transition: -webkit-transform 1s .75s ease-in;
-    transition: transform 1s .75s ease-in;
-    transition: transform 1s .75s ease-in, -webkit-transform 1s .75s ease-in;
-    -webkit-transition: transform 1s .75s ease-in; }
-  #app.on .work.active .work-flip.flipper:hover {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    transition: -webkit-transform 1s ease-in;
-    transition: transform 1s ease-in;
-    transition: transform 1s ease-in, -webkit-transform 1s ease-in;
-    -webkit-transition: transform 1s ease-in; }
+    top: 0;
+    left: 0;
+    z-index: 5; }
+  #app.on .portfolio .project-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  #app.on .portfolio .portfolio-proj {
+    float: left;
+    width: 16em;
+    height: 16em;
+    position: relative; }
+  #app.on .portfolio .project-image {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; }
+  #app.on .portfolio .project-title {
+    font-family: 'Chapaza-Italic';
+    font-size: 1.5vw;
+    top: 20px;
+    position: relative;
+    color: #fbb87a;
+    padding-left: 2vw; }
+  #app.on .portfolio .project-description {
+    font-size: 13px;
+    position: relative;
+    top: 30px;
+    padding: 0 2vw; }
+  #app.on .portfolio .arrow {
+    width: 20px;
+    height: 0;
+    top: 2vw;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #C4C65D;
+    z-index: 10;
+    position: relative;
+    left: 20px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all .3s .5s ease-in; }
+    #app.on .portfolio .arrow.collapsed {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      left: -40px;
+      transition: all .3s .5s ease-in; }
+  #app.on .work {
+    width: 100%;
+    background: #fff; }
+    #app.on .work .image-container {
+      background: linear-gradient(rgba(113, 197, 201, 0.25), rgba(113, 197, 201, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
+      background-size: cover;
+      bottom: -100%;
+      transition: bottom .5s ease-in; }
+    #app.on .work .main-copy {
+      color: #71c5c9; }
+    #app.on .work .work-container {
+      display: inline;
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      margin: 0 auto;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    #app.on .work .work-cards {
+      width: 66em;
+      height: 16em;
+      margin: 0 auto; }
+    #app.on .work .flip-container,
+    #app.on .work .flipper,
+    #app.on .work .front,
+    #app.on .work .back {
+      width: 15em;
+      height: 15em;
+      margin: 0; }
+    #app.on .work .flip-container {
+      margin: 1%;
+      float: left;
+      background: transparent; }
+    #app.on .work .front {
+      border: 1px solid #ccc; }
+    #app.on .work .back {
+      border: 1px solid lightgray;
+      background: #fff;
+      padding: 10%;
+      box-sizing: border-box; }
+    #app.on .work .work-company {
+      font-size: 1.5vw;
+      font-family: 'Chapaza';
+      color: #71c5c9; }
+    #app.on .work .work-logo {
+      width: 55px;
+      height: 35px; }
+    #app.on .work .work-position {
+      font-family: 'Chapaza-Italic';
+      font-size: 1.2vw; }
+    #app.on .work .work-description {
+      top: 1%;
+      position: relative;
+      font-size: 1vw;
+      text-align: left; }
+    #app.on .work.active .image-container {
+      bottom: 0;
+      transition: bottom .5s ease-in; }
+    #app.on .work.active .work-flip.flipper {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      transition: -webkit-transform 1s .75s ease-in;
+      transition: transform 1s .75s ease-in;
+      transition: transform 1s .75s ease-in, -webkit-transform 1s .75s ease-in;
+      -webkit-transition: transform 1s .75s ease-in; }
+    #app.on .work.active .work-flip.flipper:hover {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      transition: -webkit-transform 1s ease-in;
+      transition: transform 1s ease-in;
+      transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+      -webkit-transition: transform 1s ease-in; }
   #app.on .contact {
     background: #f9f9f9; }
     #app.on .contact .main-copy {
@@ -637,12 +601,51 @@ body {
     top: 35%; }
   #app.on .about .description-container {
     width: 100%;
-    height: 19em; }
+    height: 19em;
+    margin: 3em 0; }
   #app.on .about .fact-copy {
-    font-size: 3.5em;
+    font-size: 4em;
     top: 1em;
     width: 18em; }
   #app.on .about .fact-number {
-    left: 50%; }
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 27em; }
+  #app.on .about.active .description-container {
+    width: 100%; }
+  #app.on .about.active .fact-copy {
+    top: .7em;
+    left: .2em; }
   #app.on .about.active .fact-number {
-    left: 0; } }
+    opacity: .4;
+    left: 0; }
+  #app.on .skills .content-container {
+    width: 90%; }
+  #app.on .skills .skills-container {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    height: 96em; }
+  #app.on .skills .skill {
+    margin: 4em 5.5em;
+    float: none; }
+  #app.on .skills .skill-type {
+    font-size: 3em; }
+  #app.on .skills .skill-logo {
+    width: 8em;
+    height: 8em;
+    float: none; }
+  #app.on .work .work-cards {
+    width: 84em; }
+  #app.on .work .flip-container,
+  #app.on .work .flipper,
+  #app.on .work .front,
+  #app.on .work .back {
+    width: 40em;
+    height: 40em; }
+  #app.on .work .work-company {
+    font-size: 4em; }
+  #app.on .work .work-position,
+  #app.on .work .work-description {
+    font-size: 2.5em; } }
