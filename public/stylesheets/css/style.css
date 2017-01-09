@@ -15,6 +15,14 @@
   unicode-range: U+0020-2265; }
 
 @font-face {
+  font-family: 'Mermaid';
+  src: url("../css/fonts/Mermaid1001.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2265; }
+
+@font-face {
   font-family: 'CaviarDreams-Bold';
   src: url("../css/fonts/CaviarDreams-Bold_gdi.eot");
   src: url("../css/fonts/CaviarDreams-Bold_gdi.eot?#iefix") format("embedded-opentype"), url("../css/fonts/CaviarDreams-Bold_gdi.woff") format("woff"), url("../css/fonts/CaviarDreams-Bold_gdi.ttf") format("truetype"), url("../css/fonts/CaviarDreams-Bold_gdi.svg#CaviarDreams-Bold") format("svg");
@@ -102,7 +110,7 @@ body {
     top: 0;
     left: 0; }
   #app .content-container {
-    width: 80%;
+    width: 100%;
     height: 85%;
     position: relative;
     margin: 0 auto;
@@ -190,31 +198,12 @@ body {
   #app.on .intro.flipper:hover, #app.on .intro.flipper.clicked {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
-  #app.on .work-flip.flipper {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    transition: -webkit-transform 1s;
-    transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s;
-    -webkit-transition: transform 1s; }
-  #app.on .work-flip.flipper:hover, #app.on .work-flip.flipper.clicked {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    transition: -webkit-transform 1s;
-    transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s;
-    -webkit-transition: transform 1s; }
   #app.on .content {
     width: 100%;
     background: transparent;
     z-index: 10; }
     #app.on .content.about {
       width: 100%; }
-      #app.on .content.about .image-container {
-        background: #fff;
-        background: linear-gradient(rgba(255, 97, 96, 0.25), rgba(255, 97, 96, 0.25)), url(../../images/test.jpg) no-repeat top left;
-        background-size: cover;
-        top: -5%; }
     #app.on .content.portfolio {
       width: 100%;
       background: #fff; }
@@ -348,55 +337,138 @@ body {
     position: absolute;
     width: 100%;
     height: 100%; }
-  #app.on .about {
-    background: #f9f9f9; }
-    #app.on .about .image-container {
-      right: 0;
-      width: 50%; }
-    #app.on .about .main-copy {
+  #app.on .about .content-container {
+    width: 60%; }
+  #app.on .about .main-copy {
+    color: #FF6160; }
+  #app.on .about .description-container {
+    width: 17em;
+    height: 15em;
+    position: relative;
+    top: 5%;
+    float: left;
+    display: inline;
+    margin: 1em; }
+  #app.on .about .fact-number {
+    font-family: 'Mermaid';
+    font-size: 14em;
+    position: absolute;
+    top: -.2em;
+    left: .5em;
+    opacity: 1;
+    transition: all .5s ease-in; }
+    #app.on .about .fact-number.fact-1 {
+      color: #7f2a57; }
+    #app.on .about .fact-number.fact-2 {
+      color: #C4C65D; }
+    #app.on .about .fact-number.fact-3 {
+      color: #fbb87a; }
+    #app.on .about .fact-number.fact-4 {
+      color: #71c5c9; }
+    #app.on .about .fact-number.fact-5 {
       color: #FF6160; }
-    #app.on .about .description-container {
-      width: 90%;
-      position: relative;
-      margin: 3% auto;
-      top: 5%; }
-    #app.on .about .fact-copy,
-    #app.on .about .extrafact-copy {
-      font-family: 'CaviarDreams-Regular';
-      font-size: 1.3vw;
-      text-align: justify;
-      color: #494949;
-      display: inline;
-      cursor: pointer; }
-    #app.on .about .fact-copy {
-      text-align: right;
-      color: #494949;
-      padding: 5px 15px;
-      border: 1px solid lightgray;
-      text-transform: lowercase;
-      background: lightgray; }
-    #app.on .about .extrafact-copy {
-      text-align: left;
-      letter-spacing: -10px;
-      color: transparent;
-      transition: all .5s ease-in;
-      text-transform: none; }
-    #app.on .about .description-container:hover .extrafact-copy,
-    #app.on .about .description-container.clicked .extrafact-copy {
-      letter-spacing: 0;
-      background: #FF6160;
-      color: white;
-      padding: 5px 40px;
-      border: 1px solid #FF6160;
-      transition: all .5s ease-in; }
-    #app.on .about .description-container:hover .fact-copy,
-    #app.on .about .description-container.clicked .fact-copy {
-      background: lightgray;
-      transition: all .5s ease-in; }
+    #app.on .about .fact-number.fact-6 {
+      color: #494949; }
+  #app.on .about .fact-copy {
+    font-family: 'CaviarDreams-Regular';
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #494949;
+    top: 10em;
+    opacity: 0;
+    position: relative;
+    text-transform: lowercase;
+    width: 9em;
+    left: 2em;
+    transition: all .5s ease-in; }
+  #app.on .about.active .fact-copy {
+    top: 2em;
+    opacity: 1;
+    transition: all .5s ease-in; }
+  #app.on .about.active .fact-number {
+    opacity: .1;
+    left: -.1em;
+    transition: all .5s ease-in; }
+  #app.on .skills .content-container {
+    width: 65%; }
   #app.on .skills .main-copy {
     color: #7f2a57; }
   #app.on .skills .skill {
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity .25s ease-in; }
+    #app.on .skills .skill .skill:nth-child(1) {
+      transition-delay: 0.05s; }
+    #app.on .skills .skill .skill:nth-child(2) {
+      transition-delay: 0.1s; }
+    #app.on .skills .skill .skill:nth-child(3) {
+      transition-delay: 0.15s; }
+    #app.on .skills .skill .skill:nth-child(4) {
+      transition-delay: 0.2s; }
+    #app.on .skills .skill .skill:nth-child(5) {
+      transition-delay: 0.25s; }
+    #app.on .skills .skill .skill:nth-child(6) {
+      transition-delay: 0.3s; }
+    #app.on .skills .skill .skill:nth-child(7) {
+      transition-delay: 0.35s; }
+    #app.on .skills .skill .skill:nth-child(8) {
+      transition-delay: 0.4s; }
+    #app.on .skills .skill .skill:nth-child(9) {
+      transition-delay: 0.45s; }
+    #app.on .skills .skill .skill:nth-child(10) {
+      transition-delay: 0.5s; }
+    #app.on .skills .skill .skill:nth-child(11) {
+      transition-delay: 0.55s; }
+    #app.on .skills .skill .skill:nth-child(12) {
+      transition-delay: 0.6s; }
+  #app.on .skills.active .skill:nth-child(1) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.05s; }
+  #app.on .skills.active .skill:nth-child(2) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.1s; }
+  #app.on .skills.active .skill:nth-child(3) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.15s; }
+  #app.on .skills.active .skill:nth-child(4) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.2s; }
+  #app.on .skills.active .skill:nth-child(5) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.25s; }
+  #app.on .skills.active .skill:nth-child(6) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.3s; }
+  #app.on .skills.active .skill:nth-child(7) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.35s; }
+  #app.on .skills.active .skill:nth-child(8) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.4s; }
+  #app.on .skills.active .skill:nth-child(9) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.45s; }
+  #app.on .skills.active .skill:nth-child(10) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.5s; }
+  #app.on .skills.active .skill:nth-child(11) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.55s; }
+  #app.on .skills.active .skill:nth-child(12) {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    transition-delay: 0.6s; }
   #app.on .portfolio {
     background-color: #f9f9f9; }
     #app.on .portfolio .main-copy {
@@ -436,8 +508,7 @@ body {
     #app.on .portfolio .project-image {
       width: 100%;
       height: 100%;
-      margin: 0 auto;
-      background: linear-gradient(rgba(251, 184, 122, 0.25), rgba(251, 184, 122, 0.25)), url(../../images/test4.jpg) no-repeat bottom left; }
+      margin: 0 auto; }
     #app.on .portfolio .project-title {
       font-family: 'Chapaza-Italic';
       font-size: 1.5vw;
@@ -468,6 +539,9 @@ body {
         transform: rotate(180deg);
         left: -40px;
         transition: all .3s .5s ease-in; }
+  #app.on .work .image-container {
+    bottom: -100%;
+    transition: bottom .5s ease-in; }
   #app.on .work .main-copy {
     color: #71c5c9; }
   #app.on .work .work-container {
@@ -516,7 +590,28 @@ body {
     position: relative;
     font-size: 1vw;
     text-align: left; }
+  #app.on .work.active .image-container {
+    bottom: 0;
+    transition: bottom .5s ease-in; }
+  #app.on .work.active .work-flip.flipper {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: -webkit-transform 1s .75s ease-in;
+    transition: transform 1s .75s ease-in;
+    transition: transform 1s .75s ease-in, -webkit-transform 1s .75s ease-in;
+    -webkit-transition: transform 1s .75s ease-in; }
+  #app.on .work.active .work-flip.flipper:hover {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    transition: -webkit-transform 1s ease-in;
+    transition: transform 1s ease-in;
+    transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+    -webkit-transition: transform 1s ease-in; }
   #app.on .contact {
     background: #f9f9f9; }
     #app.on .contact .main-copy {
       color: #C4C65D; }
+    #app.on .contact .contact-method {
+      font-size: 2em;
+      text-align: center;
+      margin-top: 1em; }

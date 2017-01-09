@@ -50,12 +50,11 @@
 	<script type="text/x-tmpl" id="about-template">
 		<div class="divider"><div class="main-copy">{%= data.mainCopy %}</div></div>
 		<div class="container">
-			<div class="image-container"></div>
 			<div class="content-container">
 				{% for (var i=0; i < data.descriptionCopy.length; i++) { %}
 					<div class="description-container">
+						<div class="fact-number fact-{%# i+1 %}">{%= data.descriptionCopy[i].number %}</div>
 						<div class="fact-copy">{%= data.descriptionCopy[i].fact %}</div>
-						<div class="extrafact-copy">{%= data.descriptionCopy[i].extraFact %}</div>
 					</div>
 				{% } %}
 			</div>
@@ -91,7 +90,7 @@
 					<div class="portfolio-cards">
 						{% for (var i=0; i < data.projects.length; i ++) { %}
 							<div class="portfolio-proj">
-								<div class="project-image" style="background: linear-gradient(rgba(251,184,122, {%= data.projects[i].opacity%}), rgba(251,184,122, {%= data.projects[i].opacity%})), url('images/{%= data.projects[i].projectImg%}') no-repeat; background-size: cover; background-position: center"></div>
+								<div class="project-image"></div>
 							</div>
 						{% } %}
 					</div>
@@ -129,8 +128,13 @@
 	<script type="text/x-tmpl" id="contact-template">
 		<div class="divider"><div class="main-copy">{%= data.mainCopy %}</div></div>
 		<div class="container">
-			<div class="image-container"></div>
-			<div class="content-container"></div>
+			<div class="content-container">
+				{% for (var i=0; i < data.contactMethods.length; i ++) { %}
+					<div class="contact-method">
+						{%= data.contactMethods[i].methodType %}: {%= data.contactMethods[i].methodInput %}
+					</div>
+				{% } %}
+			</div>
 		</div>
 	</script>
 

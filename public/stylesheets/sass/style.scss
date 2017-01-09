@@ -5,6 +5,8 @@ $purple: #7f2a57;
 $blue: #71c5c9;
 $orange: #fbb87a;
 
+$colorOrder: $purple $green $orange $blue $pink $gray;
+
 @font-face {
 	font-family:'Chapaza';
 	src: url('../css/fonts/Chapaza.ttf') format('truetype');
@@ -21,6 +23,15 @@ $orange: #fbb87a;
 	font-stretch: normal;
 	unicode-range: U+0020-2265;
 }
+@font-face {
+	font-family:'Mermaid';
+	src: url('../css/fonts/Mermaid1001.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2265;
+}
+
 
 @font-face {
 	font-family:'CaviarDreams-Bold';
@@ -82,8 +93,8 @@ body {
 	    left: 0;
 	}
 	.content-container {
-		width: 80%;
-		height: 85%;
+	    width: 100%;
+	    height: 85%;
 		position: relative;
 	    margin: 0 auto;
 	    top: 50%;
@@ -174,36 +185,13 @@ body {
 			transform: rotateY(180deg);
 		}
 	}
-	.work-flip {
-		&.flipper {
-			transform: rotateY(0deg);
-			transition: transform 1s;
-			-webkit-transition: transform 1s;		
-		}
-		// transform: rotateY(0deg);
-		&.flipper:hover,
-		&.flipper.clicked {
-			transform: rotateY(180deg);
-			transition: transform 1s;
-			-webkit-transition: transform 1s;
-		}
-	}
+
 	.content {
 		width: 100%;
 		background: transparent;
 		z-index: 10;
 		&.about {
 			width: 100%;
-			.image-container {
-				background: #fff;
-				background: linear-gradient(
-			      rgba(255, 97, 96, 0.25), 
-			      rgba(255, 97, 96, 0.25)
-			    ),
-				url(../../images/test.jpg) no-repeat top left;
-				background-size: cover;
-				top: -5%;
-			}
 		}
 		&.portfolio {
 			width: 100%;
@@ -447,67 +435,91 @@ body {
 	
 /*/*ABOUT STYLES /*/
 	.about {
-		background: #f9f9f9;
-		.image-container {
-		    right: 0;
-		    width: 50%;
+		.content-container {
+		    width: 60%;
 		}
 		.main-copy {
 			color: $pink;
 		}
 		.description-container {
-			width: 90%;
+			width: 17em;
+		    height: 15em;
 		    position: relative;
-		    margin: 3% auto;
 		    top: 5%;
+		    float: left;
+		    display: inline;
+		    margin: 1em;
 		}
-		.fact-copy,
-		.extrafact-copy {
-			font-family: 'CaviarDreams-Regular';
-			font-size: 1.3vw;
-			text-align: justify;
-			color: $gray;
-			display: inline;
-			cursor: pointer;
+		.fact-number {
+			font-family: 'Mermaid';
+		    font-size: 14em;
+		    position: absolute;
+		    top: -.2em;
+		    left: .5em;
+		    opacity: 1;
+			@each $color in $colorOrder{
+			    $i: index($colorOrder, $color);
+			    &.fact-#{$i} { 
+			        color: $color;
+			    }
+			}
+			transition: all .5s ease-in;
+
 		}
 		.fact-copy {
-			text-align: right;
+			font-family: 'CaviarDreams-Regular';
+			font-size: 1.5em;
+			cursor: pointer;
 			color: $gray;
-			padding: 5px 15px;
-			border: 1px solid lightgray;
+			top: 10em;
+			opacity: 0;
+    		position: relative;
 			text-transform: lowercase;
-			background: lightgray;
-		}
-		.extrafact-copy {
-			text-align: left;
-			letter-spacing: -10px;
-			color: transparent;
+			width: 9em;
+			left: 2em;
 			transition: all .5s ease-in;
-			text-transform: none;
+
 		}
-		.description-container:hover .extrafact-copy,
-		.description-container.clicked .extrafact-copy {
-			letter-spacing: 0;
-			background: $pink;
-			color: white;
-			padding: 5px 40px;
-			border: 1px solid $pink;
-			transition: all .5s ease-in;
-		}
-		.description-container:hover .fact-copy,
-		.description-container.clicked .fact-copy {
-			background: lightgray;
-			transition: all .5s ease-in;
+		&.active {
+			.fact-copy {
+				top: 2em;
+				opacity: 1;
+				transition: all .5s ease-in;
+			}
+			.fact-number {
+				opacity: .1;
+				left: -.1em;
+				transition: all .5s ease-in;
+			}
 		}
 	}
 
 /*/*skills STYLES /*/
 	.skills {
+		.content-container {
+			width: 65%;
+		}
 		.main-copy {
 			color: $purple;
 		}
 		.skill {
-			    font-size: 1.5em;
+			font-size: 1.5em;
+			opacity: 0;
+			transition: opacity .25s ease-in;
+			@for $i from 1 to 13 {
+			  .skill:nth-child(#{$i}) {
+			  	transition-delay: $i * 0.05s; 
+			  }
+			}
+		}
+		&.active {
+			@for $i from 1 to 13 {
+			  .skill:nth-child(#{$i}) {
+				opacity: 1;
+				transition: opacity .25s ease-in;
+			  	transition-delay: $i * 0.05s; 
+			  }
+			}
 		}
 	}
 
@@ -558,7 +570,6 @@ body {
 		    width: 100%;
 		    height: 100%;
 		    margin: 0 auto;
-		    background: linear-gradient(rgba(251,184,122, 0.25), rgba(251,184,122, 0.25)), url(../../images/test4.jpg) no-repeat bottom left;
 		}
 		.project-title {
 			font-family: 'Chapaza-Italic';
@@ -598,6 +609,10 @@ body {
 
 /*/*WORK STYLES /*/
 	.work {
+		.image-container {
+			bottom: -100%;
+			transition: bottom .5s ease-in;
+		}
 		.main-copy {
 			color: $blue;
 		}
@@ -656,6 +671,25 @@ body {
 		    font-size: 1vw;
 			text-align: left;
 		}
+		&.active {
+			.image-container {
+				bottom: 0;
+				transition: bottom .5s ease-in;
+			}
+			.work-flip {
+				&.flipper {
+					transform: rotateY(180deg);
+					transition: transform 1s .75s ease-in;
+					-webkit-transition: transform 1s .75s ease-in;		
+				}
+				// transform: rotateY(0deg);
+				&.flipper:hover{
+					transform: rotateY(0deg);
+					transition: transform 1s ease-in;
+					-webkit-transition: transform 1s ease-in;
+				}
+			}
+		}
 	}
 
 
@@ -664,6 +698,11 @@ body {
 		background: #f9f9f9;		
 		.main-copy {
 			color: $green;
+		}
+		.contact-method {
+			font-size: 2em;
+			text-align: center;
+			margin-top: 1em;
 		}
 	}
 }

@@ -15,11 +15,11 @@ var scrollPos = function(e){
 	ypos = e.scrollY;
 	offset = sectionHeight * .6; //px
 	sect = Math.floor((ypos+offset)/sectionHeight);
-	console.log(sectionHeight, ypos, sect)
 
 	if(!$('.content').eq(sect).hasClass('active')){
 		$('.content').removeClass('active').eq(sect).addClass('active');
 		$('.active').addClass('init');
+		console.log('active');
 	}
 }
 
@@ -51,9 +51,6 @@ $(document).ready(function (){
 		});
 	},500)
 
-	$('.flipper, .description-container').on('click', function(){
-		$(this).addClass('clicked');
-	})
 
 	// $('.intro-grid, .intro-text').on('click', function(){
 	// 	// $(this).css('display', 'none');

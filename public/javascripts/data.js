@@ -34,32 +34,36 @@ var data = {
 		"contact"
 	],
 	"about" : {
-		"mainCopy" : "hello world!",
+		"mainCopy" : "6 things to know about me",
 		"descriptionCopy" : [
 			{ 
-				"fact" : "I'm a native New York-based web developer",
-				"extraFact" : "currently working at Quartz NYC"
+				"number": 1,
+				"fact" : "I'm a native New York-based engineer currently working at Quartz"
 			},
 			{
-				"fact" :"A grad from Boston University",
-				"extraFact" : "with a BS in Communications and Business"
+				"number": 2,
+				"fact" :"i graduated from Boston University with a BS in Communications"
 			},
 			{
-				"fact" : "With experience in qualitative insights",
-				"extraFact" : "exploring consumer relationships with brands"
+				"number": 3,
+				"fact" : "i currently work as an front-end engineer for a creative services team"
 			},
 			{
-				"fact" : "A focus on research design and storytelling",
-				"extraFact" : "with an affection for infographics and icons"
+				"number": 4,
+				"fact" : "but i have over 8 years experience in qualitative insights exploring consumer relationships with brands"
 			},
 			{
-				"fact" : "and just for fun...",
-				"extraFact" : "i love zombies, kickboxing, playing the uke and crocheting"
+				"number": 5,
+				"fact" : "across research design and storytelling to coding, i carry an affection for infographics and icons"
+			},
+			{
+				"number": 6,
+				"fact" : "and just for fun...I love zombies, kickboxing, playing the uke and crocheting"
 			}
 		]
 	},
 	"skills" : {
-		"mainCopy" : "what i've worked with",
+		"mainCopy" : "13 things i've worked with",
 		"skills" : [
 			{
 				"skill": "Ruby",
@@ -116,7 +120,7 @@ var data = {
 		],
 	},
 	"portfolio" : {
-		"mainCopy" : "i built some stuff",
+		"mainCopy" : "3 things I've recently built",
 		"projects" : [ 
 			{
 				"projectImg" : "portfolio-comicsmashup.jpg",
@@ -137,7 +141,7 @@ var data = {
 				"opacity" : ".25"
 			},
 			{
-				"projectImg" : "portfolio-cartier.jpg",
+				"projectImg" : "portfolio-workday.jpg",
 				"projectTitle" : "cartier cascade",
 				"projectDescription" : "",
 				"opacity" : ".5"
@@ -145,7 +149,7 @@ var data = {
 		]
 	},
 	"work" : {
-		"mainCopy" : "i worked at some pretty cool places",
+		"mainCopy" : "4 cool places i've worked at",
 		"jobs" : [ 
 			{
 				"company" : "Quartz",
@@ -174,7 +178,25 @@ var data = {
 		]
 	},
 	"contact" : {
-		"mainCopy" : "hello to you too"
+		"mainCopy" : "3 ways to reach me",
+		"contactMethods" : [ 
+			{
+				"methodType" : "email",
+				"methodInput" : "karynn.tran@gmail.com",
+				"icon": ""
+			},
+			{
+				"methodType" : "github",
+				"methodInput" : "github.com/karynntran",
+				"icon": ""
+			},
+			{
+				"methodType" : "linkedin",
+				"methodInput" : "www.linkedin.com/in/karynneliotran",
+				"icon": ""
+			}
+		]
+
 	}
 
 
