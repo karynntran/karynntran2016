@@ -615,3 +615,18 @@ body {
       font-size: 2em;
       text-align: center;
       margin-top: 1em; }
+
+@media all and (max-width: 480px) {
+  #app.on .content {
+    height: 178em; }
+  #app.on .intro-container {
+    width: 80%; }
+    #app.on .intro-container .flip-container, #app.on .intro-container .flipper, #app.on .intro-container .front, #app.on .intro-container .back {
+      width: 25em;
+      height: 25em; }
+    #app.on .intro-container .intro-text {
+      width: 100%; }
+    #app.on .intro-container .last-name {
+      font-size: 5.7em; }
+    #app.on .intro-container .start-icon {
+      font-size: 7.5em; } }

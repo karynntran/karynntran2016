@@ -706,3 +706,27 @@ body {
 		}
 	}
 }
+
+@media all and (max-width: 480px) {
+	#app.on {
+		.content {
+			height: 178em;		
+		}
+		.intro-container {
+			width: 80%;
+			.flip-container, .flipper, .front, .back {
+			    width: 25em;
+			    height: 25em;
+			}
+			.intro-text {
+				width: 100%;
+			}
+			.last-name {
+				font-size: 5.7em;
+			}
+			.start-icon {
+				font-size: 7.5em;
+			}
+		}
+	}
+}
