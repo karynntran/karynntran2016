@@ -75,6 +75,7 @@ body {
 	font-family: 'CaviarDreams-Regular';
 	width: 100%;
 	height: 100%;
+	overflow:none;
 }
 .vertical {
   position: relative;
@@ -359,7 +360,7 @@ body {
 				transition: all .5s ease-in;
 			}
 			.fact-number {
-				opacity: .1;
+				opacity: .3;
 				left: -.1em;
 				transition: all .5s ease-in;
 			}
@@ -386,18 +387,20 @@ body {
 		}
 		.skill {
 			float: left;
+		    height: 15em;
+		    width: 15em;
 			margin: 1em 1.5em;
 			font-size: 1.5em;
 			opacity: 0;
 			transition: opacity .25s ease-in;
-			@for $i from 1 to 13 {
+			@for $i from 1 to 14 {
 			  .skill:nth-child(#{$i}) {
 			  	transition-delay: $i * 0.05s; 
 			  }
 			}
 		}
 		&.active {
-			@for $i from 1 to 13 {
+			@for $i from 1 to 14 {
 			  .skill:nth-child(#{$i}) {
 				opacity: 1;
 				transition: opacity .25s ease-in;
@@ -655,28 +658,29 @@ body {
 				}
 				.fact-copy {
 					top: .7em;
-					left: .2em;
+					left: 1.5em;
 				}
 				.fact-number {
 					opacity: .4;
-					left: 0;			
+					left: .2em;			
 				}
 			}
 		}
 		.skills {
 			.content-container {
 				width: 90%;
+				height: 100%;
+				top: 45%;
 			}
 			.skills-container {
-				column-count: 3;
-				height: 96em;
+				height: 100%;
 			}
 			.skill {
-				margin: 4em 5.5em;
-				float: none;
+				margin: 2em;
+				float: left;
 			}
 			.skill-type {
-				font-size: 3em;
+				font-size: 2.7em;
 			}
 			.skill-logo {
 			    width: 8em;
